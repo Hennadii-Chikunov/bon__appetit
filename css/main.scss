@@ -1,0 +1,128 @@
+// ИСПОЛЬЗУЮ SCSS and FLEXbox
+// использую ШРИФТЫ
+// font-family: 'Alex Brush', cursive;
+// font-family: 'Dancing Script', cursive;
+// font-family: 'Hanalei', cursive;
+// font-family: 'Merienda', cursive;
+// font-family: 'Raleway', sans-serif;
+// БЫЛО ПРИНЯТО РЕШЕНИЕ СДЕЛАТЬ ОТЗЫВЧИВО - АДАПТИВНУЮ ВЕРСТКУ
+// В ПРОЕКТЕ . ИСПОЛЬЗУЮТСЯ ПОМИМО PX, ЕДЕНИЦЫ ИЗМЕРЕНИЯ "EM", ТАК ЖЕ % И VW , VH
+// ЭТО МОЙ ПЕРВЫЙ СЕРЬЕЗНЫЙ ПРОЕКТ, ПОЭТОМУ ИЗМЕНЕНИЯ В СДЕЛАННЫХ БЛОКАХ ЕЩЕ БУДУТ ВНЕСЕНЫ И ЗАКОММИЧЕНЫ!!!
+// ВЕРСТКА ВЕДЕТСЯ С НЕКОТОРЫМИ ЛИЧНЫМИ ПРАВКАМИ  (ТОГО , ЧТО НЕТ В МАКЕТЕ ЭТО ВКЛЮЧАЕТ В СЕБЯ ТЕКСТ-СТИЛИЗАЦИЮ, ХОВЕРЫ И Т.Д )
+// Основные спецификации
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  max-width: 73.125em;
+  padding: 0 0.9375em;
+  margin: auto;
+}
+
+// ШАПКА САЙТА 1 БЛОК
+
+.header-restoraunt {
+  font-family: "Merienda", cursive;
+  min-height: 38.5625em;
+  height: 100vh;
+  background: url("../img/header-bg.jpg") no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  .header-container {
+    padding: 2.5em 0px 6.25em;
+  }
+  // СТИЛИ ЛОГО
+  .header-restoraunt__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  // СТИЛИ МЕНЮ НАВИГАЦИИ
+  .header-menu {
+    .header-menu__items {
+      display: flex;
+      justify-content: space-evenly;
+      max-width: 43.75em;
+      margin: 1.875em auto 0;
+      .header-menu__link {
+        color: #c3c2c2;
+        &:hover,
+        &:focus {
+          color: rgba(232, 69, 69, 1);
+          border-radius: 0.25em;
+          transition: ease 0.3s;
+        }
+        &:active {
+          color: #fff;
+          background: #e84545;
+        }
+      }
+    }
+  }
+  // СТИЛИ ЗАГОЛОВКА И ПАРАГРАФА С КНОПКОЙ
+  .header-title {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    text-align: center;
+    h1 {
+      font-family: "Alex Brush", cursive;
+      font-size: 4.0625em;
+      font-weight: 700;
+      line-height: 71px;
+      color: #fff;
+      margin: 65px 0 26px;
+      &::first-letter {
+        color: #e84545;
+        font-size: 2em;
+      }
+    }
+    p {
+      color: #c3c2c2;
+      max-width: 37.5em;
+      padding: 0 25px 0 25px;
+      span {
+        color: #e84545;
+      }
+    }
+    .header__btn {
+      margin: 30px 0 0;
+      background: #e84545;
+      color: #fff;
+      border-radius: 6px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 12.5em;
+      height: 2.875em;
+      &:hover,
+      &:focus {
+        background-color: transparent;
+        border: 0.125em solid #e84545;
+        transition: all 0.3s;
+      }
+      &:active {
+        background: transparent;
+        transform: scale(1.1);
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- ЗДЕСЬ БУДУТ ВСЕ НЕОБХОДИМЫЕ МЕТА ТЕГИ -->
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Bon Appetit</title>
+	<!-- ПОДКЛЮЧИЛ Сброс СТИЛЕЙ -->
+	<link rel="stylesheet" href="css/normalize.css" />
+	<!-- ПОДКЛЮЧИЛ ГЛАВНЫЕ СТИЛИ , но что ВАЖНО !! РАБОТАЮ В SCSS - CSS ЭТО ДЛЯ БРАУЗЕРА -->
+	<link rel="stylesheet" href="css/main.css" />
+	<!-- ПОДКЛЮЧИЛ ШРИФТЫ, шрифтов 5 штук -->
+	<link
+		href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Dancing+Script:wght@400;700&family=Hanalei&family=Merienda:wght@400;700&family=Raleway:wght@400;600;700&display=swap"
+		rel="stylesheet" />
+</head>
+<body>
+	<!-- START шапка САЙТА -->
+	<header class="header-restoraunt">
+		<div class="header-container container">
+			<!-- Логотип Ресторана -->
+			<div class="header-restoraunt__logo">
+				<a href="#" title="Bon Appetit">
+					<img src="./img/bon-appetit.png" alt="Bon Appetit" />
+				</a>
+			</div>
+			<!-- Меню Навигации -->
+			<nav class="header-menu">
+				<ul class="header-menu__items">
+					<li>
+						<a class="header-menu__link" href="#">Menu</a>
+					</li>
+					<li>
+						<a class="header-menu__link" href="#">Our Team</a>
+					</li>
+					<li>
+						<a class="header-menu__link" href="#">News / Blog</a>
+					</li>
+					<li>
+						<a class="header-menu__link" href="#">Contact</a>
+					</li>
+				</ul>
+			</nav>
+			<!-- Статья о ресторане -->
+			<article class="header-title">
+				<h1>Bon Appetit</h1>
+				<p>
+					I enjoy eating out. I often have dinner in a good restaurant or café
+					with my friends or my family. I’ve got a couple of favourite places
+					for eating out. One of them is <span>“Bon Appetit”</span>.
+				</p>
+				<button class="header__btn" type="button">Find out more</button>
+			</article>
+		</div>
+	</header>
+	<!-- FINISH шапка САЙТА -->
+</body>
+</html>
