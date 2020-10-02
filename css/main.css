@@ -25,7 +25,7 @@ button {
   margin: auto;
 }
 
-.header-restoraunt {
+.header-restaurant {
   font-family: "Merienda", cursive;
   min-height: 38.5625em;
   height: 100vh;
@@ -34,11 +34,11 @@ button {
   background-attachment: fixed;
 }
 
-.header-restoraunt .header-container {
+.header-restaurant .header-container {
   padding: 2.5em 0px 6.25em;
 }
 
-.header-restoraunt .header-restoraunt__logo {
+.header-restaurant .header-restaurant__logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -50,34 +50,33 @@ button {
           align-items: center;
 }
 
-.header-restoraunt .header-menu .header-menu__items {
+.header-restaurant .header-menu .header-menu__items {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   max-width: 43.75em;
   margin: 1.875em auto 0;
 }
 
-.header-restoraunt .header-menu .header-menu__items .header-menu__link {
+.header-restaurant .header-menu .header-menu__items .header-menu__link {
   color: #c3c2c2;
 }
 
-.header-restoraunt .header-menu .header-menu__items .header-menu__link:hover, .header-restoraunt .header-menu .header-menu__items .header-menu__link:focus {
+.header-restaurant .header-menu .header-menu__items .header-menu__link:hover, .header-restaurant .header-menu .header-menu__items .header-menu__link:focus {
   color: #e84545;
   border-radius: 0.25em;
   -webkit-transition: ease 0.3s;
   transition: ease 0.3s;
 }
 
-.header-restoraunt .header-menu .header-menu__items .header-menu__link:active {
+.header-restaurant .header-menu .header-menu__items .header-menu__link:active {
   color: #fff;
   background: #e84545;
 }
 
-.header-restoraunt .header-title {
+.header-restaurant .header-title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -91,7 +90,7 @@ button {
   text-align: center;
 }
 
-.header-restoraunt .header-title h1 {
+.header-restaurant .header-title h1 {
   font-family: "Alex Brush", cursive;
   font-size: 4.0625em;
   font-weight: 700;
@@ -100,22 +99,22 @@ button {
   margin: 65px 0 26px;
 }
 
-.header-restoraunt .header-title h1::first-letter {
+.header-restaurant .header-title h1::first-letter {
   color: #e84545;
   font-size: 2em;
 }
 
-.header-restoraunt .header-title p {
+.header-restaurant .header-title p {
   color: #c3c2c2;
-  max-width: 37.5em;
+  max-width: 600px;
   padding: 0 25px 0 25px;
 }
 
-.header-restoraunt .header-title p span {
+.header-restaurant .header-title p span {
   color: #e84545;
 }
 
-.header-restoraunt .header-title .header__btn {
+.header-restaurant .header-title .header__btn {
   margin: 30px 0 0;
   background: #e84545;
   color: #fff;
@@ -133,16 +132,139 @@ button {
   height: 2.875em;
 }
 
-.header-restoraunt .header-title .header__btn:hover, .header-restoraunt .header-title .header__btn:focus {
+.header-restaurant .header-title .header__btn:hover, .header-restaurant .header-title .header__btn:focus {
   background-color: transparent;
   border: 0.125em solid #e84545;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
-.header-restoraunt .header-title .header__btn:active {
+.header-restaurant .header-title .header__btn:active {
   background: transparent;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+}
+
+.block-restaurant-form {
+  padding: 1.6875em 0 1.6875em;
+  text-align: center;
+}
+
+.block-restaurant-form h2 {
+  font-family: "Merienda", cursive;
+  padding: 0 0 25px;
+  font-size: 40px;
+}
+
+.block-restaurant-form h2::first-letter {
+  color: #e84545;
+  font-size: 1.4em;
+}
+
+.block-restaurant-form .restaurant__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.block-restaurant-form .restaurant__form label {
+  position: relative;
+}
+
+.block-restaurant-form .restaurant__form i.fa-calendar {
+  position: absolute;
+  top: 18%;
+  left: 17%;
+  z-index: 100;
+  font-size: 28px;
+  z-index: 100;
+}
+
+.block-restaurant-form .restaurant__form .form__date {
+  position: relative;
+}
+
+.block-restaurant-form .restaurant__form .form__date[type="date"]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  left: -0.9em;
+  width: 1.625em;
+  height: 1.625em;
+  background: transparent;
+  z-index: 999;
+}
+
+.block-restaurant-form .restaurant__form i.fa-clock {
+  position: absolute;
+  top: 18%;
+  left: 17%;
+  z-index: 100;
+  font-size: 28px;
+  z-index: 100;
+}
+
+.block-restaurant-form .restaurant__form .form__time {
+  position: relative;
+}
+
+.block-restaurant-form .restaurant__form .form__time[type="time"]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  left: 0.3em;
+  width: 1.625em;
+  height: 1.625em;
+  background: transparent;
+  z-index: 999;
+}
+
+.block-restaurant-form .restaurant__form i.fa-user-friends {
+  position: absolute;
+  top: 18%;
+  left: 15%;
+  z-index: 100;
+  font-size: 28px;
+  z-index: 100;
+}
+
+.block-restaurant-form .restaurant__form .form__btn {
+  font-family: "Raleway", sans-serif;
+  width: 12.5em;
+  height: 3.175em;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  background: #e84545;
+}
+
+.block-restaurant-form .restaurant__form .form__btn:hover, .block-restaurant-form .restaurant__form .form__btn:focus {
+  background: transparent;
+  color: #000;
+  border: 1px solid #e84545;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.block-restaurant-form .restaurant__form .form__btn:active {
+  background: transparent;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.block-restaurant-form .restaurant__form input,
+.block-restaurant-form .restaurant__form button {
+  border-radius: 6px;
+  margin: 0 30px 30px;
+}
+
+.block-restaurant-form .restaurant__form input {
+  width: 200px;
+  min-height: 56px;
+  border: solid 0.0625em #c2c2c2;
+  padding: 0 3.325em;
 }
 /*# sourceMappingURL=main.css.map */

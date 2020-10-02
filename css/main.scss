@@ -18,19 +18,15 @@
   outline: 0;
   box-sizing: border-box;
 }
-
 a {
   text-decoration: none;
 }
-
 li {
   list-style: none;
 }
-
 button {
   cursor: pointer;
 }
-
 .container {
   max-width: 73.125em;
   padding: 0 0.9375em;
@@ -38,8 +34,7 @@ button {
 }
 
 // ШАПКА САЙТА 1 БЛОК
-
-.header-restoraunt {
+.header-restaurant {
   font-family: "Merienda", cursive;
   min-height: 38.5625em;
   height: 100vh;
@@ -50,7 +45,7 @@ button {
     padding: 2.5em 0px 6.25em;
   }
   // СТИЛИ ЛОГО
-  .header-restoraunt__logo {
+  .header-restaurant__logo {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -59,7 +54,7 @@ button {
   .header-menu {
     .header-menu__items {
       display: flex;
-      justify-content: space-evenly;
+      justify-content: space-around;
       max-width: 43.75em;
       margin: 1.875em auto 0;
       .header-menu__link {
@@ -97,7 +92,7 @@ button {
     }
     p {
       color: #c3c2c2;
-      max-width: 37.5em;
+      max-width: 600px;
       padding: 0 25px 0 25px;
       span {
         color: #e84545;
@@ -123,6 +118,109 @@ button {
         background: transparent;
         transform: scale(1.1);
       }
+    }
+  }
+}
+//  Форма Ресторана 2 БЛОК
+// Иконки в инпутах были сделаны в кроссбраузерном РЕШЕНИИ - это fontAWESOME
+// Я ПОСТАВИЛ BACKGROUND TRANSPARENT - то есть прозрачный , для стандартной иконки браузера(Chrome)
+// и поставил z-index чтобы можно было кликнуть по календарю и времени
+.block-restaurant-form {
+  padding: 1.6875em 0 1.6875em;
+  text-align: center;
+  h2 {
+    font-family: "Merienda", cursive;
+    padding: 0 0 25px;
+    font-size: 40px;
+    &::first-letter {
+      color: #e84545;
+      font-size: 1.4em;
+    }
+  }
+  .restaurant__form {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+    align-items: center;
+    label {
+      position: relative;
+    }
+    i.fa-calendar {
+      position: absolute;
+      top: 18%;
+      left: 17%;
+      z-index: 100;
+      font-size: 28px;
+      z-index: 100;
+    }
+    .form__date {
+      position: relative;
+      &[type="date"]::-webkit-calendar-picker-indicator {
+        position: absolute;
+        left: -0.9em;
+        width: 1.625em;
+        height: 1.625em;
+        background: transparent;
+        z-index: 999;
+      }
+    }
+    i.fa-clock {
+      position: absolute;
+      top: 18%;
+      left: 17%;
+      z-index: 100;
+      font-size: 28px;
+      z-index: 100;
+    }
+    .form__time {
+      position: relative;
+      &[type="time"]::-webkit-calendar-picker-indicator {
+        position: absolute;
+        left: 0.3em;
+        width: 1.625em;
+        height: 1.625em;
+        background: transparent;
+        z-index: 999;
+      }
+    }
+    i.fa-user-friends {
+      position: absolute;
+      top: 18%;
+      left: 15%;
+      z-index: 100;
+      font-size: 28px;
+      z-index: 100;
+    }
+    .form__btn {
+      font-family: "Raleway", sans-serif;
+      width: 12.5em;
+      height: 3.175em;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #fff;
+      background: #e84545;
+      &:hover,
+      &:focus {
+        background: transparent;
+        color: #000;
+        border: 1px solid #e84545;
+        transition: all 0.3s;
+      }
+      &:active {
+        background: transparent;
+        transform: scale(1.1);
+      }
+    }
+    input,
+    button {
+      border-radius: 6px;
+      margin: 0 30px 30px;
+    }
+    input {
+      width: 200px;
+      min-height: 56px;
+      border: solid 0.0625em #c2c2c2;
+      padding: 0 3.325em;
     }
   }
 }

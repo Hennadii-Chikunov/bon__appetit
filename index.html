@@ -1,58 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<!-- ЗДЕСЬ БУДУТ ВСЕ НЕОБХОДИМЫЕ МЕТА ТЕГИ -->
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Bon Appetit</title>
-	<!-- ПОДКЛЮЧИЛ Сброс СТИЛЕЙ -->
-	<link rel="stylesheet" href="css/normalize.css" />
-	<!-- ПОДКЛЮЧИЛ ГЛАВНЫЕ СТИЛИ , но что ВАЖНО !! РАБОТАЮ В SCSS - CSS ЭТО ДЛЯ БРАУЗЕРА -->
-	<link rel="stylesheet" href="css/main.css" />
-	<!-- ПОДКЛЮЧИЛ ШРИФТЫ, шрифтов 5 штук -->
-	<link
-		href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Dancing+Script:wght@400;700&family=Hanalei&family=Merienda:wght@400;700&family=Raleway:wght@400;600;700&display=swap"
-		rel="stylesheet" />
-</head>
-<body>
-	<!-- START шапка САЙТА -->
-	<header class="header-restoraunt">
-		<div class="header-container container">
-			<!-- Логотип Ресторана -->
-			<div class="header-restoraunt__logo">
-				<a href="#" title="Bon Appetit">
-					<img src="./img/bon-appetit.png" alt="Bon Appetit" />
-				</a>
-			</div>
-			<!-- Меню Навигации -->
-			<nav class="header-menu">
-				<ul class="header-menu__items">
-					<li>
-						<a class="header-menu__link" href="#">Menu</a>
-					</li>
-					<li>
-						<a class="header-menu__link" href="#">Our Team</a>
-					</li>
-					<li>
-						<a class="header-menu__link" href="#">News / Blog</a>
-					</li>
-					<li>
-						<a class="header-menu__link" href="#">Contact</a>
-					</li>
-				</ul>
-			</nav>
-			<!-- Статья о ресторане -->
-			<article class="header-title">
-				<h1>Bon Appetit</h1>
-				<p>
-					I enjoy eating out. I often have dinner in a good restaurant or café
-					with my friends or my family. I’ve got a couple of favourite places
-					for eating out. One of them is <span>“Bon Appetit”</span>.
-				</p>
-				<button class="header__btn" type="button">Find out more</button>
-			</article>
-		</div>
-	</header>
-	<!-- FINISH шапка САЙТА -->
-</body>
+  <head>
+    <!-- ЗДЕСЬ БУДУТ ВСЕ НЕОБХОДИМЫЕ МЕТА ТЕГИ -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bon Appetit</title>
+    <!-- ПОДКЛЮЧИЛ Сброс СТИЛЕЙ -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <!-- ПОДКЛЮЧИЛ ГЛАВНЫЕ СТИЛИ , но что ВАЖНО !! РАБОТАЮ В SCSS - CSS ЭТО ДЛЯ БРАУЗЕРА -->
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- ПОДКЛЮЧИЛ ШРИФТЫ, шрифтов 5 штук -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Dancing+Script:wght@400;700&family=Hanalei&family=Merienda:wght@400;700&family=Raleway:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- START шапка САЙТА -->
+    <header class="header-restaurant">
+      <div class="header-container container">
+        <!-- Логотип Ресторана -->
+        <div class="header-restaurant__logo">
+          <a href="#" title="Bon Appetit">
+            <img src="./img/bon-appetit.png" alt="Bon Appetit" />
+          </a>
+        </div>
+        <!-- Меню Навигации -->
+        <nav class="header-menu">
+          <ul class="header-menu__items">
+            <li>
+              <a class="header-menu__link" href="#">Menu</a>
+            </li>
+            <li>
+              <a class="header-menu__link" href="#">Our Team</a>
+            </li>
+            <li>
+              <a class="header-menu__link" href="#">News / Blog</a>
+            </li>
+            <li>
+              <a class="header-menu__link" href="#">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <!-- Статья о ресторане -->
+        <article class="header-title">
+          <!-- Заголовок 1 УРОВНЯ -->
+          <h1>Bon Appetit</h1>
+          <p>
+            I enjoy eating out. I often have dinner in a good restaurant or café
+            with my friends or my family. I’ve got a couple of favourite places
+            for eating out. One of them is <span>“Bon Appetit”</span>.
+          </p>
+          <button class="header__btn" type="button">Find out more</button>
+        </article>
+      </div>
+    </header>
+    <!-- FINISH шапка САЙТА -->
+    <main>
+      <!-- Форма для БРОНИРОВАНИЯ СТОЛИКА В РЕСТОРАНЕ -->
+      <section class="block-restaurant-form">
+        <div class="container">
+          <!-- заголовок 2 уровня -->
+          <h2>Book a Table in Bon Appetit</h2>
+          <form class="restaurant__form" action="#">
+            <label>
+              <i class="far fa-calendar"></i>
+              <input class="form__date" name="date" type="date" required />
+            </label>
+            <label>
+              <i class="far fa-clock"></i>
+              <input
+                class="form__time"
+                name="time"
+                type="time"
+                value="07:00"
+                required
+              />
+            </label>
+            <label>
+              <i class="fas fa-user-friends"></i>
+              <input type="text" name="text" class="form__text text" required />
+            </label>
+            <button class="form__btn" type="submit">
+              BOOK A TABLE <i class="fa fa-angle-right"></i>
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <!-- ПОДКЛЮЧИЛ JQUERY -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <!-- ДАННЫЙ СКРИПТИК, ВЫПОЛНЯЕТ ПРОСТЕЙШУЮ ЗАДАЧУ - РЕАЛИЗАЦИЮ ТОГО , ЧТО ЕСТЬ В МАКЕТЕ (ФОРМА ПОД ХЭДЕРОМ) .. В ДАЛЬНЕЙШЕМ БУДЕТ ПРИМЕНЕНО БОЛЕЕ СЛОЖНОЕ РЕШЕНИЕ -->
+    <script>
+      $(".text").val("2 peoples");
+    </script>
+  </body>
 </html>
