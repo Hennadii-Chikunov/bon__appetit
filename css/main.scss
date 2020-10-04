@@ -10,7 +10,6 @@
 // ЭТО МОЙ ПЕРВЫЙ СЕРЬЕЗНЫЙ ПРОЕКТ, ПОЭТОМУ ИЗМЕНЕНИЯ В СДЕЛАННЫХ БЛОКАХ ЕЩЕ БУДУТ ВНЕСЕНЫ И ЗАКОММИЧЕНЫ!!!
 // ВЕРСТКА ВЕДЕТСЯ С НЕКОТОРЫМИ ЛИЧНЫМИ ПРАВКАМИ  (ТОГО , ЧТО НЕТ В МАКЕТЕ ЭТО ВКЛЮЧАЕТ В СЕБЯ ТЕКСТ-СТИЛИЗАЦИЮ, ХОВЕРЫ И Т.Д )
 // Основные спецификации
-
 * {
   margin: 0;
   padding: 0;
@@ -32,7 +31,6 @@ button {
   padding: 0 0.9375em;
   margin: auto;
 }
-
 // ШАПКА САЙТА 1 БЛОК
 .header-restaurant {
   font-family: "Merienda", cursive;
@@ -221,6 +219,117 @@ button {
       min-height: 56px;
       border: solid 0.0625em #c2c2c2;
       padding: 0 3.325em;
+    }
+  }
+}
+// Best in Town это БЛОК ПОСЛЕ ФОРМЫ ПОД ХЭДЕРОМ
+.best-in-town {
+  background: #fff;
+  padding: 4.0625em 0 5.9375em 0;
+  .best-in-town__title {
+    text-align: center;
+    font-family: "Dancing Script", cursive;
+    color: #000;
+    & > h3 {
+      font-size: 6.3125em;
+      &::first-letter {
+        color: #e84545;
+      }
+    }
+    & > p {
+      font-size: 2.8125em;
+      &::first-letter {
+        color: #e84545;
+      }
+    }
+  }
+  .main-dishes {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: wrap;
+    margin-top: 4.0625em;
+    .hot-img__bg {
+      position: relative;
+      max-width: 100%;
+      & img:nth-child(1) {
+        position: absolute;
+        top: 80%;
+        left: 5%;
+      }
+    }
+    .hot-main-dishes__column {
+      position: relative;
+      min-width: 18.75em;
+      min-height: 25em;
+      @media screen and (min-width: 240px) and (max-width: 789px) {
+        & {
+          margin: 0 50px 50px;
+        }
+      }
+      .hot__column {
+        font-family: "Raleway", sans-serif;
+        background: #fff;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        position: absolute;
+        // общий отступ заголовка
+        h4 {
+          margin-top: 1.875em;
+        }
+        // КЛАСС ЗАГОЛОВКУ был дан , как решение проблемы , после лобавления картинки "HOT" В КРАЙНЮЮ С ЛЕВОЙ СТОРОНЫ КАРТИНКУ БЛОКА... в БЛОК ЛУЧШИЕ БЛЮДА
+        .hot__h4 {
+          margin-top: 1.25em;
+        }
+        p {
+          margin-top: 1.045em;
+          max-width: 15em;
+          text-align: justify;
+          white-space: nowrap; /* Запрещаем перенос строк */
+          overflow: hidden; /* Обрезаем все, что не помещается в область */
+          -o-text-overflow: ellipsis;
+          text-overflow: ellipsis; /* Добавляем многоточие */
+          font-family: "Merienda", cursive;
+        }
+        .hot-descr__p {
+          margin-top: 0.8125em;
+        }
+        .hot-column__img {
+          max-width: 100%;
+          border-radius: 30%;
+        }
+        &:hover {
+          z-index: 100;
+          border: solid 0.125em #000;
+          -webkit-box-shadow: inset rgba(0, 0, 0, 0.6) 0 -3px 8px,
+            inset rgba(252, 255, 255, 0.7) 0 3px 8px,
+            rgba(0, 0, 0, 0.8) 0 3px 8px -3px;
+          -moz-box-shadow: inset rgba(0, 0, 0, 0.6) 0 -3px 8px,
+            inset rgba(252, 255, 255, 0.7) 0 3px 8px,
+            rgba(0, 0, 0, 0.8) 0 3px 8px -3px;
+          border-radius: 10px;
+          background: rgb(172, 11, 11)
+            radial-gradient(
+              circle at 50% 0,
+              rgba(22, 21, 21, 0.65),
+              rgba(223, 238, 8, 0.767)
+            );
+          box-shadow: inset rgba(0, 0, 0, 0.6) 0 -3px 8px,
+            inset rgba(196, 250, 3, 0.7) 0 3px 8px,
+            rgba(8, 8, 8, 0.8) 0 3px 8px -3px;
+          height: auto;
+          cursor: pointer;
+          transition: all 0.3s;
+          background: #fff;
+          padding: 0.8125em;
+        }
+        // ОТОБРАЖАЕМ ТЕКСТ СКРЫТЫЙ ЗА МНОГОТОЧИЕМ
+        &:hover p {
+          overflow: visible;
+          white-space: normal;
+        }
+      }
     }
   }
 }
