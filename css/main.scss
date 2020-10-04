@@ -333,3 +333,36 @@ button {
     }
   }
 }
+// МЕНЮ РЕСТОРАНА
+// В ДАННОМ БЛОКЕ РАМКА ОБРАМЛЯЮЩАЯ ТЕКСТ MENU БЫЛА СДЕЛАНА БЭКГРАУНДОМ И НЕ НУЖДАЕТСЯ В ДАЛЬНЕЙШИХ МЕДИА!!!  ЭТО МОЙ ЛИЧНАЯ НАРАБОТКА С ПРОШЛЫХ ТРЕНИРОВОЧНЫХ ЛЭНДИНГОВ
+.menu {
+  background: #222c2e;
+  padding: 5.1875em 0 8.1875em;
+
+  .menu__title {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    // ИСПОЛЬЗУЮ ПИКСЕЛИ В ПАДДИНГАХ, ПРИЧИНА - ЕСЛИ ИСПОЛЬЗОВАТЬ EM , ТО ТЕКСТ СМЕЩАЕТСЯ С РАМКИ ВНИЗ
+    h3 {
+      font-family: "Raleway", sans-serif;
+      font-size: 3.1875em;
+      font-weight: 700;
+      padding: 20px 20px 20px 20px;
+      color: #fff;
+      text-transform: uppercase;
+    }
+  }
+}
+.menu-title__bg {
+  background: url("../img/title-border.png") no-repeat;
+  background-size: 100%;
+  background-position: 50% 50%;
+  position: relative;
+  top: 25%;
+  right: 50%;
+  left: 50%;
+  margin-left: -150px;
+  max-height: 8.75em;
+  max-width: 18.75em;
+}

@@ -400,4 +400,44 @@ button {
   overflow: visible;
   white-space: normal;
 }
+
+.menu {
+  background: #222c2e;
+  padding: 5.1875em 0 8.1875em;
+}
+
+.menu .menu__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu .menu__title h3 {
+  font-family: "Raleway", sans-serif;
+  font-size: 3.1875em;
+  font-weight: 700;
+  padding: 20px 20px 20px 20px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.menu-title__bg {
+  background: url("../img/title-border.png") no-repeat;
+  background-size: 100%;
+  background-position: 50% 50%;
+  position: relative;
+  top: 25%;
+  right: 50%;
+  left: 50%;
+  margin-left: -150px;
+  max-height: 8.75em;
+  max-width: 18.75em;
+}
 /*# sourceMappingURL=main.css.map */
