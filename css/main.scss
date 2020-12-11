@@ -10,6 +10,37 @@
 // ЭТО МОЙ ПЕРВЫЙ СЕРЬЕЗНЫЙ ПРОЕКТ, ПОЭТОМУ ИЗМЕНЕНИЯ В СДЕЛАННЫХ БЛОКАХ ЕЩЕ БУДУТ ВНЕСЕНЫ И ЗАКОММИЧЕНЫ!!!
 // ВЕРСТКА ВЕДЕТСЯ С НЕКОТОРЫМИ ЛИЧНЫМИ ПРАВКАМИ  (ТОГО , ЧТО НЕТ В МАКЕТЕ ЭТО ВКЛЮЧАЕТ В СЕБЯ ТЕКСТ-СТИЛИЗАЦИЮ, ХОВЕРЫ И Т.Д )
 // Основные спецификации
+// АДАПТИВНОЕ СВОЙСТВО
+$maxWidth: 1920;
+$maxWidthContainer: 1170;
+
+@mixin adaptiv-value($property, $startSize, $minSize, $type) {
+  $addSize: $startSize - $minSize;
+  @if $type==1 {
+    // Только если меньше контейнера
+    #{$property}: $startSize + px;
+    @media (max-width: #{$maxWidthContainer + px}) {
+      #{$property}: calc(
+        #{$minSize + px} + #{$addSize} *
+          ((100vw - 320px) / #{$maxWidthContainer - 320})
+      );
+    }
+  } @else if $type==2 {
+    // Только если больше контейнера
+    #{$property}: $startSize + px;
+    @media (min-width: #{$maxWidthContainer + px}) {
+      #{$property}: calc(
+        #{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320})
+      );
+    }
+  } @else {
+    //Всегда
+    #{$property}: calc(
+      #{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320})
+    );
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -34,7 +65,7 @@ button {
 // ШАПКА САЙТА 1 БЛОК
 .header-restaurant {
   font-family: "Merienda", cursive;
-  min-height: 38.5625em;
+  min-height: 49.5625em;
   height: 100vh;
   background: url("../img/header-bg.jpg") no-repeat;
   background-size: cover;
@@ -337,12 +368,31 @@ button {
 // В ДАННОМ БЛОКЕ РАМКА ОБРАМЛЯЮЩАЯ ТЕКСТ MENU БЫЛА СДЕЛАНА БЭКГРАУНДОМ И НЕ НУЖДАЕТСЯ В ДАЛЬНЕЙШИХ МЕДИА!!!  ЭТО МОЙ ЛИЧНАЯ НАРАБОТКА С ПРОШЛЫХ ТРЕНИРОВОЧНЫХ ЛЭНДИНГОВ
 .menu {
   background: #222c2e;
-  padding: 5.1875em 0 8.1875em;
-
+  padding: 5.1875em 0 5.1875em;
+  min-height: 700px;
+  .menu-title__paragraph {
+    margin: 30px 0 0 0;
+    color: #fff;
+    font-family: "Merienda", cursive;
+    text-align: center;
+  }
+  .menu-title__bg {
+    background: url("../img/title-border.png") no-repeat;
+    background-size: 100%;
+    background-position: 50% 50%;
+    position: relative;
+    top: 25%;
+    right: 50%;
+    left: 50%;
+    margin-left: -150px;
+    max-height: 8.75em;
+    max-width: 18.75em;
+  }
   .menu__title {
     display: flex;
     flex-flow: column;
     align-items: center;
+    text-align: center;
     // ИСПОЛЬЗУЮ ПИКСЕЛИ В ПАДДИНГАХ, ПРИЧИНА - ЕСЛИ ИСПОЛЬЗОВАТЬ EM , ТО ТЕКСТ СМЕЩАЕТСЯ С РАМКИ ВНИЗ
     h3 {
       font-family: "Raleway", sans-serif;
@@ -354,15 +404,215 @@ button {
     }
   }
 }
-.menu-title__bg {
-  background: url("../img/title-border.png") no-repeat;
-  background-size: 100%;
-  background-position: 50% 50%;
+
+.menu-restaurant {
+  margin: 100px 0 0 0;
+}
+
+/* Базовый контейнер табов */
+.tabs {
+  min-width: 320px;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  
+}
+/* Стили секций с содержанием */
+.tabs > section {
+  display: none;
+  padding: 15px;
+}
+
+/* Прячем чекбоксы */
+.tabs > input {
+  display: none;
+  position: absolute;
+}
+/* Стили переключателей вкладок (табов) */
+.tabs > label {
+  display: inline-block;
+  margin: 0 0 -1px;
+  padding: 0px 40px;
+}
+
+/* Изменения стиля переключателей вкладок при наведении */
+
+.tabs > input + label {
+  color: #74898e;
+  fill: #74898e;
+}
+.tab1-ul-block {
+  display: block;
+  min-width: 440px;
+}
+.mr-left {
+  margin: 0 10px 0 0;
+}
+.tabs > input:checked + label {
+  color: #fff;
+  fill: #fff;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+.tab1-content-menu {
+  line-height: 1.4;
+}
+.text-tab {
   position: relative;
-  top: 25%;
-  right: 50%;
-  left: 50%;
-  margin-left: -150px;
-  max-height: 8.75em;
-  max-width: 18.75em;
+  bottom: 55px;
+  left: 15px;
+}
+.tab1-text {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  &:after {
+    content: "";
+    position: absolute;
+    margin-left: 0.3em;
+    bottom: 0.35em;
+    width: 100%;
+    border-bottom: 0.1em dotted;
+  }
+}
+.tab1-number {
+  color: #d8b57a;
+  font-weight: 700;
+  float: right;
+  padding-left: 0.2em;
+  width: 30%;
+  &:after {
+    content: "\0024";
+    color: #d8b57a;
+  }
+}
+.text-drinks-tab {
+  position: relative;
+  bottom: 61px;
+  left: 15px;
+}
+/* Стили для активной вкладки */
+svg {
+  position: relative;
+  transform: translateY(-50%);
+}
+
+.svg-icon-drinks {
+  position: relative;
+  transform: translateY(-50%);
+  top: 3px;
+}
+
+svg path {
+  fill: inherit;
+  stroke: inherit;
+  stroke-width: inherit;
+}
+
+.tabs li > input:checked ~ .tab-content {
+  display: block;
+}
+/* Активация секций с помощью псевдокласса :checked */
+#tab1:checked ~ #content-tab1,
+#tab2:checked ~ #content-tab2,
+#tab3:checked ~ #content-tab3,
+#tab4:checked ~ #content-tab4,
+#tab5:checked ~ #content-tab5 {
+  display: flex;
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  max-width: 780px;
+  @include adaptiv-value("padding", 50, 20, 0);
+  // padding: calc(20px + (50 - 20) * ((100vw - 320px) / (1600 - 320)));
+}
+.tabs li > input:checked + label {
+  color: #fff;
+  fill: #fff;
+}
+/* Убираем текст с переключателей 
+* и оставляем иконки на малых экранах
+*/
+
+@media screen and (max-width: 698px) {
+	
+  .tabs > label {
+    font-size: 0;
+    margin: 20px;
+    max-width: 120px;
+    padding: 0;
+  }
+  .tabs {
+	max-width: 250px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row wrap;
+ }
+ 
+  /* Базовый контейнер табов */
+
+  .menu {
+	 max-height: max-content;
+  }
+  #tab1:checked ~ #content-tab1,
+  #tab2:checked ~ #content-tab2,
+  #tab3:checked ~ #content-tab3,
+  #tab4:checked ~ #content-tab4,
+  #tab5:checked ~ #content-tab5 {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+  }
+  .tab1-ul-block {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    min-width: 320px;
+    font-size: 12px;
+  }
+  .mr-left {
+    margin: 0;
+  }
+  .tab1-number {
+    color: #d8b57a;
+    font-weight: 700;
+    float: right;
+    padding-left: 0.2em;
+    width: 10%;
+    &:after {
+      content: "\0024";
+      color: #d8b57a;
+    }
+  }
+
+  .tabs > label:before {
+    margin: 0;
+    font-size: 12px;
+  }
+}
+/* Изменяем внутренние отступы 
+*  переключателей для малых экранов
+*/
+@media screen and (max-width: 320px) {
+	.menu {
+		height: 300px;
+	}
+   .tabs {
+		max-width: 230px;
+		margin: 0 auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: row wrap;
+		margin: 0;
+	 }
+  .tabs > label {
+    padding: 15px;
+    margin: 20px;
+  }
 }
