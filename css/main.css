@@ -8,6 +8,18 @@
           box-sizing: border-box;
 }
 
+html {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 a {
   text-decoration: none;
 }
@@ -692,11 +704,8 @@ svg path {
 *  переключателей для малых экранов
 */
 @media screen and (max-width: 320px) {
-  .menu {
-    height: 300px;
-  }
   .tabs {
-    max-width: 230px;
+    max-width: 200px;
     margin: 0 auto;
     display: -webkit-box;
     display: -ms-flexbox;
