@@ -393,13 +393,12 @@ button {
 
 .best-in-town .main-dishes .hot-main-dishes__column .hot__column:hover {
   z-index: 100;
-  border: solid 0.125em #000;
   -webkit-box-shadow: inset rgba(0, 0, 0, 0.6) 0 -3px 8px, inset rgba(252, 255, 255, 0.7) 0 3px 8px, rgba(0, 0, 0, 0.8) 0 3px 8px -3px;
   -moz-box-shadow: inset rgba(0, 0, 0, 0.6) 0 -3px 8px, inset rgba(252, 255, 255, 0.7) 0 3px 8px, rgba(0, 0, 0, 0.8) 0 3px 8px -3px;
   border-radius: 10px;
   background: #ac0b0b radial-gradient(circle at 50% 0, rgba(22, 21, 21, 0.65), rgba(223, 238, 8, 0.767));
   -webkit-box-shadow: inset rgba(0, 0, 0, 0.6) 0 -3px 8px, inset rgba(196, 250, 3, 0.7) 0 3px 8px, rgba(8, 8, 8, 0.8) 0 3px 8px -3px;
-          box-shadow: inset rgba(0, 0, 0, 0.6) 0 -3px 8px, inset rgba(196, 250, 3, 0.7) 0 3px 8px, rgba(8, 8, 8, 0.8) 0 3px 8px -3px;
+  box-shadow: inset rgba(0, 0, 0, 0.6) 0 -3px 8px, inset rgba(196, 255, 17, 0.7) 0 3px 8px, rgba(19, 8, 8, 0.8) 11 8px 8px -3px;
   height: auto;
   cursor: pointer;
   -webkit-transition: all 0.3s;
@@ -486,6 +485,10 @@ button {
           flex-flow: row wrap;
 }
 
+h5 {
+  margin: 0 0 10px 0;
+}
+
 /* Стили секций с содержанием */
 .tabs > section {
   display: none;
@@ -516,8 +519,8 @@ button {
   min-width: 440px;
 }
 
-.mr-left {
-  margin: 0 10px 0 0;
+.mr-right {
+  margin: 0 0 0 75px;
 }
 
 .tabs > input:checked + label {
@@ -529,7 +532,8 @@ button {
 }
 
 .tab1-content-menu {
-  line-height: 1.4;
+  padding: calc( 10px + 10 * ((100vw - 320px) / 1600));
+  padding: calc(10px + (20 - 10) * ((100vw - 320px) / (1200 - 320)));
 }
 
 .text-tab {
@@ -547,7 +551,7 @@ button {
 .tab1-text:after {
   content: "";
   position: absolute;
-  margin-left: 0.3em;
+  margin-left: 0.33em;
   bottom: 0.35em;
   width: 100%;
   border-bottom: 0.1em dotted;
@@ -558,7 +562,7 @@ button {
   font-weight: 700;
   float: right;
   padding-left: 0.2em;
-  width: 30%;
+  width: 10%;
 }
 
 .tab1-number:after {
@@ -608,8 +612,7 @@ svg path {
   color: #fff;
   font-family: "Raleway", sans-serif;
   font-weight: 400;
-  max-width: 780px;
-  padding: calc( 20px + 30 * ((100vw - 320px) / 1600));
+  max-width: 940px;
 }
 
 .tabs li > input:checked + label {
@@ -680,7 +683,7 @@ svg path {
     min-width: 320px;
     font-size: 12px;
   }
-  .mr-left {
+  .mr-right {
     margin: 0;
   }
   .tab1-number {
@@ -704,27 +707,40 @@ svg path {
 *  переключателей для малых экранов
 */
 @media screen and (max-width: 320px) {
+  .menu .menu-title__bg {
+    background: url(../img/title-border.png) no-repeat;
+    background-size: 100%;
+    background-position: 50% 50%;
+    position: relative;
+    top: 25%;
+    right: 50%;
+    left: 50%;
+    margin-left: -125px;
+    max-height: 8.75em;
+    max-width: 15.75em;
+  }
+  .menu .menu-title__bg h3 {
+    font-size: 2.5875em;
+  }
   .tabs {
-    max-width: 200px;
-    margin: 0 auto;
+    min-width: 250px;
+  }
+  .tab1-ul-block {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-    margin: 0;
+    min-width: 250px;
+    font-size: 12px;
   }
-  .tabs > label {
-    padding: 15px;
-    margin: 20px;
+  .mr-right {
+    margin: 0;
   }
 }
 /*# sourceMappingURL=main.css.map */

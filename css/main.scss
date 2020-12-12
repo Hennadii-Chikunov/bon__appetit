@@ -10,7 +10,7 @@
 // ЭТО МОЙ ПЕРВЫЙ СЕРЬЕЗНЫЙ ПРОЕКТ, ПОЭТОМУ ИЗМЕНЕНИЯ В СДЕЛАННЫХ БЛОКАХ ЕЩЕ БУДУТ ВНЕСЕНЫ И ЗАКОММИЧЕНЫ!!!
 // ВЕРСТКА ВЕДЕТСЯ С НЕКОТОРЫМИ ЛИЧНЫМИ ПРАВКАМИ  (ТОГО , ЧТО НЕТ В МАКЕТЕ ЭТО ВКЛЮЧАЕТ В СЕБЯ ТЕКСТ-СТИЛИЗАЦИЮ, ХОВЕРЫ И Т.Д )
 // Основные спецификации
-// АДАПТИВНОЕ СВОЙСТВО
+// АДАПТИВНОЕ СВОЙСТВО 
 $maxWidth: 1920;
 $maxWidthContainer: 1170;
 
@@ -48,12 +48,12 @@ $maxWidthContainer: 1170;
   outline: 0;
   box-sizing: border-box;
 }
+// html and body СВОЙСТВА для того, чтобы контен тне вылазил за пределы макета
 html{
 	width: 100%;
 	max-width: 100%;
 	overflow-x: hidden;
 }
-
  body
  {
 	width: 100%;
@@ -343,29 +343,19 @@ button {
           border-radius: 30%;
         }
         &:hover {
-          z-index: 100;
-          border: solid 0.125em #000;
-          -webkit-box-shadow: inset rgba(0, 0, 0, 0.6) 0 -3px 8px,
-            inset rgba(252, 255, 255, 0.7) 0 3px 8px,
-            rgba(0, 0, 0, 0.8) 0 3px 8px -3px;
-          -moz-box-shadow: inset rgba(0, 0, 0, 0.6) 0 -3px 8px,
-            inset rgba(252, 255, 255, 0.7) 0 3px 8px,
-            rgba(0, 0, 0, 0.8) 0 3px 8px -3px;
-          border-radius: 10px;
-          background: rgb(172, 11, 11)
-            radial-gradient(
-              circle at 50% 0,
-              rgba(22, 21, 21, 0.65),
-              rgba(223, 238, 8, 0.767)
-            );
-          box-shadow: inset rgba(0, 0, 0, 0.6) 0 -3px 8px,
-            inset rgba(196, 250, 3, 0.7) 0 3px 8px,
-            rgba(8, 8, 8, 0.8) 0 3px 8px -3px;
-          height: auto;
-          cursor: pointer;
-          transition: all 0.3s;
-          background: #fff;
-          padding: 0.8125em;
+         z-index: 100;
+    -webkit-box-shadow: inset rgba(0, 0, 0, 0.6) 0 -3px 8px, inset rgba(252, 255, 255, 0.7) 0 3px 8px, rgba(0, 0, 0, 0.8) 0 3px 8px -3px;
+    -moz-box-shadow: inset rgba(0, 0, 0, 0.6) 0 -3px 8px, inset rgba(252, 255, 255, 0.7) 0 3px 8px, rgba(0, 0, 0, 0.8) 0 3px 8px -3px;
+    border-radius: 10px;
+    background: #ac0b0b radial-gradient(circle at 50% 0, rgba(22, 21, 21, 0.65), rgba(223, 238, 8, 0.767));
+    -webkit-box-shadow: inset rgba(0, 0, 0, 0.6) 0 -3px 8px, inset rgba(196, 250, 3, 0.7) 0 3px 8px, rgba(8, 8, 8, 0.8) 0 3px 8px -3px;
+    box-shadow: inset rgba(0, 0, 0, 0.6) 0 -3px 8px, inset rgba(196, 386, 17, 0.7) 0 3px 8px, rgba(19, 8, 8, 0.8) 11 8px 8px -3px;
+    height: auto;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    background: #fff;
+    padding: 0.8125em;
         }
         // ОТОБРАЖАЕМ ТЕКСТ СКРЫТЫЙ ЗА МНОГОТОЧИЕМ
         &:hover p {
@@ -416,11 +406,9 @@ button {
     }
   }
 }
-
 .menu-restaurant {
   margin: 100px 0 0 0;
 }
-
 /* Базовый контейнер табов */
 .tabs {
   min-width: 320px;
@@ -430,14 +418,15 @@ button {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
-  
+}
+h5 {
+	margin: 0 0 10px 0;
 }
 /* Стили секций с содержанием */
 .tabs > section {
   display: none;
   padding: 15px;
 }
-
 /* Прячем чекбоксы */
 .tabs > input {
   display: none;
@@ -449,7 +438,6 @@ button {
   margin: 0 0 -1px;
   padding: 0px 40px;
 }
-
 /* Изменения стиля переключателей вкладок при наведении */
 
 .tabs > input + label {
@@ -460,8 +448,8 @@ button {
   display: block;
   min-width: 440px;
 }
-.mr-left {
-  margin: 0 10px 0 0;
+.mr-right {
+  margin: 0 0 0 75px;
 }
 .tabs > input:checked + label {
   color: #fff;
@@ -470,7 +458,8 @@ button {
   transition: all 0.4s;
 }
 .tab1-content-menu {
-  line-height: 1.4;
+  @include adaptiv-value("padding", 20, 10, 0);
+  padding: calc(10px + (20 - 10) * ((100vw - 320px) / (1200 - 320)));
 }
 .text-tab {
   position: relative;
@@ -484,7 +473,7 @@ button {
   &:after {
     content: "";
     position: absolute;
-    margin-left: 0.3em;
+    margin-left: 0.33em;
     bottom: 0.35em;
     width: 100%;
     border-bottom: 0.1em dotted;
@@ -495,7 +484,7 @@ button {
   font-weight: 700;
   float: right;
   padding-left: 0.2em;
-  width: 30%;
+  width: 10%;
   &:after {
     content: "\0024";
     color: #d8b57a;
@@ -511,19 +500,16 @@ svg {
   position: relative;
   transform: translateY(-50%);
 }
-
 .svg-icon-drinks {
   position: relative;
   transform: translateY(-50%);
   top: 3px;
 }
-
 svg path {
   fill: inherit;
   stroke: inherit;
   stroke-width: inherit;
 }
-
 .tabs li > input:checked ~ .tab-content {
   display: block;
 }
@@ -537,9 +523,8 @@ svg path {
   color: #fff;
   font-family: "Raleway", sans-serif;
   font-weight: 400;
-  max-width: 780px;
-  @include adaptiv-value("padding", 50, 20, 0);
-  // padding: calc(20px + (50 - 20) * ((100vw - 320px) / (1600 - 320)));
+  max-width: 940px;
+ 
 }
 .tabs li > input:checked + label {
   color: #fff;
@@ -548,16 +533,13 @@ svg path {
 /* Убираем текст с переключателей 
 * и оставляем иконки на малых экранах
 */
-
 @media screen and (max-width: 698px) {
-	
   .tabs > label {
     font-size: 0;
     margin: 20px;
     max-width: 120px;
     padding: 0;
   }
-  
   .tabs {
 	max-width: 250px;   
 	margin: 0 auto;
@@ -565,11 +547,8 @@ svg path {
 	justify-content: center;
 	align-items: center;
 	flex-flow: row wrap;
-	
  }
- 
   /* Базовый контейнер табов */
-
   .menu {
 	 max-height: max-content;
   }
@@ -589,7 +568,7 @@ svg path {
     min-width: 320px;
     font-size: 12px;
   }
-  .mr-left {
+  .mr-right {
     margin: 0;
   }
   .tab1-number {
@@ -603,7 +582,6 @@ svg path {
       color: #d8b57a;
     }
   }
-
   .tabs > label:before {
     margin: 0;
     font-size: 12px;
@@ -613,18 +591,34 @@ svg path {
 *  переключателей для малых экранов
 */
 @media screen and (max-width: 320px) {
-	
-   .tabs {
-		max-width: 200px;
-		margin: 0 auto;
+	.menu {
+		.menu-title__bg {
+			background: url(../img/title-border.png) no-repeat;
+			background-size: 100%;
+			background-position: 50% 50%;
+			position: relative;
+			top: 25%;
+			right: 50%;
+			left: 50%;
+			margin-left: -125px;
+			max-height: 8.75em;
+			max-width: 15.75em;
+			h3 {
+				font-size: 2.5875em;
+			}
+	  }
+	}
+	.tabs {
+		min-width: 250px;	
+	}
+	 .tab1-ul-block {
 		display: flex;
-		justify-content: center;
+		flex-flow: column;
 		align-items: center;
-		flex-flow: row wrap;
-		margin: 0;
-	 }
-  .tabs > label {
-    padding: 15px;
-    margin: 20px;
-  }
+		min-width: 250px;
+		font-size: 12px;
+	 } 
+  .mr-right {
+	margin: 0;
+ }
 }
