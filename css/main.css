@@ -743,4 +743,169 @@ svg path {
     margin: 0;
   }
 }
+
+.team {
+  padding: 55px 0 55px 0;
+}
+
+.team .team--container {
+  padding: 60px 0px 0 0px;
+}
+
+.team .team__title {
+  text-align: center;
+}
+
+.team .team__title h3 {
+  text-transform: uppercase;
+  font-size: 230%;
+  font-family: 'Raleway', sans-serif;
+  position: relative;
+}
+
+.team .team__title h3:after {
+  content: "";
+  position: absolute;
+  border: solid 1px #000;
+  top: 50%;
+  right: 50%;
+  left: 50%;
+  margin: 0 0px 0 100px;
+  width: 17%;
+}
+
+.team .team__title h3:before {
+  content: "";
+  position: absolute;
+  border: solid 1px #000;
+  top: 50%;
+  right: 50%;
+  margin: 0 100px 0 0;
+  width: 17%;
+}
+
+.team .team-title__subtitle {
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+  font-size: 24px;
+  padding: 10px 0 0 0;
+}
+
+.team .flex-blocks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+@media (max-width: 698px) {
+  .team .flex-blocks {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.team .team__description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translateX(2%);
+          transform: translateX(2%);
+}
+
+.team .team__description .cooks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Raleway', sans-serif;
+  margin: 0 0 40px 0;
+  padding: calc( 2px + 2 * ((100vw - 320px) / 1600));
+  padding: calc(1px + (1 - 1) * ((100vw - 320px) / (1170 - 320)));
+}
+
+.team .team__description .cooks .cooks__photos {
+  max-width: 90%;
+}
+
+.team .team__description .cooks .cooks__quote {
+  margin: 10px 0 0 0;
+  max-width: 210px;
+  text-align: justify;
+}
+
+.team .team__description .cooks .cooks__name {
+  font-size: 22px;
+  color: #57595c;
+  margin: 20px 0 10px 0;
+}
+
+.team .team__description .cooks .cooks__subtitle {
+  font-size: 13px;
+  color: #e84545;
+  text-transform: uppercase;
+}
+
+.team .team__description .cooks .social-icons {
+  padding: 35px 0 0 0;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.team .team__description .cooks .social-icons li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 40px;
+  height: 40px;
+  margin: 0 15px 0 0;
+  background: #c6cacc;
+  border-radius: 50%;
+}
+
+.team .team__description .cooks .social-icons li:hover {
+  background: #30bae7;
+  -webkit-transition: ease 0.5s;
+  transition: ease 0.5s;
+}
+
+.team .team__description .cooks .social-icons li .fab {
+  color: #fff;
+}
 /*# sourceMappingURL=main.css.map */
