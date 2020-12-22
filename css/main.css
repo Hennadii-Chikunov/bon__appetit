@@ -83,6 +83,12 @@ button {
   padding: 45px 0 45px;
 }
 
+.header-restaurant .header__container .hamburger-menu {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+}
+
 .header-restaurant .header-restaurant__logo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -803,7 +809,7 @@ svg path {
   right: 50%;
   left: 50%;
   margin: 0 0px 0 100px;
-  width: 17%;
+  width: 15%;
 }
 
 .team .team__title h3:before {
@@ -813,7 +819,7 @@ svg path {
   top: 50%;
   right: 50%;
   margin: 0 100px 0 0;
-  width: 17%;
+  width: 15%;
 }
 
 .team .team-title__subtitle {
@@ -839,7 +845,7 @@ svg path {
           flex-flow: row wrap;
 }
 
-@media (max-width: 698px) {
+@media (max-width: 800px) {
   .team .flex-blocks {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1214,5 +1220,137 @@ svg path {
 .news .food-menu .food-menu__item:nth-child(3) .item__text .subtitle__quote-three {
   padding-top: 25px;
   font-size: 1.3em;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .header-menu {
+    display: none;
+  }
+  /* скрываем чекбокс */
+  #menu__toggle {
+    opacity: 0;
+  }
+  /* стилизуем кнопку */
+  .menu__btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    /* используем flex для центрирования содержимого */
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    /* центрируем содержимое кнопки */
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 9999;
+  }
+  /* добавляем "гамбургер" */
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #e84545;
+  }
+  .menu__btn > span::before {
+    content: "";
+    top: -8px;
+  }
+  .menu__btn > span::after {
+    content: "";
+    top: 8px;
+  }
+  /* контейнер меню */
+  .menu__box {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 120px 0 0 0;
+    overflow-y: auto;
+    list-style: none;
+    text-align: center;
+    background-color: rgba(41, 3, 3, 0.6);
+    -webkit-box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+            box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+  }
+  /* элементы меню */
+  .menu__item {
+    display: inline-block;
+    padding: 32px 24px;
+    color: #c3c2c2;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    position: relative;
+  }
+  .menu__item svg {
+    fill: none;
+    stroke: #f00000;
+    stroke-width: 3;
+    stroke-miterlimit: 10;
+    stroke-dasharray: 398;
+    stroke-dashoffset: 338;
+    stroke-linecap: round;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: calc(50% + 150px);
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    -webkit-transition: stroke-dashoffset 0s 0.4s, opacity 0.4s;
+    transition: stroke-dashoffset 0s 0.4s, opacity 0.4s;
+    z-index: -1;
+  }
+  .menu__item--active svg,
+  .menu__item:hover svg {
+    stroke-dashoffset: 0;
+    opacity: 1;
+    -webkit-transition: opacity 0s, stroke-dashoffset 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: opacity 0s, stroke-dashoffset 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+  #menu__toggle:checked ~ .menu__btn > span {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  #menu__toggle:checked ~ .menu__btn > span::before {
+    top: 0;
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  #menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  #menu__toggle:checked ~ .menu__box {
+    visibility: visible;
+    left: 0;
+  }
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
+    -webkit-transition-duration: 0.25s;
+            transition-duration: 0.25s;
+  }
+  .menu__box {
+    -webkit-transition-duration: 0.25s;
+            transition-duration: 0.25s;
+  }
 }
 /*# sourceMappingURL=main.css.map */
