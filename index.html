@@ -25,48 +25,47 @@
   <body>
     <!-- START шапка САЙТА -->
     <header class="header-restaurant">
-      <div class="header-container container">
-        <!-- Логотип Ресторана -->
-        <div class="header-restaurant__logo">
-          <a href="#" title="Bon Appetit">
-            <img src="./img/bon-appetit.png" alt="Bon Appetit" />
-          </a>
-        </div>
-        <!-- Меню Навигации -->
-        <nav class="header-menu">
-          <ul class="header-menu__items">
-            <li>
-              <a class="header-menu__link" href="#">Menu</a>
-            </li>
-            <li>
-              <a class="header-menu__link" href="#">Our Team</a>
-            </li>
-            <li>
-              <a class="header-menu__link" href="#">News / Blog</a>
-            </li>
-            <li>
-              <a class="header-menu__link" href="#">Contact</a>
-            </li>
-          </ul>
-        </nav>
-        <!-- Статья о ресторане -->
-        <article class="header-title">
-          <!-- Заголовок 1 УРОВНЯ -->
-          <h1>Bon Appetit</h1>
-          <p>
-            I enjoy eating out. I often have dinner in a good restaurant or café
-            with my friends or my family. I’ve got a couple of favourite places
-            for eating out. One of them is <span>“Bon Appetit”</span>.
-          </p>
-          <button class="header__btn" type="button">Find out more</button>
-        </article>
-      </div>
+       <div class="header__container">
+			   <!-- Логотип Ресторана -->
+				<div class="header-restaurant__logo">
+					<a href="#" title="Bon Appetit">
+					  <img src="./img/bon-appetit.png" alt="Bon Appetit" />
+					</a>
+				 </div>
+				 <!-- Меню Навигации -->
+				 <nav class="header-menu">
+					<ul class="header-menu__items">
+					  <li>
+						 <a class="header-menu__link" href="#">Menu</a>
+					  </li>
+					  <li>
+						 <a class="header-menu__link" href="#">Our Team</a>
+					  </li>
+					  <li>
+						 <a class="header-menu__link" href="#">News / Blog</a>
+					  </li>
+					  <li>
+						 <a class="header-menu__link" href="#">Contact</a>
+					  </li>
+					</ul>
+				 </nav>
+				 <!-- Статья о ресторане -->
+				 <article class="header-title">
+					<!-- Заголовок 1 УРОВНЯ -->
+					<h1>Bon Appetit</h1>
+					<p>
+					  I enjoy eating out. I often have dinner in a good restaurant or café
+					  with my friends or my family. I’ve got a couple of favourite places
+					  for eating out. One of them is <span>“Bon Appetit”</span>.
+					</p>
+					<button class="header__btn" type="button">Find out more</button>
+				 </article>
+		 </div>
     </header>
     <!-- FINISH шапка САЙТА -->
     <main>
       <!-- Форма для БРОНИРОВАНИЯ СТОЛИКА В РЕСТОРАНЕ -->
       <section class="block-restaurant-form">
-        <div class="container">
           <!-- заголовок 2 уровня -->
           <h2>Book a Table in Bon Appetit</h2>
           <form class="restaurant__form" action="#">
@@ -92,11 +91,9 @@
               BOOK A TABLE <i class="fa fa-angle-right"></i>
             </button>
           </form>
-        </div>
       </section>
       <!-- START Best in Town -->
       <section class="best-in-town">
-        <div class="container">
           <div class="best-in-town__title">
             <h3>Best in town</h3>
             <p>try our new flavours</p>
@@ -161,12 +158,10 @@
               </div>
             </div>
           </div>
-        </div>
       </section>
       <!-- FINISH Best in Town -->
       <!--START меню ресторана 3 БЛОК -->
       <section class="menu">
-        <div class="container">
           <div class="menu-title__bg">
             <div class="menu__title">
               <h3>Menu</h3>
@@ -461,11 +456,9 @@
 					</section>
 				</div>
           </div>
-        </div>
       </section>
 		<!-- FINISH меню ресторана 3 БЛОК -->
 		<section class="team">
-           <div class="container">
 				   <div class="team__title">
 						<h3>The Team</h3>
 					</div>
@@ -608,7 +601,47 @@
 							</div>
 						</div>
 					</div>
-			  </div>
+		</section>
+		<!-- block NEWS -->
+		<section class="news">
+          <div class="news__title">
+				 <h3>NEWS</h3>
+			 </div>
+			 <div class="news-title__subtitle">
+				<blockquote>
+					<p>
+						find the fresh & hot news from us
+					</p>
+				 </blockquote>
+			</div>
+					<div class="food-menu">
+						<div class="food-menu__item col-1">
+							<h4 class="item__subtitle">New Food Menu</h4>
+							<blockquote class="subtitle__quote">
+								<p>
+									Global Temperature Records Just Got Crushed Again
+								</p>
+							 </blockquote>
+						</div>
+						  <div class="food-menu__item col-2">
+							   <h4 class="item__subtitle-two">New Food Menu</h4>
+							   <blockquote class="subtitle__quote-two">
+								   <p>
+									    Global Temperature Records Just Got Crushed
+								   </p>
+							    </blockquote>
+						  </div>
+							<div class="food-menu__item col-3">
+								<div class="item__text">
+									<h4>New Food Menu</h4>
+						      <blockquote class="subtitle__quote-three">
+							       <p>
+								        Global Temperature Records Just Got Crushed Again
+							       </p>
+						       </blockquote>	
+								</div>			
+					      </div>
+					</div>
 		</section>
     </main>
     <!-- ПОДКЛЮЧИЛ JQUERY -->

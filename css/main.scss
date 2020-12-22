@@ -10,7 +10,7 @@
 // ЭТО МОЙ ПЕРВЫЙ СЕРЬЕЗНЫЙ ПРОЕКТ, ПОЭТОМУ ИЗМЕНЕНИЯ В СДЕЛАННЫХ БЛОКАХ ЕЩЕ БУДУТ ВНЕСЕНЫ И ЗАКОММИЧЕНЫ!!!
 // ВЕРСТКА ВЕДЕТСЯ С НЕКОТОРЫМИ ЛИЧНЫМИ ПРАВКАМИ  (ТОГО , ЧТО НЕТ В МАКЕТЕ ЭТО ВКЛЮЧАЕТ В СЕБЯ ТЕКСТ-СТИЛИЗАЦИЮ, ХОВЕРЫ И Т.Д )
 // Основные спецификации
-// АДАПТИВНОЕ СВОЙСТВО 
+// АДАПТИВНОЕ СВОЙСТВО
 $maxWidth: 1920;
 $maxWidthContainer: 1170;
 
@@ -41,6 +41,44 @@ $maxWidthContainer: 1170;
   }
 }
 
+section,
+header,
+footer {
+  padding: 0 15px;
+}
+
+@media (min-width: 575.98px) {
+  section,
+  header,
+  footer {
+    padding: 0 calc(50vw - 270px);
+  }
+}
+
+@media (min-width: 767.98px) {
+  section,
+  header,
+  footer {
+    padding: 0 calc(50vw - 360px);
+  }
+}
+
+@media (min-width: 991.98px) {
+  section,
+  header,
+  footer {
+    padding: 0 calc(50vw - 480px);
+  }
+}
+
+@media (min-width: 1199.98px) {
+  section,
+  header,
+  footer {
+    padding: 0 calc(50vw - 590px);
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -49,17 +87,16 @@ $maxWidthContainer: 1170;
   box-sizing: border-box;
 }
 // html and body СВОЙСТВА для того, чтобы контен тне вылазил за пределы макета
-html{
-	width: 100%;
-	max-width: 100%;
-	overflow-x: hidden;
+html {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
- body
- {
-	width: 100%;
-	max-width: 100%;
-	overflow-x: hidden;
- }
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
 a {
   text-decoration: none;
 }
@@ -69,11 +106,8 @@ li {
 button {
   cursor: pointer;
 }
-.container {
-  max-width: 73.125em;
-  padding: 0 0.9375em;
-  margin: auto;
-}
+
+
 // ШАПКА САЙТА 1 БЛОК
 .header-restaurant {
   font-family: "Merienda", cursive;
@@ -82,8 +116,8 @@ button {
   background: url("../img/header-bg.jpg") no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  .header-container {
-    padding: 2.5em 0px 6.25em;
+  .header__container {
+    padding: 45px 0 45px;
   }
   // СТИЛИ ЛОГО
   .header-restaurant__logo {
@@ -343,19 +377,32 @@ button {
           border-radius: 30%;
         }
         &:hover {
-         z-index: 100;
-    -webkit-box-shadow: inset rgba(0, 0, 0, 0.6) 0 -3px 8px, inset rgba(252, 255, 255, 0.7) 0 3px 8px, rgba(0, 0, 0, 0.8) 0 3px 8px -3px;
-    -moz-box-shadow: inset rgba(0, 0, 0, 0.6) 0 -3px 8px, inset rgba(252, 255, 255, 0.7) 0 3px 8px, rgba(0, 0, 0, 0.8) 0 3px 8px -3px;
-    border-radius: 10px;
-    background: #ac0b0b radial-gradient(circle at 50% 0, rgba(22, 21, 21, 0.65), rgba(223, 238, 8, 0.767));
-    -webkit-box-shadow: inset rgba(0, 0, 0, 0.6) 0 -3px 8px, inset rgba(196, 250, 3, 0.7) 0 3px 8px, rgba(8, 8, 8, 0.8) 0 3px 8px -3px;
-    box-shadow: inset rgba(0, 0, 0, 0.6) 0 -3px 8px, inset rgba(196, 386, 17, 0.7) 0 3px 8px, rgba(19, 8, 8, 0.8) 11 8px 8px -3px;
-    height: auto;
-    cursor: pointer;
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
-    background: #fff;
-    padding: 0.8125em;
+          z-index: 100;
+          -webkit-box-shadow: inset rgba(0, 0, 0, 0.6) 0 -3px 8px,
+            inset rgba(252, 255, 255, 0.7) 0 3px 8px,
+            rgba(0, 0, 0, 0.8) 0 3px 8px -3px;
+          -moz-box-shadow: inset rgba(0, 0, 0, 0.6) 0 -3px 8px,
+            inset rgba(252, 255, 255, 0.7) 0 3px 8px,
+            rgba(0, 0, 0, 0.8) 0 3px 8px -3px;
+          border-radius: 10px;
+          background: #ac0b0b
+            radial-gradient(
+              circle at 50% 0,
+              rgba(22, 21, 21, 0.65),
+              rgba(223, 238, 8, 0.767)
+            );
+          -webkit-box-shadow: inset rgba(0, 0, 0, 0.6) 0 -3px 8px,
+            inset rgba(196, 250, 3, 0.7) 0 3px 8px,
+            rgba(8, 8, 8, 0.8) 0 3px 8px -3px;
+          box-shadow: inset rgba(0, 0, 0, 0.6) 0 -3px 8px,
+            inset rgba(196, 386, 17, 0.7) 0 3px 8px,
+            rgba(19, 8, 8, 0.8) 11 8px 8px -3px;
+          height: auto;
+          cursor: pointer;
+          -webkit-transition: all 0.3s;
+          transition: all 0.3s;
+          background: #fff;
+          padding: 0.8125em;
         }
         // ОТОБРАЖАЕМ ТЕКСТ СКРЫТЫЙ ЗА МНОГОТОЧИЕМ
         &:hover p {
@@ -420,7 +467,7 @@ button {
   flex-flow: row wrap;
 }
 h5 {
-	margin: 0 0 10px 0;
+  margin: 0 0 10px 0;
 }
 /* Стили секций с содержанием */
 .tabs > section {
@@ -524,7 +571,6 @@ svg path {
   font-family: "Raleway", sans-serif;
   font-weight: 400;
   max-width: 940px;
- 
 }
 .tabs li > input:checked + label {
   color: #fff;
@@ -541,16 +587,16 @@ svg path {
     padding: 0;
   }
   .tabs {
-	max-width: 250px;   
-	margin: 0 auto;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-flow: row wrap;
- }
+    max-width: 250px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+  }
   /* Базовый контейнер табов */
   .menu {
-	 max-height: max-content;
+    max-height: max-content;
   }
   #tab1:checked ~ #content-tab1,
   #tab2:checked ~ #content-tab2,
@@ -591,144 +637,359 @@ svg path {
 *  переключателей для малых экранов
 */
 @media screen and (max-width: 320px) {
-	.menu {
-		.menu-title__bg {
-			background: url(../img/title-border.png) no-repeat;
-			background-size: 100%;
-			background-position: 50% 50%;
-			position: relative;
-			top: 25%;
-			right: 50%;
-			left: 50%;
-			margin-left: -125px;
-			max-height: 8.75em;
-			max-width: 15.75em;
-			h3 {
-				font-size: 2.5875em;
-			}
-	  }
-	}
-	.tabs {
-		min-width: 250px;	
-	}
-	 .tab1-ul-block {
-		display: flex;
-		flex-flow: column;
-		align-items: center;
-		min-width: 250px;
-		font-size: 12px;
-	 } 
+  .menu {
+    .menu-title__bg {
+      background: url(../img/title-border.png) no-repeat;
+      background-size: 100%;
+      background-position: 50% 50%;
+      position: relative;
+      top: 25%;
+      right: 50%;
+      left: 50%;
+      margin-left: -125px;
+      max-height: 8.75em;
+      max-width: 15.75em;
+      h3 {
+        font-size: 2.5875em;
+      }
+    }
+  }
+  .tabs {
+    min-width: 250px;
+  }
+  .tab1-ul-block {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    min-width: 250px;
+    font-size: 12px;
+  }
   .mr-right {
-	margin: 0;
- }
+    margin: 0;
+  }
 }
 //      TEAM ресторана
 .team {
-	padding: 55px 0 55px 0;
-	.team--container {
-		padding: 60px 0px 0 0px;
-	}
-	.team__title {
-		text-align: center;
-		h3 {
-			text-transform: uppercase;
-			font-size: 230%;
-			font-family: 'Raleway', sans-serif;
-			position: relative;
-			// Адаптивные псевдо ЭЛЕМЕНТЫ
-			&:after {
+  padding: 55px 0 55px 0;
+  .team--container {
+    padding: 60px 0px 0 0px;
+  }
+  .team__title {
+    text-align: center;
+    h3 {
+      text-transform: uppercase;
+      font-size: 230%;
+      font-family: "Raleway", sans-serif;
+      position: relative;
+      // Адаптивные псевдо ЭЛЕМЕНТЫ
+      &:after {
+        content: "";
+        position: absolute;
+        border: solid 1px #000;
+        top: 50%;
+        right: 50%;
+        left: 50%;
+        margin: 0 0px 0 100px;
+        width: 17%;
+      }
+      &:before {
+        content: "";
+        position: absolute;
+        border: solid 1px #000;
+        top: 50%;
+        right: 50%;
+        margin: 0 100px 0 0;
+        width: 17%;
+      }
+    }
+  }
+  .team-title__subtitle {
+    text-align: center;
+    font-family: "Dancing Script", cursive;
+    font-size: 24px;
+    padding: 10px 0 0 0;
+  }
+  .flex-blocks {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+  }
+  @media (max-width: 698px) {
+    .flex-blocks {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .team__description {
+    display: flex;
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(2%);
+    .cooks {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: "Raleway", sans-serif;
+      margin: 0 0 40px 0;
+      @include adaptiv-value("padding", 4, 2, 0);
+      padding: calc(1px + (1 - 1) * ((100vw - 320px) / (1170 - 320)));
+      .cooks__photos {
+        max-width: 90%;
+      }
+      .cooks__quote {
+        margin: 10px 0 0 0;
+        max-width: 210px;
+        text-align: justify;
+      }
+      .cooks__name {
+        font-size: 22px;
+        color: #57595c;
+        margin: 20px 0 10px 0;
+      }
+      .cooks__subtitle {
+        font-size: 13px;
+        color: #e84545;
+        text-transform: uppercase;
+      }
+      .social-icons {
+        padding: 35px 0 0 0;
+        display: inline-flex;
+        & li {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 40px;
+          height: 40px;
+          margin: 0 15px 0 0;
+          background: #c6cacc;
+          border-radius: 50%;
+          &:hover {
+            background: #30bae7;
+            transition: ease 0.5s;
+          }
+          .fab {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+// NEWS
+.news {
+  padding-top: 55px;
+  padding-bottom: 55px;
+  @media (max-width: 800px) { 
+	.food-menu {
+	  display: flex;
+	  flex-direction: column;
+	  .col-1 {
+		flex: 1;
+	  }
+	  .col-2 {
+		flex: 2;
+	  }
+	  .col-3 {
+		  right: 50%;
+		  left: 50%;
+		  transform: translateX(-50%);
+	  }
+	  div.food-menu__item {
+		  margin: 0 0px 50px 0;
+		  &:nth-child(1) {
+			order: 1;
+			background: #e84545;
+			background-size: cover;
+			flex-basis: 270px;
+			padding: 25px 0 120px 0;
+			& .item__subtitle {
+			  font-size: 150%;
+			  text-align: center;
+			  color: #fff;
+			}
+			& .subtitle__quote {
+			  margin: 50px 0 0 0;
+			  font-size: 130%;
+			  text-align: center;
+			  color: #fff;
+			}
+		  }
+		  &:nth-child(2) {
+			& .item__subtitle-two {
+				font-size: 150%;
+				display: flex;
+				justify-content: end;
+				padding-right: 5px;
+				color: #262d2f;
+			 }
+			 & .subtitle__quote-two {
+				position: absolute;
+				bottom: 2%;
+				right: 50%;
+				transform: translateX(50%);
+				font-size: 150%;
+				text-align: center;
+				color: #ffffff;
+			 }
+			 &:after {
 				content: "";
 				position: absolute;
 				border: solid 1px #000;
 				top: 50%;
-				right: 50%;
-				left: 50%;
-				margin: 0 0px 0 100px;
-				width: 17%;
+				right: 2%;
+				margin: -230px 0 0px 0;
+				width: 7%;
+			 }
+		  }
+		  &:nth-child(3) {
+			  margin: 0 0 0 0;
+			.item__text {
+				font-size: 1.0em;
 			}
-			&:before {
-				content: "";
-				position: absolute;
-				border: solid 1px #000;
-				top: 50%;
-				right: 50%;
-				margin: 0 100px 0 0;
-				width: 17%;
-			}
-		}
+		  }
+	  }
 	}
-	.team-title__subtitle {
-		text-align: center;
-		font-family: 'Dancing Script', cursive;
-		font-size: 24px;
-		padding: 10px 0 0 0;
-	}
-	.flex-blocks {
+ }
+  .news__title {
+    text-align: center;
+    h3 {
+      text-transform: uppercase;
+      font-size: 230%;
+      font-family: "Raleway", sans-serif;
+		position: relative;
+      // Адаптивные псевдо ЭЛЕМЕНТЫ
+      &:after {
+        content: "";
+        position: absolute;
+        border: solid 1px #000;
+        top: 50%;
+        right: 50%;
+        left: 50%;
+        margin: 0 0px 0 80px;
+        width: 17%;
+      }
+      &:before {
+        content: "";
+        position: absolute;
+        border: solid 1px #000;
+        top: 50%;
+        right: 50%;
+        margin: 0 80px 0 0;
+        width: 17%;
+      }
+    }
+  }
+  .news-title__subtitle {
+    text-align: center;
+    font-family: "Dancing Script", cursive;
+    font-size: 24px;
+    padding: 10px 0 0 0;
+  }
+  .food-menu {
+	 margin: 50px 0 0 0;
+	 display: flex;
+    max-width: 100%;
+    transform: translateX(0%);
+    .food-menu__item {
+		flex-grow: 1;
 		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		flex-flow: row wrap;
-	}
-	@media (max-width: 698px) {
-		.flex-blocks {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-		}
-	}
-	.team__description {
-		display: flex;
-		max-width: 100%;
-		justify-content: center;
-		align-items: center;
-		transform: translateX(2%);
-		.cooks {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			font-family: 'Raleway', sans-serif;
-			margin: 0 0 40px 0;
-			@include adaptiv-value("padding", 4, 2, 0);
-  padding: calc(1px + (1 - 1) * ((100vw - 320px) / (1170 - 320)));
-			.cooks__photos {
-				max-width: 90%;
-			}
-			.cooks__quote {
-				margin: 10px 0 0 0;
-				max-width: 210px;
-				text-align: justify;
-			}
-			.cooks__name {
-				font-size: 22px;
-				color: #57595c;
-				margin: 20px 0 10px 0;
-			}
-			.cooks__subtitle {
-				font-size: 13px;
-				color: #e84545;
-				text-transform: uppercase;
-			}
-			.social-icons {
-				padding: 35px 0 0 0;
-				display: inline-flex;
-				& li {
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					width: 40px;
-					height: 40px;
-					margin: 0 15px 0 0;
-					background: #c6cacc;
-					border-radius: 50%;
-					&:hover {
-						background: #30bae7;		
-						transition: ease 0.5s;
-					}
-					.fab {
-						color: #fff; 
-					}
-				}
-			}
-		}
-	}
+      flex-flow: column;
+		position: relative;
+	   margin: 0 0 0 20px;
+      &:nth-child(1) {
+        order: 1;
+        background: #e84545;
+        background-size: cover;
+        flex-basis: 270px;
+        padding: 25px 0 120px 0;
+        & .item__subtitle {
+          font-size: 130%;
+          text-align: center;
+          color: #fff;
+        }
+        & .subtitle__quote {
+          margin: 50px 0 0 0;
+          text-align: center;
+          color: #fff;
+        }
+        &:after {
+          content: "";
+          position: absolute;
+          border: solid 1px #ffffff;
+          top: 50%;
+          left: 50%;
+          right: 50%;
+          transform: translateX(-50%);
+          margin: -75px 0px 0px 0;
+          width: 12%;
+        }
+      }
+      &:nth-child(2) {
+        order: 2;
+        background: url("../img/food-salad-healthy-vegetables.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        flex-basis: 570px;
+        padding: 25px 0 0px 0;
+        & .item__subtitle-two {
+          font-size: 90%;
+          display: flex;
+          justify-content: end;
+          padding-right: 5px;
+          color: #f2f2f3;
+        }
+        & .subtitle__quote-two {
+          position: absolute;
+			 bottom: 2%;
+			 width: 100%;
+          font-size: 140%;
+          text-align: center;
+			 color: #ffffff;
+			 font-weight: 700;
+			 background: #222c2e;
+        }
+        &:after {
+          content: "";
+          position: absolute;
+          border: solid 1px #fff;
+          top: 50%;
+          right: 2%;
+          margin: -80px 0 0px 0;
+          width: 7%;
+        }
+      }
+      &:nth-child(3) {
+        order: 3;
+        flex-basis: 270px;
+        color: #000;
+        background: url("../img/pexels-photo.jpg") no-repeat;
+		  max-width: 270px;
+		  overflow-y: hidden;
+        & .item__text {
+          position: absolute;
+          top: 70%;
+          font-size: 0.9em;
+          letter-spacing: 1px;
+          background: snow;
+          transform: translateY(-30%);
+          &:after {
+            content: "";
+            position: absolute;
+            border: solid 1px #000;
+            bottom: 75%;
+            left: 1%;
+            margin: 50px 0 0px 0;
+            width: 10%;
+          }
+          .subtitle__quote-three {
+            padding-top: 25px;
+            font-size: 1.3em;
+          }
+        }
+      }
+    }
+  }
 }
