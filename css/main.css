@@ -998,12 +998,12 @@ svg path {
   }
   .news .food-menu div.food-menu__item:nth-child(2) .item__subtitle-two {
     font-size: 150%;
+    display: flex;
+    -ms-flex-pack: end;
+        justify-content: end;
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex;
     -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: end;
     padding-right: 5px;
     color: #262d2f;
   }
@@ -1148,12 +1148,12 @@ svg path {
 
 .news .food-menu .food-menu__item:nth-child(2) .item__subtitle-two {
   font-size: 90%;
+  display: flex;
+  -ms-flex-pack: end;
+      justify-content: end;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
   padding-right: 5px;
   color: #f2f2f3;
 }

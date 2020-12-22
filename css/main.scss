@@ -821,7 +821,10 @@ svg path {
 			& .item__subtitle-two {
 				font-size: 150%;
 				display: flex;
-				justify-content: end;
+			 justify-content: end;
+				display: -webkit-box;
+            display: -ms-flexbox;
+            -webkit-box-pack: end;
 				padding-right: 5px;
 				color: #262d2f;
 			 }
@@ -937,7 +940,10 @@ svg path {
         & .item__subtitle-two {
           font-size: 90%;
           display: flex;
-          justify-content: end;
+			 justify-content: end;
+			 display: -webkit-box;
+            display: -ms-flexbox;
+            -webkit-box-pack: end;
           padding-right: 5px;
           color: #f2f2f3;
         }
