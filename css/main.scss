@@ -1077,7 +1077,7 @@ svg path {
           padding: 0 0px 0 10px;
         }
         .form__button {
-          background: #ac0b0b;
+			 background: #ac0b0b;
           width: 82px;
           height: 45px;
           color: #fff;
@@ -1132,8 +1132,9 @@ svg path {
 	address  {
 		display: flex;
 	   p {
+			max-width: max-content;
 			margin: auto;
-			font-size: 20px;
+			font-size: 18px;
 			color: #ac0b0b;
 		}
 	}
@@ -1143,7 +1144,8 @@ svg path {
 		address  {
 			p {
 				text-align: center;
-				font-size: 14px
+				font-size: 12px;
+				
 			}
 		}
 	}

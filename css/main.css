@@ -1407,15 +1407,18 @@ svg path {
 }
 
 .footer address p {
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
   margin: auto;
-  font-size: 20px;
+  font-size: 18px;
   color: #ac0b0b;
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
   .footer address p {
     text-align: center;
-    font-size: 14px;
+    font-size: 12px;
   }
   .header-restaurant__logo {
     padding: 40px 0 0 0;
