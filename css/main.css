@@ -1311,6 +1311,9 @@ svg path {
 .footer__contacts .flx-contacts .our-newsletter .our-newsletter__form {
   margin: 25px 0 0 0;
   background: #fff;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
 }
 
 .footer__contacts .flx-contacts .our-newsletter .our-newsletter__form .form__email {
@@ -1428,9 +1431,24 @@ svg path {
   }
   .footer__contacts .our-newsletter {
     padding-top: 70px;
+    text-align: center;
   }
   .footer__contacts .our-newsletter .form__email {
     padding: 0 0px 0 0px;
+    font-size: 15px;
+  }
+  .footer__contacts .our-newsletter .form__button {
+    background: #ac0b0b;
+    max-width: 85px;
+    min-height: 45px;
+    font-size: 10px;
+    color: #fff;
+  }
+  .footer__contacts .our-newsletter .form__button:hover,
+  .footer__contacts .our-newsletter .form__button :focus {
+    background: #000;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
   }
   .header-menu {
     display: none;

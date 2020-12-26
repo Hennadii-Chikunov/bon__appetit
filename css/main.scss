@@ -1067,6 +1067,7 @@ svg path {
       .our-newsletter__form {
         margin: 25px 0 0 0;
 		  background: #fff;
+		  max-width: max-content;
         .form__email {
           padding: 0 0px 0 10px;
         }
@@ -1154,8 +1155,22 @@ svg path {
     }
     .our-newsletter {
 		padding-top: 70px;
+		text-align: center;
 		.form__email {
 			padding: 0 0px 0 0px;
+			font-size: 15px;
+		 }
+		 .form__button {
+			background: #ac0b0b;
+			max-width: 85px;
+			min-height: 45px;
+			font-size: 10px;
+			color: #fff;
+			&:hover,
+			:focus {
+			  background: #000;
+			  transition: all 0.4s;
+			}
 		 }
     }
   }
