@@ -1311,8 +1311,9 @@ svg path {
 .footer__contacts .flx-contacts .our-newsletter .our-newsletter__form {
   margin: 25px 0 0 0;
   background: #fff;
-  max-width: 280px;
-  width: 100%;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
   height: 45px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1411,15 +1412,11 @@ svg path {
   max-width: -moz-max-content;
   max-width: max-content;
   margin: auto;
-  font-size: 18px;
+  font-size: 80%;
   color: #ac0b0b;
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
-  .footer address p {
-    text-align: center;
-    font-size: 12px;
-  }
   .header-restaurant__logo {
     padding: 40px 0 0 0;
   }
