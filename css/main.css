@@ -114,6 +114,11 @@ button {
   z-index: 100;
 }
 
+.header-restaurant .header-menu .header-menu__items #team__scroll-id {
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
 .header-restaurant .header-menu .header-menu__items .header-menu__link {
   color: #c3c2c2;
 }
@@ -1407,6 +1412,71 @@ svg path {
   color: #ac0b0b;
 }
 
+/* ScrollToTop button */
+.scrollToTop {
+  opacity: 0;
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  z-index: 500;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background: #008169;
+  -webkit-animation: bounce 0.6s infinite;
+          animation: bounce 0.6s infinite;
+  /* Анимацию bounce пропишем ниже */
+}
+
+.scrollToTop:hover {
+  background-color: #f79008;
+  border-radius: 100%;
+}
+
+.scrollToTop:active {
+  background-color: #f70808;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 25px;
+  }
+  100% {
+    bottom: -5px;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 25px;
+  }
+  100% {
+    bottom: -5px;
+  }
+}
+
+/* background - цвет кнопки*/
+.scrollToTop span {
+  color: #FFF;
+}
+
+.showScrollTop {
+  font-size: 20px;
+  opacity: 0.5;
+  line-height: 40px;
+}
+
 @media (min-width: 320px) and (max-width: 767px) {
   .header-restaurant__logo {
     padding: 40px 0 0 0;
@@ -1435,7 +1505,6 @@ svg path {
   }
   .footer__contacts .our-newsletter .form__email {
     padding: 0 0px 0 0px;
-    font-size: 15px;
   }
   .footer__contacts .our-newsletter .form__button {
     background: #ac0b0b;

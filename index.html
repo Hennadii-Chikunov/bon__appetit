@@ -73,16 +73,16 @@
 				 <nav class="header-menu">
 					<ul class="header-menu__items">
 					  <li>
-						 <a class="header-menu__link" target="_blank" href="#">Menu</a>
+						 <a class="header-menu__link" href="#">Menu</a>
 					  </li>
 					  <li>
-						 <a class="header-menu__link" target="_blank" href="#">Our Team</a>
+						 <a class="header-menu__link" href="#">Our Team</a>
 					  </li>
 					  <li>
-						 <a class="header-menu__link" target="_blank" href="#">News / Blog</a>
+						 <a class="header-menu__link" href="#">News / Blog</a>
 					  </li>
 					  <li>
-						 <a class="header-menu__link" target="_blank" href="#">Contact</a>
+						 <a class="header-menu__link" href="#">Contact</a>
 					  </li>
 					</ul>
 				 </nav>
@@ -748,6 +748,8 @@
 		 <address>
 			 <p>Copyright © 2020 Hennadiy Chikunov All Rights Reserved</p>
 		 </address>
+		<!--Scroll To Top--><a class="scrollToTop" onclick="jQuery('html,body').animate({scrollTop:0}, 'slow');">
+			<span class="fa fa-chevron-up"></span></a><!--/Scroll To Top-->
 	 </footer>
     <!-- ПОДКЛЮЧИЛ JQUERY -->
     <script
@@ -758,6 +760,14 @@
     <!-- ДАННЫЙ СКРИПТИК, ВЫПОЛНЯЕТ ПРОСТЕЙШУЮ ЗАДАЧУ - РЕАЛИЗАЦИЮ ТОГО , ЧТО ЕСТЬ В МАКЕТЕ (ФОРМА ПОД ХЭДЕРОМ) .. В ДАЛЬНЕЙШЕМ БУДЕТ ПРИМЕНЕНО БОЛЕЕ СЛОЖНОЕ РЕШЕНИЕ -->
     <script>
       $(".text").val("2 peoples");
-    </script>
+	 </script>
+	  <script>
+		// ScrollToTop button toggle
+		jQuery(window).scroll(function () {
+		if(jQuery(window).scrollTop() > jQuery(window).height()/3){
+		jQuery('.scrollToTop').toggleClass('showScrollTop', true);}
+		else { jQuery('.scrollToTop').removeClass('showScrollTop');}
+		});
+		</script>
   </body>
 </html>
