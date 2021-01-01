@@ -1,10 +1,4 @@
 @charset "UTF-8";
-section,
-header,
-footer {
-  padding: 0 15px;
-}
-
 @media (min-width: 575.98px) {
   section,
   header,
@@ -44,18 +38,6 @@ footer {
   outline: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-}
-
-html {
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
-body {
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
 }
 
 a {
@@ -102,6 +84,10 @@ button {
           align-items: center;
 }
 
+.header-restaurant .header-restaurant__logo img {
+  max-width: 100%;
+}
+
 .header-restaurant .header-menu .header-menu__items {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -112,11 +98,6 @@ button {
   margin: 1.875em auto 0;
   position: relative;
   z-index: 100;
-}
-
-.header-restaurant .header-menu .header-menu__items #team__scroll-id {
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
 }
 
 .header-restaurant .header-menu .header-menu__items .header-menu__link {
@@ -397,19 +378,29 @@ button {
 
 .best-in-town .main-dishes .hot-main-dishes__column {
   position: relative;
-  min-width: 18.75em;
-  min-height: 25em;
-  margin: 0 60px 0 0;
+  width: 18.75em;
+  height: 25em;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 300px;
+          flex: 0 0 300px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 .best-in-town .main-dishes .hot-main-dishes__column:nth-child(3) {
-  margin: 0 0 0 0;
-}
-
-@media screen and (min-width: 240px) and (max-width: 789px) {
-  .best-in-town .main-dishes .hot-main-dishes__column {
-    margin: 60px 60px 60px 60px;
-  }
+  -webkit-transform: translateY(-75px);
+          transform: translateY(-75px);
+  margin-top: 150px;
+  margin-bottom: 0px;
 }
 
 .best-in-town .main-dishes .hot-main-dishes__column .hot__column {
@@ -543,13 +534,15 @@ button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
 }
 
 h5 {
@@ -575,6 +568,14 @@ h5 {
   padding: 0px 40px;
 }
 
+@media (min-width: 320px) and (max-width: 990px) {
+  .tabs > label {
+    display: inline-block;
+    margin: 0 0 -1px;
+    padding: 0px 20px;
+  }
+}
+
 /* Изменения стиля переключателей вкладок при наведении */
 .tabs > input + label {
   color: #74898e;
@@ -582,12 +583,9 @@ h5 {
 }
 
 .tab1-ul-block {
-  display: block;
-  min-width: 440px;
-}
-
-.mr-right {
-  margin: 0 0 0 75px;
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+  -webkit-box-flex: 1;
 }
 
 .tabs > input:checked + label {
@@ -673,13 +671,14 @@ svg path {
 #tab3:checked ~ #content-tab3,
 #tab4:checked ~ #content-tab4,
 #tab5:checked ~ #content-tab5 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   color: #fff;
   font-family: "Raleway", sans-serif;
   font-weight: 400;
-  max-width: 940px;
+  display: -ms-flexbox;
+  display: flex;
+  display: -webkit-box;
+  -ms-flex-preferred-size: 1000px;
+      flex-basis: 1000px;
 }
 
 .tabs li > input:checked + label {
@@ -737,21 +736,10 @@ svg path {
             align-items: center;
   }
   .tab1-ul-block {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column;
-            flex-flow: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    min-width: 320px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 300px;
+            flex: 0 0 300px;
     font-size: 12px;
-  }
-  .mr-right {
-    margin: 0;
   }
   .tab1-number {
     color: #d8b57a;
@@ -789,13 +777,13 @@ svg path {
   .menu .menu-title__bg h3 {
     font-size: 2.5875em;
   }
-  .tabs {
-    min-width: 250px;
-  }
-  .tab1-ul-block {
+  section .tab1-ul-block {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-flow: column;
@@ -803,16 +791,16 @@ svg path {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    min-width: 250px;
     font-size: 12px;
-  }
-  .mr-right {
-    margin: 0;
   }
 }
 
 .team {
   padding: 55px 0 55px 0;
+  background: url("../img/footer__contacts.jpg") no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff;
 }
 
 .team .team--container {
@@ -833,7 +821,7 @@ svg path {
 .team .team__title h3:after {
   content: "";
   position: absolute;
-  border: solid 1px #000;
+  border: solid 1px #fff;
   top: 50%;
   right: 50%;
   left: 50%;
@@ -844,7 +832,7 @@ svg path {
 .team .team__title h3:before {
   content: "";
   position: absolute;
-  border: solid 1px #000;
+  border: solid 1px #fff;
   top: 50%;
   right: 50%;
   margin: 0 100px 0 0;
@@ -877,21 +865,27 @@ svg path {
 }
 
 .team .team__description .cooks {
-  -ms-flex-preferred-size: 270px;
-      flex-basis: 270px;
+  -webkit-box-flex: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-flow: column;
+          flex-flow: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex: 0 0 270px;
+      flex: 0 0 270px;
+  -ms-flex-preferred-size: 270px;
+      flex-basis: 270px;
   font-family: "Raleway", sans-serif;
   margin: 0 0 60px 0;
   padding: calc( 2px + 2 * ((100vw - 320px) / 1600));
@@ -899,24 +893,43 @@ svg path {
 }
 
 .team .team__description .cooks .cooks__photos {
-  max-width: 90%;
+  max-width: 85%;
+  border-radius: 10px;
 }
 
 .team .team__description .cooks .cooks__quote {
   margin: 10px 0 0 0;
   max-width: 210px;
   text-align: justify;
+  background: #000;
+  border-radius: 2px;
+  -ms-flex-preferred-size: 200px;
+      flex-basis: 200px;
+  padding: 5% 4% 5% 4%;
+  border-radius: 3%;
 }
 
 .team .team__description .cooks .cooks__name {
   font-size: 22px;
-  color: #57595c;
+  color: #e84545;
+  background: #000;
+  border-radius: 100%;
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
   margin: 20px 0 10px 0;
 }
 
 .team .team__description .cooks .cooks__subtitle {
   font-size: 13px;
   color: #e84545;
+  background: #000;
+  border-radius: 100%;
+  width: 130px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
   text-transform: uppercase;
 }
 
@@ -945,13 +958,13 @@ svg path {
 }
 
 .team .team__description .cooks .social-icons li:hover {
-  background: #30bae7;
+  background: #e84545;
   -webkit-transition: ease 0.5s;
   transition: ease 0.5s;
 }
 
 .team .team__description .cooks .social-icons li .fab {
-  color: #fff;
+  color: #000;
 }
 
 .news {
@@ -1415,21 +1428,21 @@ svg path {
 /* ScrollToTop button */
 .scrollToTop {
   opacity: 0;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   position: fixed;
-  bottom: 30px;
-  right: 20px;
+  bottom: 0px;
+  right: 30px;
   z-index: 500;
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   text-align: center;
   cursor: pointer;
   border: 1px solid transparent;
   border-radius: 4px;
   background: #008169;
-  -webkit-animation: bounce 0.6s infinite;
-          animation: bounce 0.6s infinite;
+  -webkit-animation: bounce 0.9s infinite;
+          animation: bounce 0.9s infinite;
   /* Анимацию bounce пропишем ниже */
 }
 
@@ -1447,7 +1460,7 @@ svg path {
     bottom: 0;
   }
   50% {
-    bottom: 25px;
+    bottom: 10px;
   }
   100% {
     bottom: -5px;
@@ -1459,7 +1472,7 @@ svg path {
     bottom: 0;
   }
   50% {
-    bottom: 25px;
+    bottom: 10px;
   }
   100% {
     bottom: -5px;
@@ -1468,16 +1481,19 @@ svg path {
 
 /* background - цвет кнопки*/
 .scrollToTop span {
-  color: #FFF;
+  color: #fff;
 }
 
 .showScrollTop {
-  font-size: 20px;
+  font-size: 25px;
   opacity: 0.5;
-  line-height: 40px;
+  line-height: 50px;
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
+  body.lock {
+    overflow: hidden;
+  }
   .header-restaurant__logo {
     padding: 40px 0 0 0;
   }
@@ -1555,7 +1571,7 @@ svg path {
     position: absolute;
     width: 100%;
     height: 2px;
-    background-color: #e84545;
+    background-color: #ee0808;
   }
   .menu__btn > span::before {
     content: "";
@@ -1576,15 +1592,15 @@ svg path {
     height: 100%;
     margin: 0;
     padding: 120px 0 0 0;
-    overflow-y: auto;
+    overflow-y: hidden;
     list-style: none;
     text-align: center;
-    background-color: rgba(41, 3, 3, 0.6);
+    background-color: rgba(41, 3, 3, 0.9);
     -webkit-box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
             box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
-    z-index: 100;
+    z-index: 900;
   }
-  /* элементы меню */
+  /* START SVG элементы меню */
   .menu__item {
     display: inline-block;
     padding: 32px 24px;
@@ -1620,6 +1636,7 @@ svg path {
     -webkit-transition: opacity 0s, stroke-dashoffset 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
     transition: opacity 0s, stroke-dashoffset 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   }
+  /* FINISH SVG элементы меню */
   #menu__toggle:checked ~ .menu__btn > span {
     -webkit-transform: rotate(45deg);
             transform: rotate(45deg);
@@ -1647,6 +1664,9 @@ svg path {
   .menu__box {
     -webkit-transition-duration: 0.25s;
             transition-duration: 0.25s;
+  }
+  .hot-main-dishes__column {
+    margin-bottom: 100px;
   }
 }
 /*# sourceMappingURL=main.css.map */

@@ -40,12 +40,6 @@ $maxWidthContainer: 1170;
     );
   }
 }
-section,
-header,
-footer {
-  padding: 0 15px;
-}
-
 @media (min-width: 575.98px) {
   section,
   header,
@@ -53,7 +47,6 @@ footer {
     padding: 0 calc(50vw - 270px);
   }
 }
-
 @media (min-width: 767.98px) {
   section,
   header,
@@ -61,7 +54,6 @@ footer {
     padding: 0 calc(50vw - 360px);
   }
 }
-
 @media (min-width: 991.98px) {
   section,
   header,
@@ -69,7 +61,6 @@ footer {
     padding: 0 calc(50vw - 480px);
   }
 }
-
 @media (min-width: 1199.98px) {
   section,
   header,
@@ -77,7 +68,6 @@ footer {
     padding: 0 calc(50vw - 590px);
   }
 }
-
 * {
   margin: 0;
   padding: 0;
@@ -86,16 +76,6 @@ footer {
   box-sizing: border-box;
 }
 // html and body СВОЙСТВА для того, чтобы контен тне вылазил за пределы макета
-html {
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
-}
-body {
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
-}
 a {
   text-decoration: none;
   font-style: normal;
@@ -106,7 +86,6 @@ li {
 button {
   cursor: pointer;
 }
-
 // ШАПКА САЙТА 1 БЛОК
 .header-restaurant {
   font-family: "Merienda", cursive;
@@ -128,6 +107,9 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
+    & img {
+      max-width: 100%;
+    }
   }
   // СТИЛИ МЕНЮ НАВИГАЦИИ
   .header-menu {
@@ -135,12 +117,9 @@ button {
       display: flex;
       justify-content: space-around;
       max-width: 43.75em;
-		margin: 1.875em auto 0;
-		position: relative;
-		z-index: 100;
-		#team__scroll-id {
-			transition: all 0.4s;
-		}
+      margin: 1.875em auto 0;
+      position: relative;
+      z-index: 100;
       .header-menu__link {
         color: #c3c2c2;
         &:hover,
@@ -167,8 +146,8 @@ button {
     top: 30%;
     transform: translateY(-70%);
     right: 50%;
-	 transform: translate(50%);
-	 z-index: 1;
+    transform: translate(50%);
+    z-index: 1;
     h1 {
       font-family: "Alex Brush", cursive;
       font-size: 4.0625em;
@@ -336,6 +315,7 @@ button {
       }
     }
   }
+
   .main-dishes {
     display: flex;
     justify-content: center;
@@ -354,16 +334,17 @@ button {
     }
     .hot-main-dishes__column {
       position: relative;
-      min-width: 18.75em;
-      min-height: 25em;
-      margin: 0 60px 0 0;
+      width: 18.75em;
+      height: 25em;
+      flex: 0 0 300px;
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      align-content: center;
       &:nth-child(3) {
-        margin: 0 0 0 0;
-      }
-      @media screen and (min-width: 240px) and (max-width: 789px) {
-        & {
-          margin: 60px 60px 60px 60px;
-        }
+        transform: translateY(-75px);
+        margin-top: 150px;
+        margin-bottom: 0px;
       }
       .hot__column {
         font-family: "Raleway", sans-serif;
@@ -484,8 +465,9 @@ button {
   margin: 0 auto;
   display: flex;
   justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
-  flex-flow: row wrap;
 }
 h5 {
   margin: 0 0 10px 0;
@@ -506,6 +488,13 @@ h5 {
   margin: 0 0 -1px;
   padding: 0px 40px;
 }
+@media (min-width: 320px) and (max-width: 990px) {
+  .tabs > label {
+    display: inline-block;
+    margin: 0 0 -1px;
+    padding: 0px 20px;
+  }
+}
 /* Изменения стиля переключателей вкладок при наведении */
 
 .tabs > input + label {
@@ -513,12 +502,10 @@ h5 {
   fill: #74898e;
 }
 .tab1-ul-block {
-  display: block;
-  min-width: 440px;
+  flex-grow: 1;
+  -webkit-box-flex: 1;
 }
-.mr-right {
-  margin: 0 0 0 75px;
-}
+
 .tabs > input:checked + label {
   color: #fff;
   fill: #fff;
@@ -587,11 +574,12 @@ svg path {
 #tab3:checked ~ #content-tab3,
 #tab4:checked ~ #content-tab4,
 #tab5:checked ~ #content-tab5 {
-  display: flex;
   color: #fff;
   font-family: "Raleway", sans-serif;
   font-weight: 400;
-  max-width: 940px;
+  display: flex;
+  display: -webkit-box;
+  flex-basis: 1000px;
 }
 .tabs li > input:checked + label {
   color: #fff;
@@ -629,14 +617,8 @@ svg path {
     align-items: center;
   }
   .tab1-ul-block {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    min-width: 320px;
+    flex: 0 0 300px;
     font-size: 12px;
-  }
-  .mr-right {
-    margin: 0;
   }
   .tab1-number {
     color: #d8b57a;
@@ -675,23 +657,23 @@ svg path {
       }
     }
   }
-  .tabs {
-    min-width: 250px;
-  }
-  .tab1-ul-block {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    min-width: 250px;
-    font-size: 12px;
-  }
-  .mr-right {
-    margin: 0;
+  section {
+    .tab1-ul-block {
+      display: flex;
+      justify-content: center;
+      flex-flow: column;
+      align-items: center;
+      font-size: 12px;
+    }
   }
 }
 //  TEAM ресторана
 .team {
   padding: 55px 0 55px 0;
+  background: url("../img/footer__contacts.jpg") no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff;
   .team--container {
     padding: 60px 0px 0 0px;
   }
@@ -706,7 +688,7 @@ svg path {
       &:after {
         content: "";
         position: absolute;
-        border: solid 1px #000;
+        border: solid 1px #fff;
         top: 50%;
         right: 50%;
         left: 50%;
@@ -716,7 +698,7 @@ svg path {
       &:before {
         content: "";
         position: absolute;
-        border: solid 1px #000;
+        border: solid 1px #fff;
         top: 50%;
         right: 50%;
         margin: 0 100px 0 0;
@@ -737,31 +719,52 @@ svg path {
     flex-direction: row;
     flex-wrap: wrap;
     .cooks {
-      flex-basis: 270px;
+      -webkit-box-flex: 0;
       display: flex;
-      flex-direction: column;
+      flex-flow: column;
       justify-content: center;
       align-items: center;
+      flex-grow: 1;
+      flex: 0 0 270px;
+      flex-basis: 270px;
       font-family: "Raleway", sans-serif;
       margin: 0 0 60px 0;
       @include adaptiv-value("padding", 4, 2, 0);
       padding: calc(1px + (1 - 1) * ((100vw - 320px) / (1170 - 320)));
       .cooks__photos {
-        max-width: 90%;
+        max-width: 85%;
+        border-radius: 10px;
       }
       .cooks__quote {
         margin: 10px 0 0 0;
         max-width: 210px;
         text-align: justify;
+        background: #000;
+        border-radius: 2px;
+        flex-basis: 200px;
+        padding: 5% 4% 5% 4%;
+        border-radius: 3%;
       }
       .cooks__name {
         font-size: 22px;
-        color: #57595c;
+        color: #e84545;
+        background: #000;
+        border-radius: 100%;
+        width: 200px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
         margin: 20px 0 10px 0;
       }
       .cooks__subtitle {
         font-size: 13px;
         color: #e84545;
+        background: #000;
+        border-radius: 100%;
+        width: 130px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
         text-transform: uppercase;
       }
       .social-icons {
@@ -777,11 +780,11 @@ svg path {
           background: #c6cacc;
           border-radius: 50%;
           &:hover {
-            background: #30bae7;
+            background: #e84545;
             transition: ease 0.5s;
           }
           .fab {
-            color: #fff;
+            color: #000;
           }
         }
       }
@@ -1022,13 +1025,11 @@ svg path {
     justify-content: space-around;
     flex-direction: row;
     flex-wrap: wrap;
-
     .flx-column__form {
       display: flex;
       flex-flow: column;
       .contact {
         margin: 45px 0 0 0;
-
         p {
           padding: 0 0 20px 0;
         }
@@ -1069,16 +1070,16 @@ svg path {
       }
       .our-newsletter__form {
         margin: 25px 0 0 0;
-		  background: #fff;
-		  max-width: max-content;
+        background: #fff;
+        max-width: max-content;
         .form__email {
           padding: 0 0px 0 10px;
         }
         .form__button {
-			 background: #ac0b0b;
-			 max-width: 85px;
-			 min-height: 45px;
-			 padding: 6px 12px 6px 12px;
+          background: #ac0b0b;
+          max-width: 85px;
+          min-height: 45px;
+          padding: 6px 12px 6px 12px;
           color: #fff;
           &:hover,
           :focus {
@@ -1125,71 +1126,72 @@ svg path {
   }
 }
 .footer {
-	background: #252525;
-	line-height: 100px;
-	font-family: "Dancing Script", cursive;
-	address  {
-		display: flex;
-	   p {
-			max-width: max-content;
-			margin: auto;
-			font-size: 80%;
-			color: #ac0b0b;
-		}
-	}
-	
-	
+  background: #252525;
+  line-height: 100px;
+  font-family: "Dancing Script", cursive;
+  address {
+    display: flex;
+    p {
+      max-width: max-content;
+      margin: auto;
+      font-size: 80%;
+      color: #ac0b0b;
+    }
+  }
 }
 /* ScrollToTop button */
-.scrollToTop { 
-	opacity: 0;
-	width: 40px;
-	height: 40px;
-	position: fixed;
-	bottom: 30px;
-	right: 20px;
-	z-index: 500;
-	transition: all .5s ease-in-out;
-	text-align: center;
-	cursor: pointer;
-	border: 1px solid transparent;
-	border-radius: 4px;
-	background: #008169;
-	animation: bounce 0.6s infinite; /* Анимацию bounce пропишем ниже */
-	&:hover {
-		background-color:#f79008;
-		border-radius:100%;
-	}
-	&:active {
-		background-color:#f70808;
-	}
-} 
+.scrollToTop {
+  opacity: 0;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 0px;
+  right: 30px;
+  z-index: 500;
+  transition: all 0.5s ease-in-out;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background: #008169;
+  animation: bounce 0.9s infinite; /* Анимацию bounce пропишем ниже */
+  &:hover {
+    background-color: #f79008;
+    border-radius: 100%;
+  }
+  &:active {
+    background-color: #f70808;
+  }
+}
 @keyframes bounce {
-	0% {
-	  bottom: 0;
-	}
-	50% {
-		bottom: 25px;
-	}
-	100% {
-	  bottom: -5px;
-	}
- }
+  0% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 10px;
+  }
+  100% {
+    bottom: -5px;
+  }
+}
 /* background - цвет кнопки*/
-	.scrollToTop span{ 
-		color:#FFF;
-	}
-	.showScrollTop{ 
-		font-size: 20px;
-		opacity: 0.5;
-		line-height: 40px;
-	}
+.scrollToTop span {
+  color: #fff;
+}
+.showScrollTop {
+  font-size: 25px;
+  opacity: 0.5;
+  line-height: 50px;
+}
 @media (min-width: 320px) and (max-width: 767px) {
-	.header-restaurant__logo {
-		padding: 40px 0 0 0;
-	 }
+  body.lock {
+    overflow: hidden;
+  }
+  .header-restaurant__logo {
+    padding: 40px 0 0 0;
+  }
   .header-title {
-	 width: 320px;
+    width: 320px;
   }
   .footer__contacts {
     padding-bottom: 180px;
@@ -1203,23 +1205,23 @@ svg path {
       width: max-content;
     }
     .our-newsletter {
-		padding-top: 70px;
-		text-align: center;
-		.form__email {
-			padding: 0 0px 0 0px;
-		 }
-		 .form__button {
-			background: #ac0b0b;
-			max-width: 85px;
-			min-height: 45px;
-			font-size: 10px;
-			color: #fff;
-			&:hover,
-			:focus {
-			  background: #000;
-			  transition: all 0.4s;
-			}
-		 }
+      padding-top: 70px;
+      text-align: center;
+      .form__email {
+        padding: 0 0px 0 0px;
+      }
+      .form__button {
+        background: #ac0b0b;
+        max-width: 85px;
+        min-height: 45px;
+        font-size: 10px;
+        color: #fff;
+        &:hover,
+        :focus {
+          background: #000;
+          transition: all 0.4s;
+        }
+      }
     }
   }
   .header-menu {
@@ -1250,7 +1252,7 @@ svg path {
     position: absolute;
     width: 100%;
     height: 2px;
-    background-color: #e84545;
+    background-color: #ee0808;
   }
   .menu__btn > span::before {
     content: "";
@@ -1271,14 +1273,14 @@ svg path {
     height: 100%;
     margin: 0;
     padding: 120px 0 0 0;
-    overflow-y: auto;
+    overflow-y: hidden;
     list-style: none;
     text-align: center;
-    background-color: rgba(41, 3, 3, 0.6);
+    background-color: rgba(41, 3, 3, 0.9);
     box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
-    z-index: 100;
+    z-index: 900;
   }
-  /* элементы меню */
+  /* START SVG элементы меню */
   .menu__item {
     display: inline-block;
     padding: 32px 24px;
@@ -1312,6 +1314,7 @@ svg path {
     transition: opacity 0s,
       stroke-dashoffset 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   }
+  /* FINISH SVG элементы меню */
   #menu__toggle:checked ~ .menu__btn > span {
     transform: rotate(45deg);
   }
@@ -1334,5 +1337,8 @@ svg path {
   }
   .menu__box {
     transition-duration: 0.25s;
+  }
+  .hot-main-dishes__column {
+    margin-bottom: 100px;
   }
 }
