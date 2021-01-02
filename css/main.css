@@ -1496,7 +1496,9 @@ svg path {
 
 @media (min-width: 320px) and (max-width: 767px) {
   body.lock {
-    overflow: hidden;
+    overflow-y: hidden;
+    min-height: 100vh;
+    height: 100vh;
   }
   .best-in-town {
     padding: 50px 0 30px 0;
