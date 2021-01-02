@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Team</title>
+	<link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+	<header class="header-team">
+     <div class="header-team__body">
+		<a class="header-team__logo" href="#">
+			<img src="../img/bon-appetit.png" alt="bon-appetit">
+		</a>
+		<div class="header-team__burger">
+			<span></span>
+		</div>
+		<nav class="header-team__nav">
+			<ul class="header-team__list">
+				<li>
+					<a class="header-team__link" href="#">
+						<span>Menu</span>
+					</a>
+				</li>
+				<li>
+					<a class="header-team__link" href="#">
+						<span>Our Team</span>
+					</a>
+				</li>
+				<li>
+					<a class="header-team__link" href="#">
+						<span>News / Blog</span>
+					</a>
+				</li>
+				<li>
+					<a class="header-team__link" href="#">
+						<span>Contact</span>
+					</a>
+				</li>
+			</ul>
+		</nav>
+	  </div>
+	</header>
+	<main>
+		<section>
+		</section>
+	</main>
+	<footer></footer>
+	<!-- ПОДКЛЮЧИЛ JQUERY -->
+	<script
+	src="https://code.jquery.com/jquery-3.5.1.js"
+	integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+	crossorigin="anonymous"
+ ></script>
+	<script>
+		$(document).ready(function() {
+			$(".header-team__burger").click(function(event) {
+				$(".header-team__burger, .header-team__nav").toggleClass("active");
+				$("body").toggleClass("lock");
+			});
+		});
+	</script>
+</body>
+</html>

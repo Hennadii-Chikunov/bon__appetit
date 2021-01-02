@@ -58,7 +58,7 @@ $maxWidthContainer: 1170;
   section,
   header,
   footer {
-	 padding: 0 calc(50vw - 480px);
+    padding: 0 calc(50vw - 480px);
   }
 }
 @media (min-width: 1199.98px) {
@@ -68,9 +68,11 @@ $maxWidthContainer: 1170;
     padding: 0 calc(50vw - 580px);
   }
 }
-section, header, footer {
-	padding-left: 15px;
-	padding-right: 15px;
+section,
+header,
+footer {
+  padding-left: 15px;
+  padding-right: 15px;
 }
 * {
   margin: 0;
@@ -90,6 +92,62 @@ li {
 button {
   cursor: pointer;
 }
+// page TEAM HEADER
+
+.header-team {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 50;
+	&::before {
+	  content: "";
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  width: 100%;
+	  height: 100%;
+	  background: #000;
+	  z-index: 2;
+	}
+	.header-team__body {
+	  display: flex;
+	  justify-content: space-between;
+	  align-items: center;
+	  height: 130px;
+	}
+	.header-team__logo {
+	  flex: 0 0 160px;
+	  position: relative;
+	  z-index: 3;
+	  img {
+		 max-width: 100%;
+	  }
+	}
+	.header-team__list {
+	  display: flex;
+	  position: relative;
+	  z-index: 2;
+	  li {
+		 margin: 0 0 0 35px;
+		 span {
+			padding: 0 0 3px 0;
+			border-bottom: solid 2px transparent;
+		 }
+		 & span:hover {
+			color: #fff;
+			border-bottom: 2px solid #e54747;
+			transition: all 0.3s;
+		 }
+	  }
+	  .header-team__link {
+		 font-size: 18px;
+		 text-transform: uppercase;
+		 color: #c8c8c7;
+	  }
+	}
+ }
+
 
 // ШАПКА САЙТА 1 БЛОК
 .header-restaurant {
@@ -340,15 +398,15 @@ button {
       position: relative;
       width: 18.75em;
       min-height: 25em;
-		display: flex;
-		justify-content: center;
-		align-content: center;
-		&:nth-child(1) {
-			margin-bottom: 0px;
-		 }
-		&:nth-child(2) {
-			margin-bottom: 0px;
-		 }
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      &:nth-child(1) {
+        margin-bottom: 0px;
+      }
+      &:nth-child(2) {
+        margin-bottom: 0px;
+      }
       &:nth-child(3) {
         transform: translateY(-18%);
         margin-top: 150px;
@@ -1192,12 +1250,12 @@ svg path {
 }
 @media (min-width: 320px) and (max-width: 767px) {
   body.lock {
-	 overflow-y: hidden;
-	 min-height: 100vh;
-	 height: 100vh;
+    overflow-y: hidden;
+    min-height: 100vh;
+    height: 100vh;
   }
   .best-in-town {
-	padding: 50px 0 30px 0;
+    padding: 50px 0 30px 0;
   }
   .header-restaurant__logo {
     padding: 40px 0 0 0;
@@ -1282,15 +1340,15 @@ svg path {
     top: 0;
     right: -100%;
     width: 100%;
-	 height: 100vh;
-	 min-height: 100%;
-	 margin: 0;
-	 padding-top: 40%;
-	 padding-bottom: 60px;
+    height: 100vh;
+    min-height: 100%;
+    margin: 0;
+    padding-top: 40%;
+    padding-bottom: 60px;
     overflow-y: hidden;
     list-style: none;
     text-align: center;
-	 background-color: rgba(41, 3, 3, 0.9);
+    background-color: rgba(41, 3, 3, 0.9);
     box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
     z-index: 900;
   }
@@ -1353,7 +1411,80 @@ svg path {
     transition-duration: 0.25s;
   }
   .hot-main-dishes__column {
-	 margin-bottom: 100px;
-	 max-width: 17em;
+    margin-bottom: 100px;
+    max-width: 17em;
   }
+}
+@media (max-width: 767px) {
+	.header-team__burger.active span {
+		transform: scale(0);
+	 }
+	.header-team__burger.active::before {
+	  transform: rotate(45deg);
+	  top: 9px;
+	}
+	.header-team__burger.active::after {
+		transform: rotate(-45deg);
+		bottom: 9px;
+	 }
+	.header-team__body {
+		height: 50px;
+		z-index: 1;
+		.header-team__logo {
+			max-width: 100%;
+			margin: auto;
+		}
+	}
+  .header-team__burger {
+    display: block;
+    position: relative;
+    width: 30px;
+	 height: 20px;
+	 z-index: 3;
+    & span {
+      position: absolute;
+      background-color: #e54747;
+      left: 0;
+      width: 100%;
+      height: 2px;
+		top: 9px;
+		transition: all 0.3s ease 0s;
+    }
+  }
+  .header-team__burger::before,
+  .header-team__burger::after {
+	 content: "";
+	 background-color: #e54747;
+	 position: absolute;
+	 width: 100%;
+	 height: 2px;
+	 left: 0;
+	 transition: all 0.3s ease 0s;
+  }
+  .header-team__burger:before {
+	 top: 0;
+  }
+  .header-team__burger:after {
+	 bottom: 0;
+  }
+	.header-team__nav {
+		position: fixed;
+		top: -100%;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(41, 3, 3, 0.8);
+		padding: 150px 0 0 0;
+		transition: all 0.3s ease 0s;
+		.header-team__list {
+		  display: block;
+		  li {
+			  margin: 0 0 60px 0;
+			  text-align: center;
+		  }
+	  }
+	  &.active {
+		  top: 0;
+	  }
+	 }
 }
