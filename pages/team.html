@@ -18,6 +18,11 @@
 		<nav class="header-team__nav">
 			<ul class="header-team__list">
 				<li>
+					<a class="header-team__link" href="../index.html">
+						<span>Home</span>
+					</a>
+				</li>
+				<li>
 					<a class="header-team__link" href="#">
 						<span>Menu</span>
 					</a>
@@ -52,10 +57,12 @@
 	integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
 	crossorigin="anonymous"
  ></script>
+  <!--данный скрипт это надежное меню по юзабилити и удобвству пользователя -->
 	<script>
 		$(document).ready(function() {
 			$(".header-team__burger").click(function(event) {
 				$(".header-team__burger, .header-team__nav").toggleClass("active");
+				// Отмена скролла при включенном мобильном меню
 				$("body").toggleClass("lock");
 			});
 		});

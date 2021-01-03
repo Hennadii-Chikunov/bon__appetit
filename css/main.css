@@ -60,166 +60,26 @@ button {
   cursor: pointer;
 }
 
-.header-team {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 50;
-}
-
-.header-team::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #000;
-  z-index: 2;
-}
-
-.header-team .header-team__body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 130px;
-}
-
-.header-team .header-team__logo {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 160px;
-          flex: 0 0 160px;
-  position: relative;
-  z-index: 3;
-}
-
-.header-team .header-team__logo img {
-  max-width: 100%;
-}
-
-.header-team .header-team__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  z-index: 2;
-}
-
-.header-team .header-team__list li {
-  margin: 0 0 0 35px;
-}
-
-.header-team .header-team__list li span {
-  padding: 0 0 3px 0;
-  border-bottom: solid 2px transparent;
-}
-
-.header-team .header-team__list li span:hover {
-  color: #fff;
-  border-bottom: 2px solid #e54747;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-.header-team .header-team__list .header-team__link {
-  font-size: 18px;
-  text-transform: uppercase;
-  color: #c8c8c7;
-}
-
 .header-restaurant {
   font-family: "Merienda", cursive;
   min-height: 49.5625em;
-  height: 100vh;
   background: url("../img/header-bg.jpg") no-repeat;
   background-size: cover;
   background-attachment: fixed;
-}
-
-.header-restaurant .header__container {
-  padding: 45px 0 45px;
-}
-
-.header-restaurant .header__container .hamburger-menu {
-  position: absolute;
-  left: -9999px;
-  top: -9999px;
-}
-
-.header-restaurant .header-restaurant__logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.header-restaurant .header-restaurant__logo img {
-  max-width: 100%;
-}
-
-.header-restaurant .header-menu .header-menu__items {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  max-width: 43.75em;
-  margin: 1.875em auto 0;
-  position: relative;
-  z-index: 100;
-}
-
-.header-restaurant .header-menu .header-menu__items .header-menu__link {
-  color: #c3c2c2;
-}
-
-.header-restaurant .header-menu .header-menu__items .header-menu__link:hover, .header-restaurant .header-menu .header-menu__items .header-menu__link:focus {
-  color: #e84545;
-  border-radius: 0.25em;
-  -webkit-transition: ease 0.3s;
-  transition: ease 0.3s;
-}
-
-.header-restaurant .header-menu .header-menu__items .header-menu__link:active {
-  color: #fff;
-  background: #e84545;
-}
-
-.header-restaurant .header-title {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  max-width: -webkit-max-content;
-  max-width: -moz-max-content;
-  max-width: max-content;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   text-align: center;
-  position: absolute;
-  top: 30%;
-  -webkit-transform: translateY(-70%);
-          transform: translateY(-70%);
-  right: 50%;
-  -webkit-transform: translate(50%);
-          transform: translate(50%);
-  z-index: 1;
 }
 
 .header-restaurant .header-title h1 {
@@ -228,7 +88,7 @@ button {
   font-weight: 700;
   line-height: 71px;
   color: #fff;
-  margin: 120px 0 26px;
+  margin: 60px 0 26px;
 }
 
 .header-restaurant .header-title h1::first-letter {
@@ -247,21 +107,12 @@ button {
 }
 
 .header-restaurant .header-title .header__btn {
-  margin: 30px 0 0;
+  margin: 30px 0 0 0;
+  width: 140px;
+  height: 50px;
   background: #e84545;
   color: #fff;
   border-radius: 6px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 12.5em;
-  height: 2.875em;
 }
 
 .header-restaurant .header-title .header__btn:hover, .header-restaurant .header-title .header__btn:focus {
@@ -1513,7 +1364,7 @@ svg path {
   position: fixed;
   bottom: 0px;
   right: 30px;
-  z-index: 500;
+  z-index: 5;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   text-align: center;
@@ -1572,13 +1423,10 @@ svg path {
 
 @media (min-width: 320px) and (max-width: 767px) {
   body.lock {
-    overflow-y: hidden;
+    overflow: hidden;
   }
   .best-in-town {
     padding: 50px 0 30px 0;
-  }
-  .header-restaurant__logo {
-    padding: 40px 0 0 0;
   }
   .header-title {
     width: 320px;
@@ -1618,145 +1466,133 @@ svg path {
     -webkit-transition: all 0.4s;
     transition: all 0.4s;
   }
-  .header-menu {
-    display: none;
-  }
-  /* скрываем чекбокс */
-  #menu__toggle {
-    opacity: 0;
-  }
-  /* стилизуем кнопку */
-  .menu__btn {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    /* используем flex для центрирования содержимого */
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    /* центрируем содержимое кнопки */
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    width: 26px;
-    height: 26px;
-    cursor: pointer;
-    z-index: 9999;
-  }
-  /* добавляем "гамбургер" */
-  .menu__btn > span,
-  .menu__btn > span::before,
-  .menu__btn > span::after {
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background-color: #ee0808;
-  }
-  .menu__btn > span::before {
-    content: "";
-    top: -8px;
-  }
-  .menu__btn > span::after {
-    content: "";
-    top: 8px;
-  }
-  /* контейнер меню */
-  .menu__box {
-    display: block;
-    position: fixed;
-    visibility: hidden;
-    top: 0;
-    right: -100%;
-    width: 100%;
-    height: 100vh;
-    min-height: 100%;
-    margin: 0;
-    padding-top: 40%;
-    padding-bottom: 60px;
-    overflow-y: hidden;
-    list-style: none;
-    text-align: center;
-    background-color: rgba(41, 3, 3, 0.9);
-    -webkit-box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
-            box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
-    z-index: 900;
-  }
-  /* START SVG элементы меню */
-  .menu__item {
-    display: inline-block;
-    padding: 32px 24px;
-    color: #c3c2c2;
-    font-size: 20px;
-    font-weight: 600;
-    text-decoration: none;
-    position: relative;
-  }
-  .menu__item svg {
-    fill: none;
-    stroke: #f00000;
-    stroke-width: 3;
-    stroke-miterlimit: 10;
-    stroke-dasharray: 398;
-    stroke-dashoffset: 338;
-    stroke-linecap: round;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: calc(50% + 160px);
-    opacity: 0;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    -webkit-transition: stroke-dashoffset 0s 0.4s, opacity 0.4s;
-    transition: stroke-dashoffset 0s 0.4s, opacity 0.4s;
-    z-index: -1;
-  }
-  .menu__item--active svg,
-  .menu__item:hover svg {
-    stroke-dashoffset: 0;
-    opacity: 1;
-    -webkit-transition: opacity 0s, stroke-dashoffset 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-    transition: opacity 0s, stroke-dashoffset 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  }
-  /* FINISH SVG элементы меню */
-  #menu__toggle:checked ~ .menu__btn > span {
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-  }
-  #menu__toggle:checked ~ .menu__btn > span::before {
-    top: 0;
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-  #menu__toggle:checked ~ .menu__btn > span::after {
-    top: 0;
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
-  }
-  #menu__toggle:checked ~ .menu__box {
-    visibility: visible;
-    left: 0;
-  }
-  .menu__btn > span,
-  .menu__btn > span::before,
-  .menu__btn > span::after {
-    -webkit-transition-duration: 0.25s;
-            transition-duration: 0.25s;
-  }
-  .menu__box {
-    -webkit-transition-duration: 0.25s;
-            transition-duration: 0.25s;
-  }
   .hot-main-dishes__column {
     margin-bottom: 100px;
     max-width: 17em;
   }
 }
 
-@media (max-width: 767px) {
+.header-team {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 50;
+}
+
+.header-team::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  z-index: 2;
+}
+
+.header-team .header-team__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100px;
+}
+
+.header-team .header-team__logo {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 160px;
+          flex: 0 0 160px;
+  position: relative;
+  z-index: 3;
+}
+
+.header-team .header-team__logo img {
+  max-width: 100%;
+}
+
+.header-team .header-team__nav {
+  font-family: "Merienda", cursive;
+}
+
+.header-team .header-team__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  z-index: 2;
+}
+
+.header-team .header-team__list li {
+  margin: 0 0 0 60px;
+}
+
+.header-team .header-team__list li span {
+  padding: 0 0 3px 0;
+  border-bottom: solid 2px transparent;
+}
+
+.header-team .header-team__list li span:hover {
+  border-bottom: 2px solid #ac0b0b;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.header-team .header-team__list .header-team__link {
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #c8c8c7;
+  display: inline-block;
+  font-weight: 600;
+  position: relative;
+}
+
+.header-team .header-team__list .header-team__link svg {
+  fill: none;
+  stroke: #f00000;
+  stroke-width: 3;
+  stroke-miterlimit: 10;
+  stroke-dasharray: 398;
+  stroke-dashoffset: 338;
+  stroke-linecap: round;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: calc(50% + 90px);
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: stroke-dashoffset 0s 0.4s, opacity 0.4s;
+  transition: stroke-dashoffset 0s 0.4s, opacity 0.4s;
+  z-index: -1;
+}
+
+.header-team .header-team__list .header-team__link:hover, .header-team .header-team__list .header-team__link:focus {
+  color: #e84545;
+  border-radius: 0.25em;
+  -webkit-transition: ease 0.3s;
+  transition: ease 0.3s;
+}
+
+.header-team .header-team__list .header-team__link:active {
+  color: #fff;
+  background: #e84545;
+}
+
+.header-team .header-team__list .menu__item--active svg,
+.header-team .header-team__list .header-team__link:hover svg {
+  stroke-dashoffset: 0;
+  opacity: 1;
+  -webkit-transition: opacity 0s, stroke-dashoffset 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: opacity 0s, stroke-dashoffset 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
   .header-team__burger.active span {
     -webkit-transform: scale(0);
             transform: scale(0);
@@ -1772,7 +1608,7 @@ svg path {
     bottom: 9px;
   }
   .header-team__body {
-    height: 50px;
+    height: 30px;
     z-index: 1;
   }
   .header-team__body .header-team__logo {
@@ -1814,7 +1650,9 @@ svg path {
     bottom: 0;
   }
   .header-team__nav {
+    font-family: "Merienda", cursive;
     position: fixed;
+    overflow: auto;
     top: -100%;
     left: 0;
     width: 100%;
