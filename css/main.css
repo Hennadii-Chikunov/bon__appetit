@@ -253,7 +253,7 @@ button {
 
 .best-in-town {
   background: #fff;
-  padding: 50px 0 130px 0;
+  padding: 50px 0 100px 0;
 }
 
 .best-in-town .best-in-town__title {
@@ -319,21 +319,6 @@ button {
           justify-content: center;
   -ms-flex-line-pack: center;
       align-content: center;
-}
-
-.best-in-town .main-dishes .hot-main-dishes__column:nth-child(1) {
-  margin-bottom: 0px;
-}
-
-.best-in-town .main-dishes .hot-main-dishes__column:nth-child(2) {
-  margin-bottom: 0px;
-}
-
-.best-in-town .main-dishes .hot-main-dishes__column:nth-child(3) {
-  -webkit-transform: translateY(-18%);
-          transform: translateY(-18%);
-  margin-top: 150px;
-  margin-bottom: 0px;
 }
 
 .best-in-town .main-dishes .hot-main-dishes__column .hot__column {
@@ -940,8 +925,6 @@ svg path {
             order: 1;
     background: #e84545;
     background-size: cover;
-    -ms-flex-preferred-size: 270px;
-        flex-basis: 270px;
     padding: 25px 0 120px 0;
   }
   .news .food-menu div.food-menu__item:nth-child(1) .item__subtitle {
@@ -1037,13 +1020,13 @@ svg path {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   max-width: 100%;
 }
 
 .news .food-menu .food-menu__item {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1200,6 +1183,12 @@ svg path {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
@@ -1251,10 +1240,11 @@ svg path {
 
 .footer__contacts .flx-contacts .our-newsletter {
   color: #fff;
+  text-align: center;
 }
 
 .footer__contacts .flx-contacts .our-newsletter p {
-  width: 250px;
+  padding-bottom: 20px;
 }
 
 .footer__contacts .flx-contacts .our-newsletter .our-newsletter__form {
@@ -1263,6 +1253,7 @@ svg path {
   max-width: -webkit-max-content;
   max-width: -moz-max-content;
   max-width: max-content;
+  margin: auto;
 }
 
 .footer__contacts .flx-contacts .our-newsletter .our-newsletter__form .form__email {
@@ -1287,10 +1278,12 @@ svg path {
 .footer__contacts .flx-contacts .about__bon-appetit {
   color: #fff;
   padding: 0 0 60px 0;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 300px;
+          flex: 0 0 300px;
 }
 
 .footer__contacts .flx-contacts .about__bon-appetit blockquote {
-  max-width: 350px;
   text-align: justify;
 }
 
@@ -1592,7 +1585,129 @@ svg path {
   transition: opacity 0s, stroke-dashoffset 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
-@media (min-width: 320px) and (max-width: 768px) {
+.wrap-team {
+  padding-top: 150px;
+}
+
+.wrap-team .team--title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 230%;
+  font-family: "Raleway", sans-serif;
+  position: relative;
+}
+
+.wrap-team .team--title:after {
+  content: "";
+  position: absolute;
+  border: solid 1px #000;
+  top: 50%;
+  right: 50%;
+  left: 50%;
+  margin: 0 0px 0 80px;
+  width: 17%;
+}
+
+.wrap-team .team--title:before {
+  content: "";
+  position: absolute;
+  border: solid 1px #000;
+  top: 50%;
+  right: 50%;
+  margin: 0 80px 0 0;
+  width: 17%;
+}
+
+.wrap-team .team-title__subtitle {
+  text-align: center;
+  font-family: "Dancing Script", cursive;
+  font-size: 24px;
+  padding: 10px 0 0 0;
+}
+
+.wrap-team .team-flx {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.wrap-team .team-flx .team-column {
+  max-width: 100%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 250px;
+          flex: 0 0 250px;
+  margin-bottom: 60px;
+  font-family: "Dancing Script", cursive;
+  font-size: 1.1em;
+  font-weight: 700;
+}
+
+.wrap-team .team-flx .team-column .team__name {
+  color: #008169;
+  font-size: 25px;
+}
+
+.wrap-team .team-flx .team-column .team__subname {
+  color: #ac0b0b;
+  font-size: 22px;
+}
+
+.wrap-team .team-flx .team-column .team__qoute {
+  padding-top: 15px;
+  text-align: justify;
+}
+
+.wrap-team .team-flx .team-column .team-img {
+  max-width: 100%;
+  padding-bottom: 15px;
+}
+
+.wrap-team .team-flx .team-column .team-icons {
+  padding-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.wrap-team .team-flx .team-column .team-icons li {
+  border: solid #0e0d0d 2px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 40px;
+  height: 40px;
+}
+
+.wrap-team .team-flx .team-column .team-icons li:hover {
+  background: #ac0b0b;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.wrap-team .team-flx .team-column .team-icons li i {
+  color: #0c0c0c;
+}
+
+@media (max-width: 768px) {
   .header-team__burger.active span {
     -webkit-transform: scale(0);
             transform: scale(0);
