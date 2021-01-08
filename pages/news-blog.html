@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>News \ Blog</title>
+	  <!-- ПОДКЛЮЧИЛ Сброс СТИЛЕЙ -->
+	  <link rel="stylesheet" href="../css/normalize.css" />
+	  <!-- ПОДКЛЮЧИЛ ГЛАВНЫЕ СТИЛИ , но что ВАЖНО !! РАБОТАЮ В SCSS - CSS ЭТО ДЛЯ БРАУЗЕРА -->
+	  <link rel="stylesheet" href="../css/main.css" />
+	   <!-- ПОДКЛЮЧИЛ ШРИФТЫ, шрифтов 5 штук -->
+		<link
+      href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Dancing+Script:wght@400;700&family=Hanalei&family=Merienda:wght@400;700&family=Raleway:wght@400;600;700&display=swap"
+      rel="stylesheet"
+	 />
+	  <!-- подключил БИБЛИОТЕКУ FONTAWESOME для иконок -->
+	  <link
+	  rel="stylesheet"
+	  href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+	  integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+	  crossorigin="anonymous"
+	/>
+</head>
+<body>
+	<!-- START шапка САЙТА -->
+	<header class="header">
+		<div class="header__body">
+		 <a class="header__logo" href="#">
+			 <img src="../img/bon-appetit.png" alt="bon-appetit">
+		 </a>
+		 <div class="header__burger">
+			 <span></span>
+		 </div>
+		 <nav class="header__nav">
+			 <ul class="header__list">
+				 <li>
+					 <a class="header__link menu__item--active" href="../index.html">
+						 Home
+						 <svg version="1.1" x="0px" y="0px" viewBox="0 0 152.9 43.4" style="enable-background:new 0 0 152.9 43.4;" xml:space="preserve">
+							<path d="M151.9,13.6c0,0,3.3-9.5-85-8.3c-97,1.3-58.3,29-58.3,29s9.7,8.1,69.7,8.1c68.3,0,69.3-23.1,69.3-23.1 s1.7-10.5-14.7-18.4"/>
+						  </svg>
+					 </a>
+				 </li>
+				 <li>
+					 <a class="header__link" href="../pages/menu.html">
+						 Menu
+						 <svg version="1.1" x="0px" y="0px" viewBox="0 0 152.9 43.4" style="enable-background:new 0 0 152.9 43.4;" xml:space="preserve">
+							<path d="M151.9,13.6c0,0,3.3-9.5-85-8.3c-97,1.3-58.3,29-58.3,29s9.7,8.1,69.7,8.1c68.3,0,69.3-23.1,69.3-23.1 s1.7-10.5-14.7-18.4"/>
+						  </svg>
+					 </a>
+				 </li>
+				 <li>
+					 <a class="header__link" href="../pages/team.html">
+						 Our Team
+                   <svg version="1.1" x="0px" y="0px" viewBox="0 0 152.9 43.4" style="enable-background:new 0 0 152.9 43.4;" xml:space="preserve">
+							<path d="M151.9,13.6c0,0,3.3-9.5-85-8.3c-97,1.3-58.3,29-58.3,29s9.7,8.1,69.7,8.1c68.3,0,69.3-23.1,69.3-23.1 s1.7-10.5-14.7-18.4"/>
+						  </svg>
+					 </a>
+				 </li>
+				 <li>
+					 <a class="header__link" href="#">
+						 Contacts
+						 <svg version="1.1" x="0px" y="0px" viewBox="0 0 152.9 43.4" style="enable-background:new 0 0 152.9 43.4;" xml:space="preserve">
+							<path d="M151.9,13.6c0,0,3.3-9.5-85-8.3c-97,1.3-58.3,29-58.3,29s9.7,8.1,69.7,8.1c68.3,0,69.3-23.1,69.3-23.1 s1.7-10.5-14.7-18.4"/>
+						  </svg>
+					 </a>
+				 </li>
+			 </ul>
+		 </nav>
+		</div>
+	 </header>
+	 <!-- FINISH шапка САЙТА -->
+	 <main>
+		 <section class="news-blog">
+			 <div class="wrap--container flx-contr">
+              <div class="main-flx-wrap">
+                  <div class="main-flx-column">
+							<img src="../img/news-blog-food-one.jpg" alt="news-blog-food-one">
+							<div class="date-time-author">
+								<time class="time" datetime="2015-03-19">March 19.2015</time>
+								<span>By Admin</span>
+							</div>
+							 <h5 class="column-title">How to cook salmon deliciously and correctly</h5>
+							 <p class="column-quote">
+								Fusce et augue placerat, dictum velit sit amet, egestas urna. Cras aliquam pretium ornare. 
+								Aliquam vel finibus metus. Aenean venenatis sodales...
+							 </p>
+						</div>
+						<div class="main-flx-column">
+							<img src="../img/news-blog-food-two.jpg" alt="news-blog-food-one">
+							<div class="date-time-author">
+								<time class="time" datetime="2015-03-19">March 19.2015</time>
+								<span>By Admin</span>
+							</div>
+							 <h5 class="column-title">How to cook salmon deliciously and correctly</h5>
+							 <p class="column-quote">
+								Fusce et augue placerat, dictum velit sit amet, egestas urna. Cras aliquam pretium ornare. 
+								Aliquam vel finibus metus. Aenean venenatis sodales...
+							 </p>
+						</div>
+						<div class="main-flx-column">
+							<img src="../img/news-blog-food-three.jpg" alt="news-blog-food-one">
+							<div class="date-time-author">
+								<time class="time" datetime="2015-03-19">March 19.2015</time>
+								<span>By Admin</span>
+							</div>
+							 <h5 class="column-title">How to cook salmon deliciously and correctly</h5>
+							 <p class="column-quote">
+								Fusce et augue placerat, dictum velit sit amet, egestas urna. Cras aliquam pretium ornare. 
+								Aliquam vel finibus metus. Aenean venenatis sodales...
+							 </p>
+						</div>
+							<a class="btn-previous" href="../pages/news-blog-detail.html"></a>
+							<a class="btn-next" href="../pages/news-blog-detail.html"></a>	
+							
+				  </div>
+				  <aside class="aside">  
+								<div class="recent-posts">
+									<h6><span>Recent Posts</span></h6>
+									<p class="aside__article">Global Temperature Records
+										Just Got Crushed Again</p>
+										<p class="aside__article">Global Temperature Records
+											Just Got Crushed Again</p>
+											<p class="aside__article">Global Temperature Records
+												Just Got Crushed Again</p>
+								</div>
+								<div class="our-newsletter">
+									<h6><span>Our newsletter</span></h6>
+									<p>To receive the latest news from us please
+										subscribe to our newsletter.</p>
+										<form action="#">
+											<input class="aside-email-form" type="email" placeholder="enter your email here">
+											<button class="aside-button" type="submit">SEND</button>
+										</form>
+								</div>
+								<div class="be-social">
+									<h6><span>Be Social</span></h6>
+									<p>To receive the latest news from us please
+										subscribe to our newsletter.</p>
+										<address>
+											<ul class="aside-icons">
+												<li>
+													<a href="#">
+														<i class="fab fa-facebook-f"></i>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<i class="fab fa-twitter"></i>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<i class="fab fa-linkedin-in"></i>	
+													</a>
+												</li>
+											</ul>
+										</address>
+								</div>
+						</aside>
+			   </div>
+		 </section>
+		  	<!-- Contacts -->
+		<section class="footer__contacts">
+			<div class="flx-contacts">
+				  <div class="about__bon-appetit">
+					  <h4><span>About Bon Appetit</span></h4>
+					  <blockquote>
+						  <p>Bon Apetit is an enchanting and easy-to-use parallax Restaurant WordPress
+							  theme that allows you to tell your story in a dynamic, narrative and enjoyable
+							  way, making it perfect for restaurants, bakeries, bars or coffee shops.</p>
+					  </blockquote>
+					  <div class="be__social">
+						  <address>
+							  <h5 class="social__title">Be Special</h5>
+							  <ul>
+								  <li>
+									  <a href="#">
+										  <i class="fab fa-facebook-f"></i>
+									  </a>
+								  </li>
+								  <li>
+									  <a href="#">
+										  <i class="fab fa-twitter"></i>
+									  </a>
+								  </li>
+								  <li>
+									  <a href="#">
+										  <i class="fab fa-linkedin-in"></i>	
+									  </a>
+								  </li>
+							  </ul>
+						  </address>
+					  </div>
+				  </div>
+			  <div class="flx-column__form">
+				  <div class="our-newsletter">
+					  <h4><span>Our Newsletter</span></h4>
+					  <p>To receive the latest news from us please
+						  subscribe to our newsletter.</p>
+							  <form class="our-newsletter__form" action="#">
+									  <input class="form__email" type="email" name="user_email" placeholder="enter your email here" required>
+									  <input class="form__button" type="submit" name="button" value="SEND">			
+							  </form>
+				  </div>
+				  <div class="contact">
+					  <h4><span>Contact</span></h4>
+					  <address>
+						  <p>
+							  <i class="fa fa-phone"></i><a class="contact__tel" href="tel:+31071312345">+3(107)-1312-34-5</a>
+						  </p>
+							<p>
+							  <i class="fas fa-envelope"></i><a href="mailto:info@bonapetit.com">info@bonapetit.com</a>
+							</p>
+							<p>
+							  <i class="fas fa-map-marker-alt"></i><a href="https://goo.gl/maps/MPsQ5A5tec7NMPJf8">New York</a>
+							</p>
+					  </address>
+				  </div>
+			  </div>
+			</div>
+		</section>
+	 </main>
+	 <footer class="footer">
+		<address>
+			<p>Copyright © 2020 Hennadiy Chikunov All Rights Reserved</p>
+		</address>
+	</footer>
+		<!-- ПОДКЛЮЧИЛ JQUERY -->
+		<script
+		src="https://code.jquery.com/jquery-3.5.1.js"
+		integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+		crossorigin="anonymous"
+	 ></script>
+	 <!--данный скрипт это надежное меню по юзабилити и удобвству пользователя -->
+	<script>
+		$(document).ready(function() {
+			$(".header__burger").click(function(event) {
+				$(".header__burger, .header__nav").toggleClass("active");
+				// Отмена скролла при включенном мобильном меню
+				$("body").toggleClass("lock");
+			});
+		});
+	</script>
+</body>
+</html>
