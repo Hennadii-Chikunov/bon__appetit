@@ -25,7 +25,7 @@
 	<!-- START шапка САЙТА -->
 	<header class="header">
 		<div class="header__body">
-		 <a class="header__logo" href="#">
+		 <a class="header__logo" href="../index.html">
 			 <img src="../img/bon-appetit.png" alt="bon-appetit">
 		 </a>
 		 <div class="header__burger">
@@ -42,7 +42,7 @@
 					 </a>
 				 </li>
 				 <li>
-					 <a class="header__link" href="#">
+					 <a class="header__link" href="../pages/menu.html">
 						 Menu
 						 <svg version="1.1" x="0px" y="0px" viewBox="0 0 152.9 43.4" style="enable-background:new 0 0 152.9 43.4;" xml:space="preserve">
 							<path d="M151.9,13.6c0,0,3.3-9.5-85-8.3c-97,1.3-58.3,29-58.3,29s9.7,8.1,69.7,8.1c68.3,0,69.3-23.1,69.3-23.1 s1.7-10.5-14.7-18.4"/>
@@ -58,7 +58,7 @@
 					 </a>
 				 </li>
 				 <li>
-					 <a class="header__link" href="#">
+					 <a class="header__link" href="../pages/news-blog.html">
 						 News / Blog
 						 <svg version="1.1" x="0px" y="0px" viewBox="0 0 152.9 43.4" style="enable-background:new 0 0 152.9 43.4;" xml:space="preserve">
 							<path d="M151.9,13.6c0,0,3.3-9.5-85-8.3c-97,1.3-58.3,29-58.3,29s9.7,8.1,69.7,8.1c68.3,0,69.3-23.1,69.3-23.1 s1.7-10.5-14.7-18.4"/>
@@ -178,7 +178,7 @@
 						<a class="btn-previous" href="../pages/news-blog.html"></a>
 						<a class="btn-next" href="../pages/news-blog.html"></a>			
 				  </div>
-				  <aside class="aside">  
+				  <aside class="aside detail-aside">  
 								<div class="recent-posts">
 									<h6><span>Recent Posts</span></h6>
 									<p class="aside__article">Global Temperature Records
@@ -289,6 +289,32 @@
 		<address>
 			<p>Copyright © 2020 Hennadiy Chikunov All Rights Reserved</p>
 		</address>
+			<!--Scroll To Top--><a class="scrolltotop" onclick="jQuery('html,body').animate({scrollTop:0}, 'slow');">
+				<span class="fa fa-chevron-up"></span></a><!--/Scroll To Top-->
 	</footer>
+	<!-- ПОДКЛЮЧИЛ JQUERY -->
+	<script
+	src="https://code.jquery.com/jquery-3.5.1.js"
+	integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+	crossorigin="anonymous"
+ ></script>
+	 <!--данный скрипт это надежное меню по юзабилити и удобвству пользователя -->
+	 <script>
+		$(document).ready(function() {
+			$(".header__burger").click(function(event) {
+				$(".header__burger, .header__nav").toggleClass("active");
+				// Отмена скролла при включенном мобильном меню
+				$("body").toggleClass("lock");
+			});
+		});
+	</script>
+	<script>
+		// ScrollToTop button toggle
+		jQuery(window).scroll(function () {
+		if(jQuery(window).scrollTop() > jQuery(window).height()/3){
+		jQuery('.scrolltotop').toggleClass('showScrolltop', true);}
+		else { jQuery('.scrolltotop').removeClass('showScrolltop');}
+		});
+		</script>
 </body>
 </html>

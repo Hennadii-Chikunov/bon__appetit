@@ -1182,7 +1182,7 @@ svg path {
   }
 }
 /* ScrollToTop button */
-.scrollToTop {
+.scrolltotop {
   opacity: 0;
   width: 50px;
   height: 50px;
@@ -1217,10 +1217,10 @@ svg path {
   }
 }
 /* background - цвет кнопки*/
-.scrollToTop span {
+.scrolltotop span {
   color: #fff;
 }
-.showScrollTop {
+.showScrolltop {
   font-size: 25px;
   opacity: 0.5;
   line-height: 50px;
@@ -1533,7 +1533,6 @@ svg path {
 		background: #008169;
 		background-size: cover;
 		color: #c2c2c2;
-		
 		.flx-contr {
 			display: flex;
 			flex-direction: row;
@@ -1544,6 +1543,7 @@ svg path {
 				flex: 0 1 600px;
 				flex-grow: 1;
 				position: relative;
+				
 				.main-flx-column {
 					font-family: "Raleway", sans-serif;
 					&:nth-child(1) {
@@ -1682,6 +1682,7 @@ svg path {
 							justify-content: center;
 							align-items: center;
 						}
+						
 					}
 				}
 			}
@@ -1781,12 +1782,9 @@ svg path {
 @media (max-width: 1024px) {
 	.news-blog {
 		.aside {
-			   display: flex;
-				flex-direction: row;
-				flex-wrap: wrap;
-				justify-content: center;
-				margin: 150px 0 0 0px;
+			   display: none;
 		}
 	}
 	
 }
+

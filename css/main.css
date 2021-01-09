@@ -1460,7 +1460,7 @@ svg path {
 }
 
 /* ScrollToTop button */
-.scrollToTop {
+.scrolltotop {
   opacity: 0;
   width: 50px;
   height: 50px;
@@ -1480,12 +1480,12 @@ svg path {
   /* Анимацию bounce пропишем ниже */
 }
 
-.scrollToTop:hover {
+.scrolltotop:hover {
   background-color: #f79008;
   border-radius: 100%;
 }
 
-.scrollToTop:active {
+.scrolltotop:active {
   background-color: #f70808;
 }
 
@@ -1514,11 +1514,11 @@ svg path {
 }
 
 /* background - цвет кнопки*/
-.scrollToTop span {
+.scrolltotop span {
   color: #fff;
 }
 
-.showScrollTop {
+.showScrolltop {
   font-size: 25px;
   opacity: 0.5;
   line-height: 50px;
@@ -2244,19 +2244,7 @@ svg path {
 
 @media (max-width: 1024px) {
   .news-blog .aside {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    margin: 150px 0 0 0px;
+    display: none;
   }
 }
 /*# sourceMappingURL=main.css.map */

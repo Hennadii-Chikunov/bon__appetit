@@ -397,6 +397,8 @@
 		<address>
 			<p>Copyright © 2020 Hennadiy Chikunov All Rights Reserved</p>
 		</address>
+				<!--Scroll To Top--><a class="scrolltotop" onclick="jQuery('html,body').animate({scrollTop:0}, 'slow');">
+					<span class="fa fa-chevron-up"></span></a><!--/Scroll To Top-->
 	</footer>
 	<!-- ПОДКЛЮЧИЛ JQUERY -->
 	<script
@@ -414,5 +416,13 @@
 			});
 		});
 	</script>
+	<script>
+		// ScrollToTop button toggle
+		jQuery(window).scroll(function () {
+		if(jQuery(window).scrollTop() > jQuery(window).height()/3){
+		jQuery('.scrolltotop').toggleClass('showScrolltop', true);}
+		else { jQuery('.scrolltotop').removeClass('showScrolltop');}
+		});
+		</script>
 </body>
 </html>
