@@ -56,6 +56,10 @@ li {
   list-style: none;
 }
 
+address {
+  font-style: normal;
+}
+
 button {
   cursor: pointer;
 }
@@ -734,7 +738,7 @@ svg path {
     padding: 0;
   }
   .tabs {
-    width: calc( 100% - 350px);
+    width: calc(100% - 350px);
     margin: auto;
   }
   /* Базовый контейнер табов */
@@ -2245,6 +2249,182 @@ svg path {
 @media (max-width: 1024px) {
   .news-blog .aside {
     display: none;
+  }
+}
+
+.wrap-contacts {
+  padding: 150px 0 0px 0;
+  background: #4d4d4c;
+}
+
+.wrap-contacts .title-contacts {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 230%;
+  font-family: "Raleway", sans-serif;
+  position: relative;
+}
+
+.wrap-contacts .title-contacts:after {
+  content: "";
+  position: absolute;
+  border: solid 1px #000;
+  top: 50%;
+  right: 50%;
+  left: 50%;
+  margin: 0 0px 0 110px;
+  width: 12%;
+}
+
+.wrap-contacts .title-contacts:before {
+  content: "";
+  position: absolute;
+  border: solid 1px #000;
+  top: 50%;
+  right: 50%;
+  margin: 0 110px 0 0;
+  width: 12%;
+}
+
+.wrap-contacts .subtitle-contacts {
+  text-align: center;
+  font-family: "Dancing Script", cursive;
+  font-size: 25px;
+}
+
+.wrap-contacts .form-contacts {
+  margin: 80px 0 0px 0;
+  max-width: 100%;
+}
+
+.wrap-contacts .form-contacts .contacts-name input {
+  margin: 0 0px 20px 0px;
+  border: solid 2px #000;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 250px;
+          flex: 0 1 250px;
+  padding: 10px;
+}
+
+.wrap-contacts .form-contacts .contacts-comments {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.wrap-contacts .form-contacts .contacts-comments textarea {
+  border: solid 2px #000;
+  padding: 10px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 500px;
+          flex: 0 1 500px;
+  resize: none;
+}
+
+.wrap-contacts .form-contacts .btn-form {
+  margin: 20px 0 0 0;
+  border: solid 2px #000;
+  background: #ac0b0b;
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+  width: 80px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrap-contacts .flx-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.wrap-contacts .flx-container .bg-relative {
+  position: relative;
+  width: 25.15em;
+  min-height: 25em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  z-index: 1;
+  margin: 0 0 200px 0;
+}
+
+.wrap-contacts .flx-container .bg-relative .bg-coordinates-maps {
+  background: #222c2e;
+  text-align: center;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  margin: 80px 0 0px 0;
+  position: absolute;
+}
+
+.wrap-contacts .flx-container .bg-relative .bg-coordinates-maps .coordinates-img img {
+  max-width: 100%;
+}
+
+.wrap-contacts .flx-container .bg-relative .bg-coordinates-maps .info-coordinates {
+  border: 2px solid;
+  margin: 20px;
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 45px 0 60px 0;
+}
+
+.wrap-contacts .flx-container .bg-relative .bg-coordinates-maps .info-coordinates span {
+  padding: 0 0 3px 0;
+  border-bottom: 2px solid #d8b57a;
+}
+
+.wrap-contacts .flx-container .bg-relative .bg-coordinates-maps .info-coordinates address {
+  padding: 20px 0 30px 0;
+  max-width: 300px;
+  margin: auto;
+}
+
+.wrap-contacts .flx-container .bg-relative .bg-coordinates-maps .info-coordinates h5 {
+  font-size: 18px;
+}
+
+.wrap-contacts .flx-container .bg-relative .bg-coordinates-maps .info-coordinates h6 {
+  font-size: 16px;
+  padding: 10px 0 10px 0;
+}
+
+@media (max-width: 767px) {
+  .contacts-name {
+    text-align: center;
   }
 }
 /*# sourceMappingURL=main.css.map */
