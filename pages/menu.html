@@ -458,23 +458,7 @@
 	integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
 	crossorigin="anonymous"
  ></script>
-  <!--данный скрипт это надежное меню по юзабилити и удобвству пользователя -->
-	<script>
-		$(document).ready(function() {
-			$(".header__burger").click(function(event) {
-				$(".header__burger, .header__nav").toggleClass("active");
-				// Отмена скролла при включенном мобильном меню
-				$("body").toggleClass("lock");
-			});
-		});
-	</script>
-	<script>
-		// ScrollToTop button toggle
-		jQuery(window).scroll(function () {
-		if(jQuery(window).scrollTop() > jQuery(window).height()/3){
-		jQuery('.scrolltotop').toggleClass('showScrolltop', true);}
-		else { jQuery('.scrolltotop').removeClass('showScrolltop');}
-		});
-		</script>
+   <!-- Скрипты на JQuery перенесены в отдельный файл -->
+	<script src="../js/scripts.js"></script>
 </body>
 </html>
