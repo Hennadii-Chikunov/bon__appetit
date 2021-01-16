@@ -691,7 +691,7 @@ svg path {
 /* Убираем текст с переключателей 
  * и оставляем иконки на малых экранах
  */
-@media screen and (max-width: 698px) {
+@media screen and (max-width: 767px) {
   .tabs > label {
     font-size: 0;
     margin: 20px;
@@ -701,12 +701,6 @@ svg path {
   .tabs {
     width: calc(100% - 350px);
     margin: auto;
-  }
-  /* Базовый контейнер табов */
-  .menu {
-    max-height: -webkit-max-content;
-    max-height: -moz-max-content;
-    max-height: max-content;
   }
   #tab1:checked ~ #content-tab1,
   #tab2:checked ~ #content-tab2,
@@ -723,16 +717,6 @@ svg path {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-  }
-  .tab1-ul-block {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 1 300px;
-    flex: 0 1 300px;
-    font-size: 12px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
   }
   .tab1-number {
     color: #d8b57a;
@@ -1324,30 +1308,47 @@ svg path {
 
 .footer__contacts .flx-contacts .our-newsletter .our-newsletter__form {
   margin: 25px 0 0 0;
-  background: #fff;
   max-width: -webkit-max-content;
   max-width: -moz-max-content;
   max-width: max-content;
   margin: auto;
 }
 
+.footer__contacts .flx-contacts .our-newsletter .our-newsletter__form input {
+  margin: 0 0 15px 0;
+}
+
 .footer__contacts .flx-contacts .our-newsletter .our-newsletter__form .form__email {
   padding: 0 0px 0 10px;
+  height: 40px;
 }
 
 .footer__contacts .flx-contacts .our-newsletter .our-newsletter__form .form__button {
   background: #ac0b0b;
-  max-width: 85px;
-  min-height: 45px;
-  padding: 6px 12px 6px 12px;
+  width: 85px;
+  height: 45px;
+  letter-spacing: 0.1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #fff;
+  font-weight: 700;
 }
 
-.footer__contacts .flx-contacts .our-newsletter .our-newsletter__form .form__button:hover,
-.footer__contacts .flx-contacts .our-newsletter .our-newsletter__form .form__button :focus {
-  background: #000;
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
+.footer__contacts .flx-contacts .our-newsletter .our-newsletter__form .form__button:hover, .footer__contacts .flx-contacts .our-newsletter .our-newsletter__form .form__button:focus {
+  background: transparent;
+  color: #fff;
+  border: solid 2px #000;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .footer__contacts .flx-contacts .about__bon-appetit {
@@ -2020,9 +2021,12 @@ svg path {
 }
 
 .news-blog .flx-contr .main-flx-wrap .main-flx-column .comment-form .right-block-form .form-comment__btn {
+  font-size: 20px;
+  letter-spacing: 0.1em;
   margin: 15px 0 0 0;
   width: 100px;
   max-width: 100px;
+  border-radius: 5px;
   height: 45px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2036,6 +2040,16 @@ svg path {
   background: #e84545;
   color: #fff;
   font-weight: 600;
+}
+
+.news-blog .flx-contr .main-flx-wrap .main-flx-column .comment-form .right-block-form .form-comment__btn:hover, .news-blog .flx-contr .main-flx-wrap .main-flx-column .comment-form .right-block-form .form-comment__btn:focus {
+  background: transparent;
+  color: #000;
+  border: solid 2px #000;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .news-blog .flx-contr .main-flx-wrap .main-flx-column .comment-form input {
@@ -2118,11 +2132,33 @@ svg path {
 
 .news-blog .flx-contr .aside .our-newsletter .aside-button {
   display: block;
-  padding: 15px;
+  letter-spacing: 0.1em;
+  width: 80px;
+  max-width: 80px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: #e84545;
-  border-radius: 10px;
+  border-radius: 5px;
   color: #fff;
   font-size: 18px;
+}
+
+.news-blog .flx-contr .aside .our-newsletter .aside-button:hover, .news-blog .flx-contr .aside .our-newsletter .aside-button:focus {
+  background: transparent;
+  color: #000;
+  border: solid 2px #000;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .news-blog .flx-contr .aside h6 {
@@ -2154,7 +2190,7 @@ svg path {
 }
 
 .news-blog .flx-contr .aside .be-social {
-  padding: 0 0 110px 0;
+  padding: 60px 0 110px 0;
 }
 
 .news-blog .flx-contr .aside .be-social .aside-icons {
@@ -2191,7 +2227,6 @@ svg path {
 }
 
 .news-blog .btn-previous {
-  background: url("../img/icons/arrow-left.svg") 0 0/100% no-repeat;
   position: absolute;
   left: 50px;
   bottom: -80px;
@@ -2199,13 +2234,28 @@ svg path {
   width: 50px;
 }
 
+.news-blog .btn-previous svg:hover {
+  fill: #ac0b0b;
+  background: #000000;
+  border-radius: 100%;
+  -webkit-transition: ease 0.4s;
+  transition: ease 0.4s;
+}
+
 .news-blog .btn-next {
-  background: url("../img/icons/arrow-right.svg") 0 0/100% no-repeat;
   position: absolute;
   right: 50px;
   bottom: -80px;
   height: 65px;
   width: 50px;
+}
+
+.news-blog .btn-next svg:hover {
+  fill: #ac0b0b;
+  background: #000000;
+  border-radius: 100%;
+  -webkit-transition: ease 0.4s;
+  transition: ease 0.4s;
 }
 
 @media (max-width: 1024px) {
@@ -2293,6 +2343,7 @@ svg path {
   font-weight: 600;
   width: 80px;
   height: 50px;
+  letter-spacing: 0.1em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2302,6 +2353,16 @@ svg path {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.wrap-contacts .form-contacts .btn-form:hover, .wrap-contacts .form-contacts .btn-form:focus {
+  background: transparent;
+  color: #000;
+  border: solid 2px #000;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .wrap-contacts .flx-container {
