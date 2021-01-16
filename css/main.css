@@ -198,10 +198,13 @@ button {
 }
 
 .header-restaurant .header-title .header__btn:hover, .header-restaurant .header-title .header__btn:focus {
-  background-color: transparent;
-  border: 0.125em solid #e84545;
+  color: #fff;
+  background: transparent;
+  border: solid 2px #ac0b0b;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .header-restaurant .header-title .header__btn:active {
@@ -309,9 +312,11 @@ button {
 .block-restaurant-form .restaurant__form .form__btn:hover, .block-restaurant-form .restaurant__form .form__btn:focus {
   background: transparent;
   color: #000;
-  border: 1px solid #e84545;
+  border: solid 2px #000;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .block-restaurant-form .restaurant__form .form__btn:active {
@@ -1348,7 +1353,7 @@ svg path {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .footer__contacts .flx-contacts .about__bon-appetit {
@@ -1532,8 +1537,12 @@ svg path {
   .footer__contacts .our-newsletter .form__button:hover,
   .footer__contacts .our-newsletter .form__button :focus {
     background: #000;
-    -webkit-transition: all 0.4s;
-    transition: all 0.4s;
+    color: #000;
+    border: solid 2px #000;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
   }
   .hot-main-dishes__column {
     margin-bottom: 100px;
@@ -2158,7 +2167,7 @@ svg path {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .news-blog .flx-contr .aside h6 {
@@ -2362,7 +2371,7 @@ svg path {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .wrap-contacts .flx-container {
