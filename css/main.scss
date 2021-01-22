@@ -675,6 +675,19 @@ button {
   -moz-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  .new {
+	&:after {
+	  content: "NEW!";
+	  background: #e84545;
+	  font-family: "Raleway", sans-serif;
+	  font-weight: 800;
+	  font-size: 14px;
+	  text-transform: uppercase;
+	  padding: 8px;
+	  color: #fff;
+	  margin-left: 10px;
+	}
+ }
 }
 h5 {
   margin: 0 0 10px 0;
@@ -1597,7 +1610,11 @@ svg path {
         padding: 30px 15px 0 15px;
         color: #fff;
         .social__title {
-          padding-top: 10px;
+					font-size: 15px;
+					font-weight: 600;
+					letter-spacing: 0.1em;
+					display: block;
+					padding: 10px 0 10px 0;
         }
         ul {
           display: -webkit-box;

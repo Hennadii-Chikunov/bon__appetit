@@ -84,7 +84,7 @@
     <!-- FINISH шапка САЙТА -->
     <main>
 		 <section class="header-restaurant">
-				<article class="header-title">
+				<div class="header-title">
 					<!-- Заголовок 1 УРОВНЯ -->
 					<h1>Bon Appetit</h1>
 					<p>
@@ -93,7 +93,7 @@
 					  for eating out. One of them is <span>“Bon Appetit”</span>.
 					</p>
 					<button class="header__btn" type="button">Find out more</button>
-				 </article>
+				 </div>
 		 </section>
       <!-- Форма для БРОНИРОВАНИЯ СТОЛИКА В РЕСТОРАНЕ -->
       <section class="block-restaurant-form">
@@ -202,9 +202,7 @@
               <h3>Menu</h3>
             </div>
           </div>
-          <article class="menu-title__paragraph">
-            <p>Every week - a new recipe from the chef!</p>
-          </article>
+            <p class="menu-title__paragraph">Every week - a new recipe from the chef!</p>
           <div class="menu-restaurant">
 				<div class="tabs">
 					<input id="tab1" type="radio" name="tabs" checked>
@@ -262,12 +260,12 @@
 					<section id="content-tab1">	
 							<ul class="tab1-ul-block">
 								<li class="tab1-content-menu">
-									<h5>French Toast</h5>	
+									<h5 class="new">French Toast</h5>	
 									<span class="tab1-number">12</span>
 									<span class="tab1-text">eggs,milk, bread, butter, syrup</span>
 								</li>
 								<li class="tab1-content-menu">
-									<h5>Old Timer's Breakfast</h5>			
+									<h5 class="new">Old Timer's Breakfast</h5>			
 									<span class="tab1-number">32</span>
 									<span class="tab1-text">eggs,milk, bread, butter, syrup</span>
 								</li>		
@@ -308,7 +306,7 @@
 					<section id="content-tab2">
 						<ul class="tab1-ul-block">
 							<li class="tab1-content-menu">
-								<h5>Coca-Cola</h5>
+								<h5 class="new">Coca-Cola</h5>
 								<span class="tab1-number">12</span>
 								<span class="tab1-text">eggs,milk, bread, butter, syrup</span>	
 							</li>
@@ -354,7 +352,7 @@
 					<section id="content-tab3">
 						<ul class="tab1-ul-block">
 							<li class="tab1-content-menu">
-								<h5>Pasta Bolonese</h5>
+								<h5 class="new">Pasta Bolonese</h5>
 								<span class="tab1-number">12</span>
 								<span class="tab1-text">eggs,milk, bread, butter, syrup</span>
 								</li>
@@ -369,7 +367,7 @@
 									<span class="tab1-text">eggs,milk, bread, butter, syrup</span>
 								</li>		
 								<li class="tab1-content-menu">
-									<h5>Down Home Biscuit Breakfast</h5>
+									<h5 class="new">Down Home Biscuit Breakfast</h5>
 									<span class="tab1-number">12</span>
 									<span class="tab1-text">eggs,milk, bread, butter, syrup</span>
 								</li>
@@ -400,7 +398,7 @@
 					<section id="content-tab4">
 						<ul class="tab1-ul-block">
 							<li class="tab1-content-menu">
-								<h5>Pizza Four Cheeses</h5>
+								<h5 class="new">Pizza Four Cheeses</h5>
 									<span class="tab1-number">12</span>
 									<span class="tab1-text">eggs,milk, bread, butter, syrup</span>
 									</li>
@@ -432,7 +430,7 @@
 											<span class="tab1-text">eggs,milk, bread, butter, syrup</span>
 										</li>	
 										<li class="tab1-content-menu">
-											<h5>Double Meat Breakfast</h5>
+											<h5 class="new">Double Meat Breakfast</h5>
 											<span class="tab1-number">12</span>
 											<span class="tab1-text">eggs,milk, bread, butter, syrup</span>
 										</li>					
@@ -446,7 +444,7 @@
 					<section id="content-tab5">
 						<ul class="tab1-ul-block">
 							<li class="tab1-content-menu">
-								<h5>Cake</h5>
+								<h5 class="new">Cake</h5>
 								<span class="tab1-number">12</span>
 								<span class="tab1-text">eggs,milk, bread, butter, syrup</span>
 							</li>
@@ -698,7 +696,7 @@
 						</blockquote>
 						<div class="be__social">
 							<address>
-								<h5 class="social__title">Be Special</h5>
+								<span class="social__title">Be Special</span>
 								<ul>
 									<li>
 										<a href="#">
