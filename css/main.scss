@@ -2802,6 +2802,11 @@ svg path {
   }
 }
 .contacts-maps {
+	.google-maps {
+		visibility: hidden;
+		position: absolute;
+		z-index: 100;
+	}
   iframe {
     height: 300px;
     width: 100vw;
