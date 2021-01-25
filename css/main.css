@@ -27,7 +27,7 @@ button {
 
 .wrap--container {
   max-width: 1170px;
-  min-width: 320px;
+  min-width: 280px;
   padding: 0 15px 0 15px;
   margin: auto;
 }
@@ -2142,13 +2142,13 @@ svg path {
 }
 
 .news-blog .main-flx-wrap .column-comments .comment-form .form--comment-area {
-  display: block;
   margin: 30px 0 0 0;
-  max-width: 100%;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
   height: 280px;
   padding: 10px;
   resize: none;
-  overflow: auto;
 }
 
 .news-blog .main-flx-wrap .column-comments .comment-form input::-webkit-input-placeholder {
@@ -2169,10 +2169,6 @@ svg path {
 .news-blog .main-flx-wrap .column-comments .comment-form input::placeholder {
   font-size: 18px;
   font-family: "Raleway", sans-serif;
-}
-
-.news-blog .main-flx-wrap .column-comments .mr-comment {
-  margin-left: 80px;
 }
 
 .news-blog .aside div {
@@ -2237,7 +2233,7 @@ svg path {
 }
 
 .news-blog .aside p {
-  width: 220px;
+  max-width: 220px;
 }
 
 .news-blog .aside .aside__article {

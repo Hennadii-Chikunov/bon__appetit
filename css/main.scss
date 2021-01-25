@@ -62,7 +62,7 @@ button {
 }
 .wrap--container {
 	max-width: 1170px;
-	min-width: 320px;
+	min-width: 280px;
   padding: 0 15px 0 15px;
   margin: auto;
 }
@@ -2425,7 +2425,6 @@ svg path {
 							letter-spacing: 0.1em;
 						}
 					}
-         
           .left-block-form {
             display: -webkit-box;
             display: -webkit-flex;
@@ -2499,13 +2498,12 @@ svg path {
             }
           }
           .form--comment-area {
-            display: block;
 						margin: 30px 0 0 0;
-						max-width: 100%;
+						max-width: max-content;
             height: 280px;
             padding: 10px;
             resize: none;
-            overflow: auto;
+            
           }
           input::-webkit-input-placeholder {
             font-size: 18px;
@@ -2532,9 +2530,7 @@ svg path {
             font-family: "Raleway", sans-serif;
           }
 				}
-				.mr-comment {
-          margin-left: 80px;
-        } 
+				
 			}
     }
     .aside {
@@ -2606,7 +2602,7 @@ svg path {
         }
       }
       p {
-        width: 220px;
+        max-width: 220px;
       }
       .aside__article {
         padding: 0 0 30px 0;
