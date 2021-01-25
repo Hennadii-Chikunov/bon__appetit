@@ -555,6 +555,27 @@ button {
           background: #ac0b0b -moz-radial-gradient(50% 0, circle, rgba(22, 21, 21, 0.65), rgba(223, 238, 8, 0.767));
           background: #ac0b0b -o-radial-gradient(50% 0, circle, rgba(22, 21, 21, 0.65), rgba(223, 238, 8, 0.767));
           background: #ac0b0b
+            -webkit-radial-gradient(
+              50% 0,
+              circle,
+              rgba(22, 21, 21, 0.65),
+              rgba(223, 238, 8, 0.767)
+            );
+          background: #ac0b0b
+            -moz-radial-gradient(
+              50% 0,
+              circle,
+              rgba(22, 21, 21, 0.65),
+              rgba(223, 238, 8, 0.767)
+            );
+          background: #ac0b0b
+            -o-radial-gradient(
+              50% 0,
+              circle,
+              rgba(22, 21, 21, 0.65),
+              rgba(223, 238, 8, 0.767)
+            );
+          background: #ac0b0b
             radial-gradient(
               circle at 50% 0,
               rgba(22, 21, 21, 0.65),
@@ -2231,9 +2252,21 @@ svg path {
     -moz-box-flex: 1;
     flex-grow: 1;
 		position: relative;
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -moz-box;
+		display: -ms-flexbox;
 		display: flex;
-		flex-flow: column;
-		flex-wrap: wrap;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-webkit-flex-flow: column;
+		   -moz-box-orient: vertical;
+		   -moz-box-direction: normal;
+		    -ms-flex-flow: column;
+		        flex-flow: column;
+		-webkit-flex-wrap: wrap;
+		    -ms-flex-wrap: wrap;
+		        flex-wrap: wrap;
     .main-flx-column {
       font-family: "Raleway", sans-serif;
       &:nth-child(1) {
@@ -2464,10 +2497,31 @@ svg path {
           input {
             margin: 30px 0 30px 0;
             padding: 0px 0 0 15px;
-            flex: 0 1 40px;
+            -webkit-box-flex: 0;
+            -webkit-flex: 0 1 40px;
+               -moz-box-flex: 0;
+                -ms-flex: 0 1 40px;
+                    flex: 0 1 40px;
 						border: solid 2px #4d4d4c;
 						width: 100%;
-						box-sizing: border-box;;
+						-webkit-box-sizing: border-box;
+						   -moz-box-sizing: border-box;
+						        box-sizing: border-box;;
+						&::-webkit-input-placeholder {
+							color: #008169;
+						};
+						&:-moz-placeholder {
+							color: #008169;
+						};
+						&::-moz-placeholder {
+							color: #008169;
+						};
+						&:-ms-input-placeholder {
+							color: #008169;
+						};
+						&::-ms-input-placeholder {
+							color: #008169;
+						};
 						&::placeholder {
 							color: #008169;
 						}
@@ -2490,17 +2544,50 @@ svg path {
             margin: 30px 0 20px 0;
             border: solid 2px #4d4d4c;
             padding: 10px 0 0 15px;
-						flex: 0 1 255px;
-						box-sizing: border-box;
+						-webkit-box-flex: 0;
+						-webkit-flex: 0 1 255px;
+						   -moz-box-flex: 0;
+						    -ms-flex: 0 1 255px;
+						        flex: 0 1 255px;
+						-webkit-box-sizing: border-box;
+						   -moz-box-sizing: border-box;
+						        box-sizing: border-box;
 						width: 100%;
+						&::-webkit-input-placeholder {
+							color: #008169;
+						}
+						&:-moz-placeholder {
+							color: #008169;
+						}
+						&::-moz-placeholder {
+							color: #008169;
+						}
+						&:-ms-input-placeholder {
+							color: #008169;
+						}
+						&::-ms-input-placeholder {
+							color: #008169;
+						}
 						&::placeholder {
 							color: #008169;
 						}
           }
           button {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -moz-box;
+            display: -ms-flexbox;
             display: flex;
-            justify-content: center;
-            align-items: center;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+               -moz-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+               -moz-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
             max-width: 100px;
 						height: 50px;
 						text-transform: uppercase;
@@ -2512,8 +2599,15 @@ svg path {
 						&:hover, &:focus {
 							background: #fff;
 							color: #000;
+							-webkit-transition: all 0.4s;
+							-o-transition: all 0.4s;
+							-moz-transition: all 0.4s;
 							transition: all 0.4s;
-							transform: scale(1.2);
+							-webkit-transform: scale(1.2);
+							   -moz-transform: scale(1.2);
+							    -ms-transform: scale(1.2);
+							     -o-transform: scale(1.2);
+							        transform: scale(1.2);
 						}
           }
         }
