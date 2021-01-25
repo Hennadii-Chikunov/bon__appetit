@@ -2295,6 +2295,8 @@ svg path {
         }   
 			}	
 			.column-comments {
+				display: flex;
+				flex-flow: column;
 				.title-comment {
           font-size: 18px;
           font-weight: 700;

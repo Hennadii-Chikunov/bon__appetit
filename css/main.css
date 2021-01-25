@@ -1967,6 +1967,16 @@ svg path {
   font-weight: 600;
 }
 
+.news-blog .main-flx-wrap .column-comments {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
 .news-blog .main-flx-wrap .column-comments .title-comment {
   font-size: 18px;
   font-weight: 700;
