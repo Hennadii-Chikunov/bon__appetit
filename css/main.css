@@ -2078,16 +2078,11 @@ svg path {
 }
 
 .news-blog .main-flx-wrap .column-comments .comment-form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
   margin: 0 0 40px 0;
-  max-width: -webkit-max-content;
-  max-width: -moz-max-content;
-  max-width: max-content;
 }
 
 .news-blog .main-flx-wrap .column-comments .comment-form fieldset {
@@ -2106,18 +2101,21 @@ svg path {
 }
 
 .news-blog .main-flx-wrap .column-comments .comment-form .left-block-form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  float: left;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
 .news-blog .main-flx-wrap .column-comments .comment-form .right-block-form {
-  float: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .news-blog .main-flx-wrap .column-comments .comment-form .right-block-form .form-comment__btn {
@@ -2192,6 +2190,10 @@ svg path {
 .news-blog .main-flx-wrap .column-comments .comment-form input::placeholder {
   font-size: 18px;
   font-family: "Raleway", sans-serif;
+}
+
+.news-blog .main-flx-wrap .column-comments .mr-comment {
+  margin-left: 60px;
 }
 
 .news-blog .aside div {

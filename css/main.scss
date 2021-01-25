@@ -2405,18 +2405,8 @@ svg path {
 					}
 				}
 				.comment-form {
-					display: -webkit-box;
-					display: -webkit-flex;
-					display: -moz-box;
-					display: -ms-flexbox;
-					display: flex;
-					-webkit-box-pack: center;
-					-webkit-justify-content: center;
-					   -moz-box-pack: center;
-					    -ms-flex-pack: center;
-					        justify-content: center;
+					flex-flow: column;
 					margin: 0 0 40px 0;
-					max-width: max-content;
 					fieldset {
 						background: transparent;
 						-webkit-border-radius: 10px;
@@ -2433,22 +2423,12 @@ svg path {
 						}
 					}
           .left-block-form {
-            display: -webkit-box;
-            display: -webkit-flex;
-            display: -moz-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
-            -webkit-flex-direction: column;
-            -moz-box-orient: vertical;
-            -moz-box-direction: normal;
-            -ms-flex-direction: column;
-            flex-direction: column;
-            float: left;
+            align-self: flex-start;
           }
           .right-block-form {
-            float: right;
+						display: flex;
+						align-items: center;
+						flex-direction: column;
             .form-comment__btn {
               font-size: 20px;
               letter-spacing: 0.1em;
@@ -2537,7 +2517,9 @@ svg path {
             font-family: "Raleway", sans-serif;
           }
 				}
-				
+				.mr-comment {
+					margin-left: 60px;
+        } 
 			}
     }
     .aside {
