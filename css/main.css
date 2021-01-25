@@ -2188,6 +2188,11 @@ svg path {
   margin-left: 60px;
 }
 
+.news-blog .aside {
+  position: absolute;
+  right: 20px;
+}
+
 .news-blog .aside div {
   margin: 0 30px;
 }

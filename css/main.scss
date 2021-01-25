@@ -2522,6 +2522,8 @@ svg path {
 			}
     }
     .aside {
+			position: absolute;
+			right: 20px;
       & div {
         margin: 0 30px;
       }
