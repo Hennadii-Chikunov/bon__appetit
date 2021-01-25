@@ -2065,6 +2065,9 @@ svg path {
   -ms-flex-pack: center;
   justify-content: center;
   margin: 0 0 40px 0;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
 }
 
 .news-blog .main-flx-wrap .column-comments .comment-form fieldset {
@@ -2169,6 +2172,10 @@ svg path {
 .news-blog .main-flx-wrap .column-comments .comment-form input::placeholder {
   font-size: 18px;
   font-family: "Raleway", sans-serif;
+}
+
+.news-blog .main-flx-wrap .column-comments .mr-comment {
+  margin-left: 80px;
 }
 
 .news-blog .aside div {

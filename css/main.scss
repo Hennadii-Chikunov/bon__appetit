@@ -2410,6 +2410,7 @@ svg path {
 					    -ms-flex-pack: center;
 					        justify-content: center;
 					margin: 0 0 40px 0;
+					max-width: max-content;
 					fieldset {
 						background: transparent;
 						-webkit-border-radius: 10px;
@@ -2530,7 +2531,9 @@ svg path {
             font-family: "Raleway", sans-serif;
           }
 				}
-				
+				.mr-comment {
+          margin-left: 80px;
+        } 
 			}
     }
     .aside {
