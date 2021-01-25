@@ -1958,6 +1958,7 @@ svg path {
   max-width: 800px;
   text-align: justify;
   padding-bottom: 50px;
+  word-wrap: break-word;
 }
 
 .news-blog .main-flx-wrap .main-flx-column .column-tags {
@@ -1975,16 +1976,26 @@ svg path {
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
           flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .news-blog .main-flx-wrap .column-comments .title-comment {
   font-size: 18px;
   font-weight: 700;
   color: #000000;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
 .news-blog .main-flx-wrap .column-comments .row-comment {
-  padding: 40px 0 50px 0;
+  margin: 40px 0 50px 0;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
 .news-blog .main-flx-wrap .column-comments .row-comment .comment-btn {
@@ -2001,8 +2012,7 @@ svg path {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  height: 50px;
-  width: 100px;
+  min-height: 50px;
   max-width: 100px;
   font-weight: 700;
   font-size: 18px;
@@ -2030,8 +2040,7 @@ svg path {
   border: solid 2px #fde50b;
   border-radius: 50%;
   max-width: 100%;
-  width: 60px;
-  height: 60px;
+  min-height: 60px;
 }
 
 .news-blog .main-flx-wrap .column-comments .row-comment .img-name-date-time {
@@ -2062,9 +2071,10 @@ svg path {
 }
 
 .news-blog .main-flx-wrap .column-comments .row-comment .comment-quote {
-  max-width: 700px;
+  max-width: 500px;
   text-align: justify;
   padding: 20px 0 0 0;
+  word-wrap: break-word;
 }
 
 .news-blog .main-flx-wrap .column-comments .comment-form {
@@ -2185,7 +2195,7 @@ svg path {
 }
 
 .news-blog .main-flx-wrap .column-comments .mr-comment {
-  margin-left: 80px;
+  margin-left: 60px;
 }
 
 .news-blog .aside div {

@@ -2285,7 +2285,8 @@ svg path {
         .column-quote {
           max-width: 800px;
           text-align: justify;
-          padding-bottom: 50px;
+					padding-bottom: 50px;
+					word-wrap: break-word;
         }
         .column-tags {
           display: block;
@@ -2297,13 +2298,17 @@ svg path {
 			.column-comments {
 				display: flex;
 				flex-flow: column;
+				justify-content: center;
+				align-items: center;
 				.title-comment {
           font-size: 18px;
           font-weight: 700;
-          color: #000000;
+					color: #000000;
+					align-self: flex-start;
 				}
 				.row-comment {
-					padding: 40px 0 50px 0;
+					margin: 40px 0 50px 0;
+					align-self: flex-start;
 					.comment-btn {
 						margin: 20px 0 0 0;
 						background: transparent;
@@ -2326,8 +2331,7 @@ svg path {
 						   -moz-box-align: center;
 						    -ms-flex-align: center;
 						        align-items: center;
-						height: 50px;
-						width: 100px;
+						min-height: 50px;
 						max-width: 100px;
 						font-weight:700;
 						font-size: 18px;
@@ -2358,8 +2362,7 @@ svg path {
 						   -moz-border-radius: 50%;
 						        border-radius: 50%;
             max-width: 100%;
-            width: 60px;
-            height: 60px;
+            min-height: 60px;
           }
           .img-name-date-time {
             display: -webkit-box;
@@ -2395,9 +2398,10 @@ svg path {
             }
 					}
 					.comment-quote {
-						max-width: 700px;
+						max-width: 500px;
 						text-align: justify;
 						padding: 20px 0 0 0;
+						word-wrap: break-word;
 					}
 				}
 				.comment-form {
@@ -2534,7 +2538,7 @@ svg path {
           }
 				}
 				.mr-comment {
-          margin-left: 80px;
+					margin-left: 60px;
         } 
 			}
     }
