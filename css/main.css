@@ -1911,6 +1911,15 @@ svg path {
   -ms-flex-positive: 1;
   flex-grow: 1;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .news-blog .main-flx-wrap .main-flx-column {
@@ -2042,6 +2051,13 @@ svg path {
   min-height: 60px;
 }
 
+.news-blog .main-flx-wrap .column-comments .row-comment .comment-quote {
+  max-width: 800px;
+  text-align: justify;
+  padding: 20px 0 0px 0;
+  word-wrap: break-word;
+}
+
 .news-blog .main-flx-wrap .column-comments .row-comment .img-name-date-time {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2074,7 +2090,8 @@ svg path {
 }
 
 .news-blog .main-flx-wrap .column-comments .flx--form fieldset {
-  margin: 30px 0 0 0px;
+  margin: 30px 0 0px 0px;
+  padding: 20px 20px 20px 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2114,14 +2131,35 @@ svg path {
   -ms-flex-flow: column;
   flex-flow: column;
   margin: 0px 0 0 0px;
+  padding: 0px 25px 0 0px;
 }
 
 .news-blog .main-flx-wrap .column-comments .flx--form .form__left-block input {
   margin: 30px 0 30px 0;
   padding: 0px 0 0 15px;
-  max-width: 220px;
-  height: 45px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 40px;
+          flex: 0 1 40px;
   border: solid 2px #4d4d4c;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.news-blog .main-flx-wrap .column-comments .flx--form .form__left-block input::-webkit-input-placeholder {
+  color: #008169;
+}
+
+.news-blog .main-flx-wrap .column-comments .flx--form .form__left-block input:-ms-input-placeholder {
+  color: #008169;
+}
+
+.news-blog .main-flx-wrap .column-comments .flx--form .form__left-block input::-ms-input-placeholder {
+  color: #008169;
+}
+
+.news-blog .main-flx-wrap .column-comments .flx--form .form__left-block input::placeholder {
+  color: #008169;
 }
 
 .news-blog .main-flx-wrap .column-comments .flx--form .form__right-block {
@@ -2135,15 +2173,60 @@ svg path {
 }
 
 .news-blog .main-flx-wrap .column-comments .flx--form .form__right-block textarea {
-  margin: 30px 0 0 0;
+  margin: 30px 0 20px 0;
   border: solid 2px #4d4d4c;
   padding: 10px 0 0 15px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 255px;
+          flex: 0 1 255px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+}
+
+.news-blog .main-flx-wrap .column-comments .flx--form .form__right-block textarea::-webkit-input-placeholder {
+  color: #008169;
+}
+
+.news-blog .main-flx-wrap .column-comments .flx--form .form__right-block textarea:-ms-input-placeholder {
+  color: #008169;
+}
+
+.news-blog .main-flx-wrap .column-comments .flx--form .form__right-block textarea::-ms-input-placeholder {
+  color: #008169;
+}
+
+.news-blog .main-flx-wrap .column-comments .flx--form .form__right-block textarea::placeholder {
+  color: #008169;
 }
 
 .news-blog .main-flx-wrap .column-comments .flx--form .form__right-block button {
-  margin: 15px 0 0 0;
-  width: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 100px;
   height: 50px;
+  text-transform: uppercase;
+  background: transparent;
+  border: solid 2px #000;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.1em;
+}
+
+.news-blog .main-flx-wrap .column-comments .flx--form .form__right-block button:hover, .news-blog .main-flx-wrap .column-comments .flx--form .form__right-block button:focus {
+  background: #fff;
+  color: #000;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .news-blog .main-flx-wrap .column-comments .mr-comment {
@@ -2273,7 +2356,7 @@ svg path {
 
 .news-blog .btn-previous {
   position: absolute;
-  left: 50px;
+  left: 5%;
   bottom: -80px;
   height: 65px;
   width: 50px;
@@ -2289,7 +2372,7 @@ svg path {
 
 .news-blog .btn-next {
   position: absolute;
-  right: 50px;
+  right: 5%;
   bottom: -80px;
   height: 65px;
   width: 50px;
