@@ -217,22 +217,27 @@
 									 </p>
 									 <a href="#" class="comment-btn">Reply</a>
 								</article>
-								<article class="row-comment">
-									<form class="comment-form" action="#">
-										<fieldset>
-											<legend>Leave a Reply</legend>
-											<div class="left-block-form">
-											<input type="text" name="firstname" placeholder="First Name">
-											<input type="text" name="lastname" placeholder="Last Name">
-											<input type="email" name="email" placeholder="Email">
-											</div>
-											 <div class="right-block-form">
-												<textarea class="form--comment-area" name="comment" cols="30" rows="10" placeholder="Comment"></textarea>
-													<button class="form-comment__btn" type="submit">SEND</button>
-											</div>
-										</fieldset>
-								 </form>
-								</article>
+							
+									<div class="flx--form">
+										<form action="#">
+											<fieldset>
+													 <legend>Leave a Reply</legend>
+														<div class="form__left-block">
+														 <label for="firstName"></label><input id="firstName" type="text" name="firstName" tabindex="1" placeholder="First Name" />
+														 <label for="lastName"></label><input id="lastName" type="text" name="lastName" tabindex="2" placeholder="Last Name"/>
+														 <label for="email"></label><input id="email" type="email" tabindex="3" placeholder="Email" required>
+														</div>
+													<div class="right-block__wrap">
+													 <div class="form__right-block">
+														 <textarea name="comment" cols="30" rows="10" placeholder="Comment"></textarea>
+														 <button type="submit">Send</button>
+													 </div>
+													</div>
+													 
+												 </fieldset>
+										</form>
+								 </div>
+								
 									
 								
 							 </div>

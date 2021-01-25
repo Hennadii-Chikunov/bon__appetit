@@ -27,7 +27,7 @@ button {
 
 .wrap--container {
   max-width: 1170px;
-  min-width: 280px;
+  min-width: 250px;
   padding: 0 15px 0 15px;
   margin: auto;
 }
@@ -2067,119 +2067,81 @@ svg path {
   font-family: "Raleway", sans-serif;
 }
 
-.news-blog .main-flx-wrap .column-comments .row-comment .comment-quote {
-  max-width: 500px;
-  text-align: justify;
-  padding: 20px 0 0 0;
-  word-wrap: break-word;
+.news-blog .main-flx-wrap .column-comments .flx--form {
+  margin: 0 0 50px 0;
 }
 
-.news-blog .main-flx-wrap .column-comments .row-comment .comment-form {
-  margin: 0 0 40px 0;
+.news-blog .main-flx-wrap .column-comments .flx--form fieldset {
+  margin: 30px 0 0 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
 }
 
-.news-blog .main-flx-wrap .column-comments .row-comment .comment-form fieldset {
-  background: transparent;
-  border-radius: 10px;
-  border: solid 2px #000;
-}
-
-.news-blog .main-flx-wrap .column-comments .row-comment .comment-form fieldset legend {
-  color: #000000;
-  font-weight: 700;
-  font-size: 20px;
+.news-blog .main-flx-wrap .column-comments .flx--form fieldset legend {
+  font-size: 18px;
   text-transform: uppercase;
-  font-family: "Raleway", sans-serif;
+  color: #000;
+  font-weight: 700;
   letter-spacing: 0.1em;
+  font-family: "Raleway", sans-serif;
 }
 
-.news-blog .main-flx-wrap .column-comments .row-comment .comment-form .left-block-form {
-  -ms-flex-item-align: start;
-      align-self: flex-start;
+.news-blog .main-flx-wrap .column-comments .flx--form fieldset:nth-child(1) {
+  border: solid 2px #000000;
+}
+
+.news-blog .main-flx-wrap .column-comments .flx--form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.news-blog .main-flx-wrap .column-comments .flx--form .form__left-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
           flex-flow: column;
+  margin: 0px 0 0 0px;
+}
+
+.news-blog .main-flx-wrap .column-comments .flx--form .form__left-block input {
+  margin: 30px 0 30px 0;
+  padding: 0px 0 0 15px;
+  max-width: 220px;
+  height: 45px;
+  border: solid 2px #4d4d4c;
+}
+
+.news-blog .main-flx-wrap .column-comments .flx--form .form__right-block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  float: left;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
 }
 
-.news-blog .main-flx-wrap .column-comments .row-comment .comment-form .right-block-form {
-  float: right;
+.news-blog .main-flx-wrap .column-comments .flx--form .form__right-block textarea {
+  margin: 30px 0 0 0;
+  border: solid 2px #4d4d4c;
+  padding: 10px 0 0 15px;
 }
 
-.news-blog .main-flx-wrap .column-comments .row-comment .comment-form .right-block-form .form-comment__btn {
-  font-size: 20px;
-  letter-spacing: 0.1em;
+.news-blog .main-flx-wrap .column-comments .flx--form .form__right-block button {
   margin: 15px 0 0 0;
   width: 100px;
-  max-width: 100px;
-  border-radius: 5px;
-  height: 45px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background: #e84545;
-  color: #fff;
-  font-weight: 600;
-}
-
-.news-blog .main-flx-wrap .column-comments .row-comment .comment-form .right-block-form .form-comment__btn:hover, .news-blog .main-flx-wrap .column-comments .row-comment .comment-form .right-block-form .form-comment__btn:focus {
-  background: transparent;
-  color: #000;
-  border: solid 2px #000;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  -webkit-transform: scale(1.2);
-  transform: scale(1.2);
-}
-
-.news-blog .main-flx-wrap .column-comments .row-comment .comment-form input {
-  max-width: 270px;
-  height: 45px;
-  margin-bottom: 45px;
-  padding: 10px;
-  margin-right: 50px;
-}
-
-.news-blog .main-flx-wrap .column-comments .row-comment .comment-form input:nth-child(1) {
-  margin-top: 30px;
-}
-
-.news-blog .main-flx-wrap .column-comments .row-comment .comment-form .form--comment-area {
-  margin: 30px 0 0 0;
-  max-width: 300px;
-  min-height: 300px;
-  padding: 10px;
-  resize: none;
-}
-
-.news-blog .main-flx-wrap .column-comments .row-comment .comment-form input::-webkit-input-placeholder {
-  font-size: 18px;
-  font-family: "Raleway", sans-serif;
-}
-
-.news-blog .main-flx-wrap .column-comments .row-comment .comment-form input:-ms-input-placeholder {
-  font-size: 18px;
-  font-family: "Raleway", sans-serif;
-}
-
-.news-blog .main-flx-wrap .column-comments .row-comment .comment-form input::-ms-input-placeholder {
-  font-size: 18px;
-  font-family: "Raleway", sans-serif;
-}
-
-.news-blog .main-flx-wrap .column-comments .row-comment .comment-form input::placeholder {
-  font-size: 18px;
-  font-family: "Raleway", sans-serif;
+  height: 50px;
 }
 
 .news-blog .main-flx-wrap .column-comments .mr-comment {
