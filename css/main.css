@@ -1976,9 +1976,6 @@ svg path {
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
           flex-flow: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -2078,10 +2075,6 @@ svg path {
 }
 
 .news-blog .main-flx-wrap .column-comments .comment-form {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
   margin: 0 0 40px 0;
 }
 
@@ -2103,19 +2096,18 @@ svg path {
 .news-blog .main-flx-wrap .column-comments .comment-form .left-block-form {
   -ms-flex-item-align: start;
       align-self: flex-start;
-}
-
-.news-blog .main-flx-wrap .column-comments .comment-form .right-block-form {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  float: left;
+}
+
+.news-blog .main-flx-wrap .column-comments .comment-form .right-block-form {
+  float: right;
 }
 
 .news-blog .main-flx-wrap .column-comments .comment-form .right-block-form .form-comment__btn {
@@ -2164,9 +2156,9 @@ svg path {
 
 .news-blog .main-flx-wrap .column-comments .comment-form .form--comment-area {
   margin: 30px 0 0 0;
-  max-width: -webkit-max-content;
-  max-width: -moz-max-content;
-  max-width: max-content;
+  -webkit-box-flex: content;
+      -ms-flex: content;
+          flex: content;
   height: 280px;
   padding: 10px;
   resize: none;
