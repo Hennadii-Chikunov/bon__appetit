@@ -1974,25 +1974,27 @@ svg path {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .news-blog .main-flx-wrap .column-comments .title-comment {
   font-size: 18px;
   font-weight: 700;
   color: #000000;
+  -webkit-align-self: flex-start;
   -ms-flex-item-align: start;
-      align-self: flex-start;
+  align-self: flex-start;
 }
 
 .news-blog .main-flx-wrap .column-comments .row-comment {
   margin: 40px 0 50px 0;
+  -webkit-align-self: flex-start;
   -ms-flex-item-align: start;
-      align-self: flex-start;
+  align-self: flex-start;
 }
 
 .news-blog .main-flx-wrap .column-comments .row-comment .comment-btn {
@@ -2078,8 +2080,8 @@ svg path {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
 }
 
 .news-blog .main-flx-wrap .column-comments .flx--form fieldset legend {
@@ -2100,7 +2102,7 @@ svg path {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .news-blog .main-flx-wrap .column-comments .flx--form .form__left-block {
@@ -2109,8 +2111,8 @@ svg path {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
   margin: 0px 0 0 0px;
 }
 
@@ -2128,8 +2130,8 @@ svg path {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
 }
 
 .news-blog .main-flx-wrap .column-comments .flx--form .form__right-block textarea {
@@ -2145,7 +2147,7 @@ svg path {
 }
 
 .news-blog .main-flx-wrap .column-comments .mr-comment {
-  margin-left: 60px;
+  padding-left: 60px;
 }
 
 .news-blog .aside {
