@@ -9,35 +9,6 @@
 // ЭТО МОЙ ПЕРВЫЙ СЕРЬЕЗНЫЙ ПРОЕКТ, ПОЭТОМУ ИЗМЕНЕНИЯ В СДЕЛАННЫХ БЛОКАХ ЕЩЕ БУДУТ ВНЕСЕНЫ И ЗАКОММИЧЕНЫ!!!
 // ВЕРСТКА ВЕДЕТСЯ С НЕКОТОРЫМИ ЛИЧНЫМИ ПРАВКАМИ  (ТОГО , ЧТО НЕТ В МАКЕТЕ ЭТО ВКЛЮЧАЕТ В СЕБЯ ТЕКСТ-СТИЛИЗАЦИЮ, ХОВЕРЫ И Т.Д )
 // Основные спецификации
-// АДАПТИВНОЕ СВОЙСТВО
-$maxWidth: 1200;
-$maxWidthContainer: 1170;
-@mixin adaptiv-value($property, $startSize, $minSize, $type) {
-  $addSize: $startSize - $minSize;
-  @if $type==1 {
-    // Только если меньше контейнера
-    #{$property}: $startSize + px;
-    @media (max-width: #{$maxWidthContainer + px}) {
-      #{$property}: calc(
-        #{$minSize + px} + #{$addSize} *
-          ((100vw - 320px) / #{$maxWidthContainer - 320})
-      );
-    }
-  } @else if $type==2 {
-    // Только если больше контейнера
-    #{$property}: $startSize + px;
-    @media (min-width: #{$maxWidthContainer + px}) {
-      #{$property}: calc(
-        #{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320})
-      );
-    }
-  } @else {
-    //Всегда
-    #{$property}: calc(
-      #{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320})
-    );
-  }
-}
 * {
   margin: 0;
   padding: 0;
@@ -81,7 +52,7 @@ button {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #000;
+		background: #011814;
     z-index: 2;
   }
   .header__body {
@@ -109,8 +80,8 @@ button {
     position: relative;
     z-index: 3;
     img {
-      max-width: 100%;
-    }
+			max-width: 100%;
+		}
   }
   .header__nav {
     font-family: "Merienda", cursive;
@@ -331,7 +302,8 @@ button {
       z-index: 100;
     }
     .form__date {
-      position: relative;
+			position: relative;
+			// НУЖНО ПЕРЕДЕЛАТЬ НА КРОСС БРАУЗЕРНОЕ РЕШЕНИЕ 
       &[type="date"]::-webkit-calendar-picker-indicator {
         position: absolute;
         left: -0.9em;
@@ -417,7 +389,7 @@ button {
 }
 // Best in Town это БЛОК ПОСЛЕ ФОРМЫ ПОД ХЭДЕРОМ
 .best-in-town {
-  background: #fff;
+  background: transparent;
   padding: 50px 0 0px 0;
   .best-in-town__title {
     text-align: center;
@@ -473,25 +445,19 @@ button {
     .hot-main-dishes__column {
       position: relative;
       width: 18.75em;
-      min-height: 25em;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -moz-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: center;
-      -webkit-justify-content: center;
-      -moz-box-pack: center;
-      -ms-flex-pack: center;
-      justify-content: center;
-      -webkit-align-content: center;
-      -ms-flex-line-pack: center;
-      align-content: center;
-      z-index: 1;
-      margin: 0 0 200px 0;
+      height: 30em;
+			z-index: 1;
+			&:nth-child(1) {
+				z-index: 4;
+			}
+			&:nth-child(2) {
+				z-index: 3;
+			}
+			&:nth-child(3) {
+				z-index: 0;
+			}
       .hot__column {
         font-family: "Raleway", sans-serif;
-        background: #fff;
         display: -webkit-box;
         display: -webkit-flex;
         display: -moz-box;
@@ -509,7 +475,11 @@ button {
         -moz-box-align: center;
         -ms-flex-align: center;
         align-items: center;
-        position: absolute;
+				position: absolute;
+				padding: 15px;
+				border: solid 2px #518677;
+				border-radius: 10px;
+				background: #008169;
         // общий отступ заголовка
         h4 {
           margin-top: 1.875em;
@@ -532,10 +502,8 @@ button {
           margin-top: 0.8125em;
         }
         .hot-column__img {
-          max-width: 100%;
-          -webkit-border-radius: 30%;
-          -moz-border-radius: 30%;
-          border-radius: 30%;
+					max-width: 100%;
+					border-radius: 10px;
         }
         &:hover {
           z-index: 100;
@@ -592,12 +560,11 @@ button {
             rgba(19, 8, 8, 0.8) 11 8px 8px -3px;
           height: auto;
           cursor: pointer;
-          -webkit-transition: all 0.3s;
-          -o-transition: all 0.3s;
-          -moz-transition: all 0.3s;
-          transition: all 0.3s;
-          background: #fff;
-          padding: 0.8125em;
+          -webkit-transition: all 0.4s;
+          -o-transition: all 0.4s;
+          -moz-transition: all 0.4s;
+          transition: all 0.4s;
+					padding: 0.7125em;
         }
         // ОТОБРАЖАЕМ ТЕКСТ СКРЫТЫЙ ЗА МНОГОТОЧИЕМ
         &:hover p {
@@ -762,10 +729,7 @@ h5 {
   transition: all 0.4s;
 }
 .tab1-content-menu {
-  @include adaptiv-value("padding", 20, 10, 0);
-  padding: -webkit-calc(10px + (20 - 10) * ((100vw - 320px) / (1200 - 320)));
-  padding: -moz-calc(10px + (20 - 10) * ((100vw - 320px) / (1200 - 320)));
-  padding: calc(10px + (20 - 10) * ((100vw - 320px) / (1200 - 320)));
+  padding: 20px;
 }
 .text-tab {
   position: relative;
@@ -1070,10 +1034,6 @@ svg path {
       flex-basis: 270px;
       font-family: "Raleway", sans-serif;
       margin: 0 0 60px 0;
-      @include adaptiv-value("padding", 4, 2, 0);
-      padding: -webkit-calc(1px + (1 - 1) * ((100vw - 320px) / (1170 - 320)));
-      padding: -moz-calc(1px + (1 - 1) * ((100vw - 320px) / (1170 - 320)));
-      padding: calc(1px + (1 - 1) * ((100vw - 320px) / (1170 - 320)));
       .cooks__photos {
         max-width: 85%;
         -webkit-border-radius: 10px;
@@ -1694,7 +1654,7 @@ svg path {
   }
 }
 .footer {
-  background: #252525;
+	background: #011814;
   line-height: 100px;
   font-family: "Dancing Script", cursive;
   address {
@@ -1702,14 +1662,17 @@ svg path {
     display: -webkit-flex;
     display: -moz-box;
     display: -ms-flexbox;
-    display: flex;
-    p {
-      max-width: -webkit-max-content;
+		display: flex;
+		max-width: -webkit-max-content;
       max-width: -moz-max-content;
-      max-width: max-content;
-      margin: auto;
-      font-size: 80%;
-      color: #ac0b0b;
+			max-width: max-content;
+			margin: auto;
+    p {
+			font-size: 12px;
+			word-break: break-all;
+	     font-weight: 700;
+color: #fa2500;
+
     }
   }
 }
@@ -1857,10 +1820,6 @@ svg path {
         }
       }
     }
-  }
-  .hot-main-dishes__column {
-    margin-bottom: 100px;
-    max-width: 17em;
   }
 }
 

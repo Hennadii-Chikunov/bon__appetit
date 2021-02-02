@@ -47,7 +47,7 @@ button {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #000;
+  background: #011814;
   z-index: 2;
 }
 
@@ -340,7 +340,7 @@ button {
 }
 
 .best-in-town {
-  background: #fff;
+  background: transparent;
   padding: 50px 0 0px 0;
 }
 
@@ -398,22 +398,24 @@ button {
 .best-in-town .main-dishes .hot-main-dishes__column {
   position: relative;
   width: 18.75em;
-  min-height: 25em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -ms-flex-line-pack: center;
-  align-content: center;
+  height: 30em;
   z-index: 1;
-  margin: 0 0 200px 0;
+}
+
+.best-in-town .main-dishes .hot-main-dishes__column:nth-child(1) {
+  z-index: 4;
+}
+
+.best-in-town .main-dishes .hot-main-dishes__column:nth-child(2) {
+  z-index: 3;
+}
+
+.best-in-town .main-dishes .hot-main-dishes__column:nth-child(3) {
+  z-index: 0;
 }
 
 .best-in-town .main-dishes .hot-main-dishes__column .hot__column {
   font-family: "Raleway", sans-serif;
-  background: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -425,6 +427,10 @@ button {
   -ms-flex-align: center;
   align-items: center;
   position: absolute;
+  padding: 15px;
+  border: solid 2px #518677;
+  border-radius: 10px;
+  background: #008169;
 }
 
 .best-in-town .main-dishes .hot-main-dishes__column .hot__column h4 {
@@ -454,7 +460,7 @@ button {
 
 .best-in-town .main-dishes .hot-main-dishes__column .hot__column .hot-column__img {
   max-width: 100%;
-  border-radius: 30%;
+  border-radius: 10px;
 }
 
 .best-in-town .main-dishes .hot-main-dishes__column .hot__column:hover {
@@ -467,10 +473,9 @@ button {
   box-shadow: inset rgba(0, 0, 0, 0.6) 0 -3px 8px, inset rgba(196, 255, 17, 0.7) 0 3px 8px, rgba(19, 8, 8, 0.8) 11 8px 8px -3px;
   height: auto;
   cursor: pointer;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  background: #fff;
-  padding: 0.8125em;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  padding: 0.7125em;
 }
 
 .best-in-town .main-dishes .hot-main-dishes__column .hot__column:hover p {
@@ -617,8 +622,7 @@ h5 {
 }
 
 .tab1-content-menu {
-  padding: calc( 10px + 10 * ((100vw - 320px) / 880));
-  padding: calc(10px + (20 - 10) * ((100vw - 320px) / (1200 - 320)));
+  padding: 20px;
 }
 
 .text-tab {
@@ -883,8 +887,6 @@ svg path {
   flex-basis: 270px;
   font-family: "Raleway", sans-serif;
   margin: 0 0 60px 0;
-  padding: calc( 2px + 2 * ((100vw - 320px) / 880));
-  padding: calc(1px + (1 - 1) * ((100vw - 320px) / (1170 - 320)));
 }
 
 .team .team__description .cooks .cooks__photos {
@@ -1427,7 +1429,7 @@ svg path {
 }
 
 .footer {
-  background: #252525;
+  background: #011814;
   line-height: 100px;
   font-family: "Dancing Script", cursive;
 }
@@ -1436,15 +1438,17 @@ svg path {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.footer address p {
   max-width: -webkit-max-content;
   max-width: -moz-max-content;
   max-width: max-content;
   margin: auto;
-  font-size: 80%;
-  color: #ac0b0b;
+}
+
+.footer address p {
+  font-size: 12px;
+  word-break: break-all;
+  font-weight: 700;
+  color: #fa2500;
 }
 
 /* ScrollToTop button */
@@ -1560,10 +1564,6 @@ svg path {
     transition: all 0.3s;
     -webkit-transform: scale(1.2);
     transform: scale(1.2);
-  }
-  .hot-main-dishes__column {
-    margin-bottom: 100px;
-    max-width: 17em;
   }
 }
 
