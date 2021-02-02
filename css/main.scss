@@ -199,21 +199,21 @@ button {
   -moz-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  text-align: center;
-  // СТИЛИ ЗАГОЛОВКА И ПАРАГРАФА С КНОПКОЙ
+	text-align: center;
+	position: relative;
+	// СТИЛИ ЗАГОЛОВКА И ПАРАГРАФА С КНОПКОЙ
   .header-title {
-    h1 {
-      font-family: "Alex Brush", cursive;
-      font-size: 4.0625em;
-      font-weight: 700;
-      line-height: 71px;
-      color: #fff;
-      margin: 60px 0 26px;
-      &::first-letter {
-        color: #e84545;
-        font-size: 2em;
-      }
-    }
+			h1 {
+				font-family: "Alex Brush", cursive;
+				font-size: 4.0625em;
+				font-weight: 700;
+				line-height: 71px;
+				color: #fff;
+				&::first-letter {
+					color: #e84545;
+					font-size: 2em;
+				}
+			}
     p {
       color: #c3c2c2;
       max-width: 600px;
@@ -255,7 +255,96 @@ button {
         transform: scale(1.1);
       }
     }
-  }
+	}
+	.header__scroll-wrap {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		position: absolute;
+		bottom: 30px;
+		left: 47%;
+		width: 6%;
+    height: 100px;
+		opacity: 0;
+		-webkit-animation-name: scroll,scroll-opacity;
+		animation-name: scroll,scroll-opacity;
+		-webkit-animation-duration: 1s,.5s;
+		animation-duration: 1s,.5s;
+		-webkit-animation-delay: 3s,2.5s;
+		animation-delay: 3s,2.5s;
+		-webkit-animation-iteration-count: infinite,1;
+		animation-iteration-count: infinite,1;
+		-webkit-animation-timing-function: linear,linear;
+		animation-timing-function: linear,linear;
+		-webkit-animation-direction: alternate,normal;
+		animation-direction: alternate,normal;
+		-webkit-animation-fill-mode: none,forwards;
+		animation-fill-mode: none,forwards;
+		p {
+			font-weight: 700;
+			color: #ac0b0b;
+			padding: 0 0 10px 0;
+		}
+	.header__scroll {
+		position: relative;
+		width: 30px;
+		height: 50px;
+		background: -webkit-gradient(linear, left top, left bottom, from(#0ff), to(#ac0b0b));
+		background: linear-gradient(#0ff, #ac0b0b);
+		border-radius: 12px;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 7px;
+			left: 13px;
+			width: 4px;
+			height: 10px;
+			background-color: #000;
+	}
+	&::after {
+		content: "";
+		position: absolute;
+		bottom: -20px;
+		left: 9px;
+		width: 10px;
+		height: 10px;
+		border-right: 2px solid #ac0b0b;
+		border-bottom: 2px solid #ac0b0b;
+		-webkit-transform: rotate(45deg);
+		transform: rotate(45deg);
+}
+}
+}
+@-webkit-keyframes scroll-opacity {
+	to {
+			opacity: 1;
+	}
+}
+
+@keyframes scroll-opacity {
+	to {
+			opacity: 1;
+	}
+}
+
+@-webkit-keyframes scroll {
+	to {
+			bottom: 0;
+	}
+}
+
+@keyframes scroll {
+	to {
+			bottom: 0;
+	}
+}
 }
 //  Форма Ресторана 2 БЛОК
 // Иконки в инпутах были сделаны в кроссбраузерном РЕШЕНИИ - это fontAWESOME
@@ -263,7 +352,7 @@ button {
 // и поставил z-index чтобы можно было кликнуть по календарю и времени
 .block-restaurant-form {
   padding: 1.6875em 0 1.6875em;
-  text-align: center;
+	text-align: center;
   h2 {
     font-family: "Merienda", cursive;
     padding: 0 0 25px;

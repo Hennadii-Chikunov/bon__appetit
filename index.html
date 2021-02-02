@@ -21,13 +21,16 @@
       integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
       crossorigin="anonymous"
 		/>
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   </head>
   <body>
     <!-- START шапка САЙТА -->
 	 <header class="header">
 		<div class="wrap--container">
 			<div class="header__body">
-				<a class="header__logo" href="./index.html">
+				<a data-aos="flip-left"
+				data-aos-easing="ease-out-cubic"
+				data-aos-duration="2500" class="header__logo" href="./index.html">
 					<img src="./img/bon-appetit.png" alt="bon-appetit">
 				</a>
 				<div class="header__burger">
@@ -35,7 +38,7 @@
 				</div>
 				<nav class="header__nav">
 					<ul class="header__list">
-					  <li>
+					  <li data-aos="zoom-out" data-aos-easing="ease-out-cubic" data-aos-duration="2600">
 						  <a class="header__link menu__item--active" href="index.html">
 								 Home
 								  <svg version="1.1" x="0px" y="0px" viewBox="0 0 152.9 43.4" style="enable-background:new 0 0 152.9 43.4;" xml:space="preserve">
@@ -43,7 +46,7 @@
 									 </svg>
 						  </a>
 					  </li>
-						<li>
+						<li data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="2800">
 							<a class="header__link" href="./pages/menu.html">
 								Menu
 								  <svg version="1.1" x="0px" y="0px" viewBox="0 0 152.9 43.4" style="enable-background:new 0 0 152.9 43.4;" xml:space="preserve">
@@ -51,7 +54,7 @@
 									 </svg>
 							</a>
 						</li>
-						<li>
+						<li data-aos="zoom-out"  data-aos-easing="ease-out-cubic" data-aos-duration="3000">
 							<a class="header__link" href="./pages/team.html">
 								Our Team
 									<svg version="1.1" x="0px" y="0px" viewBox="0 0 152.9 43.4" style="enable-background:new 0 0 152.9 43.4;" xml:space="preserve">
@@ -60,7 +63,7 @@
 								
 							</a>
 						</li>
-						<li>
+						<li data-aos="zoom-in" data-aos-duration="3200">
 							<a class="header__link" href="./pages/news-blog.html">
 								News / Blog
 								  <svg version="1.1" x="0px" y="0px" viewBox="0 0 152.9 43.4" style="enable-background:new 0 0 152.9 43.4;" xml:space="preserve">
@@ -68,7 +71,7 @@
 									 </svg>
 							</a>
 						</li>
-						<li>
+						<li data-aos="zoom-in" data-aos-duration="3400">
 							<a class="header__link" href="./pages/contacts.html">
 								Contacts
 								  <svg version="1.1" x="0px" y="0px" viewBox="0 0 152.9 43.4" style="enable-background:new 0 0 152.9 43.4;" xml:space="preserve">
@@ -85,8 +88,8 @@
     <main>
 		 <section class="header-restaurant">
 				<div class="header-title">
-					<!-- Заголовок 1 УРОВНЯ -->
-					<h1>Bon Appetit</h1>
+					<!-- Заголовок 1 УРОВНЯ -->			
+							<h1>Bon Appetit</h1>
 					<p>
 					  I enjoy eating out. I often have dinner in a good restaurant or café
 					  with my friends or my family. I’ve got a couple of favourite places
@@ -94,18 +97,28 @@
 					</p>
 					<button class="header__btn" type="button">Find out more</button>
 				 </div>
+				 <div class="header__scroll-wrap">
+					 <p>Колесиком ВНИЗ</p>
+					<div class="header__scroll"></div>
+			</div>
 		 </section>
       <!-- Форма для БРОНИРОВАНИЯ СТОЛИКА В РЕСТОРАНЕ -->
       <section class="block-restaurant-form">
          <div class="wrap--container">
 				 <!-- заголовок 2 уровня -->
-				 <h2>Book a Table in Bon Appetit</h2>
+				 <h2 data-aos="flip-up"
+				 data-aos-easing="linear"
+				 data-aos-duration="1200">Book a Table in Bon Appetit</h2>
 				 <form class="restaurant__form" action="#">
-					<label>
+					<label data-aos="flip-up"
+					data-aos-easing="linear"
+					data-aos-duration="1000">
 					  <i class="far fa-calendar"></i>
 					  <input class="form__date" name="date" type="date" required />
 					</label>
-					<label>
+					<label data-aos="flip-up"
+					data-aos-easing="linear"
+					data-aos-duration="1200">
 					  <i class="far fa-clock"></i>
 					  <input
 						 class="form__time"
@@ -115,11 +128,15 @@
 						 required
 					  />
 					</label>
-					<label>
+					<label data-aos="flip-up"
+					data-aos-easing="linear"
+					data-aos-duration="1400">
 					  <i class="fas fa-user-friends"></i>
 					  <input type="text" name="text" class="form__text text" required />
 					</label>
-					<button class="form__btn" type="submit">
+					<button class="form__btn" type="submit" data-aos="flip-up"
+					data-aos-easing="linear"
+					data-aos-duration="1500">
 					  BOOK A TABLE <i class="fa fa-angle-right"></i>
 					</button>
 				 </form>
@@ -129,8 +146,12 @@
       <section class="best-in-town">
          <div class="wrap--container">
 				<div class="best-in-town__title">
-					<h3>Best in town</h3>
-					<p>try our new flavours</p>
+					<h3 data-aos="flip-up"
+					data-aos-easing="linear"
+					data-aos-duration="1200">Best in town</h3>
+					<p data-aos="flip-down"
+					data-aos-easing="linear"
+					data-aos-duration="1200">try our new flavours</p>
 				 </div>
 				 <div class="main-dishes">
 					<div class="hot-main-dishes__column">
@@ -769,5 +790,9 @@
     ></script>
 	 <!-- Скрипты на JQuery перенесены в отдельный файл -->
 	 <script src="./js/scripts.js"></script>
+	 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	 <script>
+		 AOS.init();
+	 </script>
   </body>
 </html>
