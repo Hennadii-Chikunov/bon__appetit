@@ -31,6 +31,7 @@ address {
 button {
   cursor: pointer;
 }
+
 .wrap--container {
   max-width: 1170px;
   min-width: 250px;
@@ -55,6 +56,7 @@ button {
 		background: #011814;
     z-index: 2;
   }
+  
   .header__body {
     display: -webkit-box;
     display: -webkit-flex;
@@ -201,8 +203,227 @@ button {
   align-items: center;
 	text-align: center;
 	position: relative;
+  
 	// СТИЛИ ЗАГОЛОВКА И ПАРАГРАФА С КНОПКОЙ
+  
   .header-title {
+    .file__item {
+			position: relative;
+			.file__input {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			opacity: 0;
+			font-size: 0;
+			cursor: pointer;
+		}
+		.file__preview {
+			display: inline-block;
+			max-width: 100px;
+			padding: 10px 0 0 0;
+			& img {
+			max-width: 100%;
+		}
+		}
+		}
+		.modal__cross {
+			width: 30px;
+			height: 30px;
+			position: absolute;
+			top: 10%;
+			right: 10px;
+      fill:rgba(196, 250, 3, 0.7);
+			cursor: pointer;
+      &:hover {
+        fill: rgb(185, 11, 11);
+        transition: all 0.5s ease 0s;
+      }
+		}
+		.form__close-form {
+			position: relative;
+		}
+    .contact-form { 
+      padding: 50px 0 0 0;
+      
+      
+   .contact-form__left-block {
+     display: flex;
+     flex-flow: column;
+      margin-right: 30px;
+    
+   }
+   .contact-form__right-block {
+    padding: 0 20px 0 20px;
+    display: inline-block;
+   }
+      fieldset {
+        display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+     legend {
+      color: rgba(196, 250, 3, 0.7);
+      background: rgba(0, 0, 0, 0.7);
+      padding: 0 20px 0px 20px;
+      height: 40px;
+      text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: 0.5em;
+      border-radius: 10px;
+      line-height: 40px;
+     }
+      }
+     textarea {
+       resize: vertical;
+       width: 100%;
+       box-sizing: border-box;
+       padding: 20px;
+       border-radius: 10px;
+       &:focus {
+         box-shadow: 0 0 15px #7a956b;
+       }
+     }
+     input {
+     max-width: 100%;
+     width: 260px;
+     box-sizing: border-box;
+     height: 50px;
+     border: 1px solid #c3c3c3;
+     border-radius: 5px;
+     margin-bottom: 20px;
+     padding: 0 15px;
+     display: flex;
+     align-items: center;
+     transition: all 0.5s ease 0s;
+     &:focus {
+       box-shadow: 0 0 15px #7a956b;
+     }
+     &:nth-child(1) {
+       position: relative;
+     }
+ }
+   .form__item {
+     .form__label {
+       color: #fff;
+       margin: 15px 0px;
+     }
+     .file__item {
+       position: relative;
+       left: 50%;
+       transform: translateX(-50%);
+       max-width: 140px;
+       margin: 30px 0 10px 0;
+       border-radius: 10px;
+       color: #fff;
+       font-weight: 500;
+       letter-spacing: 0.3em;
+       .file__input {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height : 100%;
+         opacity: 0;
+         font-size: 0;
+         cursor: pointer;
+       }
+       .file__button {
+         display: inline-flex;
+         min-height: 40px;
+         justify-content: center;
+         align-items: center;
+         background-color: #e84545;
+         width: 100%;
+         border-radius: 10px;
+         text-align: center;
+       }
+     }
+     .file__preview {
+       display: inline-block;
+       max-width: 100px;
+       padding: 30px 0 30px 0;
+       & img {
+         max-width: 100%;
+       }
+     }
+   }
+   .contact-form__button {
+     min-height: 50px;
+     max-width: 150px;
+     background: #06798d;
+     box-sizing: border-box;
+     color: #fff;
+     text-transform: uppercase;
+     font-weight: 600;
+     letter-spacing: 0.1em;
+     font-size: 15px;
+     margin-top: 30px;
+     padding: 15px;
+     border-radius: 10px;
+     cursor: pointer;
+     transition: all 0.4s;
+     -webkit-animation: pulsing 2s infinite;
+     animation: pulsing 2s infinite;
+     &:hover, &:focus {
+       background: transparent;
+     }
+   }
+   .contact-form__btn-reset {
+     max-width: 150px;
+     min-height: 50px;
+     box-sizing: border-box;
+     background: #aec010;
+     color: #fff;
+     border-radius: 10px;
+     text-transform: uppercase;
+     font-weight: 600;
+     padding: 15px;
+     margin-left: 30px;
+   }
+   @media (max-width: 325px) {
+    .contact-form__button {
+      margin-bottom: 20px;
+    }
+   }
+   @-webkit-keyframes pulsing {
+     0% {
+       -webkit-transform: scale(1.0, 1.0);
+       transform: scale(1.0, 1.0);
+     }
+     50% {
+       -webkit-transform: scale(1.1, 1.1);
+       transform: scale(1.1, 1.1);
+     }
+     100% {
+       -webkit-transform: scale(1.0, 1.0);
+       transform: scale(1.0, 1.0);
+     }
+   }
+   
+   @keyframes pulsing {
+     0% {
+       -webkit-transform: scale(1.0, 1.0);
+       transform: scale(1.0, 1.0);
+     }
+     50% {
+       -webkit-transform: scale(1.1, 1.1);
+       transform: scale(1.1, 1.1);
+     }
+     100% {
+       -webkit-transform: scale(1.0, 1.0);
+       transform: scale(1.0, 1.0);
+     }
+   }
+ }
+      
 			h1 {
 				font-family: "Alex Brush", cursive;
 				font-size: 4.0625em;

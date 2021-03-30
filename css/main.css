@@ -166,6 +166,270 @@ button {
   position: relative;
 }
 
+.header-restaurant .header-title .file__item {
+  position: relative;
+}
+
+.header-restaurant .header-title .file__item .file__input {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  font-size: 0;
+  cursor: pointer;
+}
+
+.header-restaurant .header-title .file__item .file__preview {
+  display: inline-block;
+  max-width: 100px;
+  padding: 10px 0 0 0;
+}
+
+.header-restaurant .header-title .file__item .file__preview img {
+  max-width: 100%;
+}
+
+.header-restaurant .header-title .modal__cross {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 10%;
+  right: 10px;
+  fill: rgba(196, 250, 3, 0.7);
+  cursor: pointer;
+}
+
+.header-restaurant .header-title .modal__cross:hover {
+  fill: #b90b0b;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+
+.header-restaurant .header-title .form__close-form {
+  position: relative;
+}
+
+.header-restaurant .header-title .contact-form {
+  padding: 50px 0 0 0;
+}
+
+.header-restaurant .header-title .contact-form .contact-form__left-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  margin-right: 30px;
+}
+
+.header-restaurant .header-title .contact-form .contact-form__right-block {
+  padding: 0 20px 0 20px;
+  display: inline-block;
+}
+
+.header-restaurant .header-title .contact-form fieldset {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+}
+
+.header-restaurant .header-title .contact-form fieldset legend {
+  color: rgba(196, 250, 3, 0.7);
+  background: rgba(0, 0, 0, 0.7);
+  padding: 0 20px 0px 20px;
+  height: 40px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.5em;
+  border-radius: 10px;
+  line-height: 40px;
+}
+
+.header-restaurant .header-title .contact-form textarea {
+  resize: vertical;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.header-restaurant .header-title .contact-form textarea:focus {
+  -webkit-box-shadow: 0 0 15px #7a956b;
+          box-shadow: 0 0 15px #7a956b;
+}
+
+.header-restaurant .header-title .contact-form input {
+  max-width: 100%;
+  width: 260px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 50px;
+  border: 1px solid #c3c3c3;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding: 0 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+
+.header-restaurant .header-title .contact-form input:focus {
+  -webkit-box-shadow: 0 0 15px #7a956b;
+          box-shadow: 0 0 15px #7a956b;
+}
+
+.header-restaurant .header-title .contact-form input:nth-child(1) {
+  position: relative;
+}
+
+.header-restaurant .header-title .contact-form .form__item .form__label {
+  color: #fff;
+  margin: 15px 0px;
+}
+
+.header-restaurant .header-title .contact-form .form__item .file__item {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  max-width: 140px;
+  margin: 30px 0 10px 0;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+}
+
+.header-restaurant .header-title .contact-form .form__item .file__item .file__input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  font-size: 0;
+  cursor: pointer;
+}
+
+.header-restaurant .header-title .contact-form .form__item .file__item .file__button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  min-height: 40px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #e84545;
+  width: 100%;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.header-restaurant .header-title .contact-form .form__item .file__preview {
+  display: inline-block;
+  max-width: 100px;
+  padding: 30px 0 30px 0;
+}
+
+.header-restaurant .header-title .contact-form .form__item .file__preview img {
+  max-width: 100%;
+}
+
+.header-restaurant .header-title .contact-form .contact-form__button {
+  min-height: 50px;
+  max-width: 150px;
+  background: #06798d;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  font-size: 15px;
+  margin-top: 30px;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-animation: pulsing 2s infinite;
+  animation: pulsing 2s infinite;
+}
+
+.header-restaurant .header-title .contact-form .contact-form__button:hover, .header-restaurant .header-title .contact-form .contact-form__button:focus {
+  background: transparent;
+}
+
+.header-restaurant .header-title .contact-form .contact-form__btn-reset {
+  max-width: 150px;
+  min-height: 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #aec010;
+  color: #fff;
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 15px;
+  margin-left: 30px;
+}
+
+@media (max-width: 325px) {
+  .header-restaurant .header-title .contact-form .contact-form__button {
+    margin-bottom: 20px;
+  }
+}
+
+@-webkit-keyframes pulsing {
+  0% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+  50% {
+    -webkit-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes pulsing {
+  0% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+  50% {
+    -webkit-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+}
+
 .header-restaurant .header-title h1 {
   font-family: "Alex Brush", cursive;
   font-size: 4.0625em;
@@ -2684,4 +2948,3 @@ svg path {
     text-align: center;
   }
 }
-/*# sourceMappingURL=main.css.map */
