@@ -1,201 +1,287 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Contacts</title>
-	<link href="../img/favicon.png" rel="icon" />
-	 <!-- ПОДКЛЮЧИЛ Сброс СТИЛЕЙ -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacts</title>
+    <link href="../img/favicon.png" rel="icon" />
+    <!-- ПОДКЛЮЧИЛ Сброс СТИЛЕЙ -->
     <link rel="stylesheet" href="../css/normalize.css" />
     <!-- ПОДКЛЮЧИЛ ШРИФТЫ, шрифтов 5 штук -->
     <link
       href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Dancing+Script:wght@400;700&family=Hanalei&family=Merienda:wght@400;700&family=Raleway:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
-    <!-- подключил БИБЛИОТЕКУ FONTAWESOME для иконок -->
+    <!-- подключил БИБЛИОТЕКИ для иконок -->
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
       integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
       crossorigin="anonymous"
     />
-	   <!-- ПОДКЛЮЧИЛ ГЛАВНЫЕ СТИЛИ , но что ВАЖНО !! РАБОТАЮ В SCSS - CSS ЭТО ДЛЯ БРАУЗЕРА -->
-	   <link rel="stylesheet" href="../css/main.css" />
-</head>
-<body>
-	 <!-- START шапка САЙТА -->
-	 <header class="header">
-		<div class="wrap--container">
-		<div class="header__body">
-		 <a class="header__logo" href="../index.html">
-			 <img src="../img/bon-appetit.png" alt="bon-appetit">
-		 </a>
-		 <div class="header__burger">
-			 <span></span>
-		 </div>
-		 <nav class="header__nav">
-			 <ul class="header__list">
-				<li>
-					<a class="header__link menu__item--active" href="../index.html">
-			           Home
-							<svg version="1.1" x="0px" y="0px" viewBox="0 0 152.9 43.4" style="enable-background:new 0 0 152.9 43.4;" xml:space="preserve">
-								<path d="M151.9,13.6c0,0,3.3-9.5-85-8.3c-97,1.3-58.3,29-58.3,29s9.7,8.1,69.7,8.1c68.3,0,69.3-23.1,69.3-23.1 s1.7-10.5-14.7-18.4"/>
-							  </svg>
-					</a>
-				</li>
-				 <li>
-					 <a class="header__link" href="../pages/menu.html">
-						 Menu
-							<svg version="1.1" x="0px" y="0px" viewBox="0 0 152.9 43.4" style="enable-background:new 0 0 152.9 43.4;" xml:space="preserve">
-								<path d="M151.9,13.6c0,0,3.3-9.5-85-8.3c-97,1.3-58.3,29-58.3,29s9.7,8.1,69.7,8.1c68.3,0,69.3-23.1,69.3-23.1 s1.7-10.5-14.7-18.4"/>
-							  </svg>
-					 </a>
-				 </li>
-				 <li>
-					 <a class="header__link" href="../pages/team.html">
-						 Our Team
-							 <svg version="1.1" x="0px" y="0px" viewBox="0 0 152.9 43.4" style="enable-background:new 0 0 152.9 43.4;" xml:space="preserve">
-								<path d="M151.9,13.6c0,0,3.3-9.5-85-8.3c-97,1.3-58.3,29-58.3,29s9.7,8.1,69.7,8.1c68.3,0,69.3-23.1,69.3-23.1 s1.7-10.5-14.7-18.4"/>
-							  </svg>
-						 
-					 </a>
-				 </li>
-				 <li>
-					 <a class="header__link" href="../pages/news-blog.html">
-						 News / Blog
-							<svg version="1.1" x="0px" y="0px" viewBox="0 0 152.9 43.4" style="enable-background:new 0 0 152.9 43.4;" xml:space="preserve">
-								<path d="M151.9,13.6c0,0,3.3-9.5-85-8.3c-97,1.3-58.3,29-58.3,29s9.7,8.1,69.7,8.1c68.3,0,69.3-23.1,69.3-23.1 s1.7-10.5-14.7-18.4"/>
-							  </svg>
-					 </a>
-				 </li>
-			 </ul>
-		 </nav>
-		</div>
-		</div>
-	 </header>
-	 <!-- FINISH шапка САЙТА -->
-	 <main>
-		 <section class="wrap-contacts">
-			 <div class="wrap--container">
-				<h3 class="title-contacts">Contacts</h3>
-				<p class="subtitle-contacts">text us or send your impression</p>
-			   <div class="flx-container">
-					<div class="form-contacts" >
-						<form action="#">
-							<div class="contacts-name">
-							  <input name="firstname" type="text" placeholder="First Name">
-							  <input name="lastname" type="text" placeholder="Last Name">
-							</div>
-							<div class="contacts-comments">
-							 <textarea name="comment" cols="30" rows="10"  placeholder="Comment"></textarea>
-							</div>
-							 <button class="btn-form" type="submit">Send</button>
-						</form>
-					 </div>
-						<div class="bg-relative">
-							<div class="bg-coordinates-maps">
-								<div class="coordinates-img">
-									<img src="../img/coofee-maps.jpg" alt="coofee-maps">
-								</div>
-								 <div class="info-coordinates">
-									 <h5><span>Location</span></h5>
-									 <address>LITTLE LONSDALE ST, MELBOURNE
-										 VICTORIA 8011 AUSTRALIA
-										 </address>
-										 <h5><span>Hours</span></h5>
-										 <h6>THUE - THU</h6>
-										 <time datetime="2004-07-24T09:30">9:30AM</time>-<time datetime="2004-07-24T21:30">21:30PM</time>
-										 <h6>FRI - SUN</h6>
-										 <time datetime="2004-07-24T10:30">10:30AM</time>-<time datetime="2004-07-24T23:30">23:30PM</time>
-								 </div>
-							 </div>
-						</div> 
-				</div>
-			 </div>
-		 </section>
-		 <section class="contacts-maps">	
-			 <h6 class="google-maps">Google Maps</h6>
-				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3152.0919843199877!2d144.95955741531859!3d-37.81131437975281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642cab0b6f5e7%3A0xa738f6dd68b5a1e8!2zTGl0dGxlIExvbnNkYWxlIFN0LCBNZWxib3VybmUgVklDIDMwMDAsINCQ0LLRgdGC0YDQsNC70LjRjw!5e0!3m2!1sru!2sua!4v1610233275716!5m2!1sru!2sua"></iframe>
-		 </section>
-		 <!-- Contacts -->
-		<section class="footer__contacts">
-			<div class="wrap--container">
-			<div class="flx-contacts">
-				  <div class="about__bon-appetit">
-					  <h4><span>About Bon Appetit</span></h4>
-					  <blockquote>
-						  <p>Bon Apetit is an enchanting and easy-to-use parallax Restaurant WordPress
-							  theme that allows you to tell your story in a dynamic, narrative and enjoyable
-							  way, making it perfect for restaurants, bakeries, bars or coffee shops.</p>
-					  </blockquote>
-					  <div class="be__social">
-						  <address>
-							  <span class="social__title">Be Special</span>
-							  <ul>
-								  <li>
-									  <a href="#">
-										  <i class="fab fa-facebook-f"></i>
-									  </a>
-								  </li>
-								  <li>
-									  <a href="#">
-										  <i class="fab fa-twitter"></i>
-									  </a>
-								  </li>
-								  <li>
-									  <a href="#">
-										  <i class="fab fa-linkedin-in"></i>	
-									  </a>
-								  </li>
-							  </ul>
-						  </address>
-					  </div>
-				  </div>
-			  <div class="flx-column__form">
-				  <div class="our-newsletter">
-					  <h4><span>Our Newsletter</span></h4>
-					  <p>To receive the latest news from us please
-						  subscribe to our newsletter.</p>
-							  <form class="our-newsletter__form" action="#">
-									  <input class="form__email" type="email" name="user_email" placeholder="enter your email here" required>
-									  <input class="form__button" type="submit" name="button" value="SEND">			
-							  </form>
-				  </div>
-				  <div class="contact">
-					  <h4><span>Contact</span></h4>
-					  <address>
-						  <p>
-							  <i class="fa fa-phone"></i><a class="contact__tel" href="tel:+31071312345">+3(107)-1312-34-5</a>
-						  </p>
-							<p>
-							  <i class="fas fa-envelope"></i><a href="mailto:info@bonapetit.com">info@bonapetit.com</a>
-							</p>
-							<p>
-							  <i class="fas fa-map-marker-alt"></i><a href="https://goo.gl/maps/MPsQ5A5tec7NMPJf8">New York</a>
-							</p>
-					  </address>
-				  </div>
-			  </div>
-			</div>
-			</div>
-		</section>
-	 </main>
-	 <footer class="footer">
-		<div class="wrap--container">
-		<address>
-			<p>Copyright © 2020 Hennadiy Chikunov All Rights Reserved</p>
-		</address>
-			<!--Scroll To Top--><a class="scrolltotop" onclick="jQuery('html,body').animate({scrollTop:0}, 'slow');">
-				<span class="fa fa-chevron-up"></span></a><!--/Scroll To Top-->
-		</div>
-	</footer>
-	<!-- ПОДКЛЮЧИЛ JQUERY -->
-	<script
-	src="https://code.jquery.com/jquery-3.5.1.js"
-	integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-	crossorigin="anonymous"
- ></script>
-	 <!-- Скрипты на JQuery перенесены в отдельный файл -->
-	 <script src="../js/scripts.js"></script>
-</body>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- ПОДКЛЮЧИЛ ГЛАВНЫЕ СТИЛИ , но что ВАЖНО !! РАБОТАЮ В SCSS - CSS ЭТО ДЛЯ БРАУЗЕРА -->
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
+  <body>
+    <!-- START шапка САЙТА -->
+    <header class="header">
+      <div class="wrap--container">
+        <div class="header__body">
+          <a class="header__logo" href="../index.html">
+            <img src="../img/bon-appetit.png" alt="bon-appetit" />
+          </a>
+          <div class="header__burger">
+            <span></span>
+          </div>
+          <a href="#" class="themetoggle">
+            <span class="material-icons">wb_sunny</span></a
+          >
+          <nav class="header__nav">
+            <ul class="header__list">
+              <li>
+                <a class="header__link menu__item--active" href="../index.html">
+                  Home
+                  <svg
+                    version="1.1"
+                    x="0px"
+                    y="0px"
+                    viewBox="0 0 152.9 43.4"
+                    style="enable-background: new 0 0 152.9 43.4"
+                    xml:space="preserve"
+                  >
+                    <path
+                      d="M151.9,13.6c0,0,3.3-9.5-85-8.3c-97,1.3-58.3,29-58.3,29s9.7,8.1,69.7,8.1c68.3,0,69.3-23.1,69.3-23.1 s1.7-10.5-14.7-18.4"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a class="header__link" href="../pages/menu.html">
+                  Menu
+                  <path
+                    version="1.1"
+                    x="0px"
+                    y="0px"
+                    viewBox="0 0 152.9 43.4"
+                    style="enable-background: new 0 0 152.9 43.4"
+                    xml:space="preserve"
+                  >
+                    <path
+                      d="M151.9,13.6c0,0,3.3-9.5-85-8.3c-97,1.3-58.3,29-58.3,29s9.7,8.1,69.7,8.1c68.3,0,69.3-23.1,69.3-23.1 s1.7-10.5-14.7-18.4"
+                    />
+                  </path>
+                </a>
+              </li>
+              <li>
+                <a class="header__link" href="../pages/team.html">
+                  Our Team
+                  <svg
+                    version="1.1"
+                    x="0px"
+                    y="0px"
+                    viewBox="0 0 152.9 43.4"
+                    style="enable-background: new 0 0 152.9 43.4"
+                    xml:space="preserve"
+                  >
+                    <path
+                      d="M151.9,13.6c0,0,3.3-9.5-85-8.3c-97,1.3-58.3,29-58.3,29s9.7,8.1,69.7,8.1c68.3,0,69.3-23.1,69.3-23.1 s1.7-10.5-14.7-18.4"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a class="header__link" href="../pages/news-blog.html">
+                  News / Blog
+                  <svg
+                    version="1.1"
+                    x="0px"
+                    y="0px"
+                    viewBox="0 0 152.9 43.4"
+                    style="enable-background: new 0 0 152.9 43.4"
+                    xml:space="preserve"
+                  >
+                    <path
+                      d="M151.9,13.6c0,0,3.3-9.5-85-8.3c-97,1.3-58.3,29-58.3,29s9.7,8.1,69.7,8.1c68.3,0,69.3-23.1,69.3-23.1 s1.7-10.5-14.7-18.4"
+                    />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- FINISH шапка САЙТА -->
+    <main>
+      <section class="wrap-contacts">
+        <div class="wrap--container">
+          <h3 class="title-contacts">Contacts</h3>
+          <p class="subtitle-contacts">text us or send your impression</p>
+          <div class="flx-container">
+            <div class="form-contacts">
+              <form action="#">
+                <div class="contacts-name">
+                  <input
+                    name="firstname"
+                    type="text"
+                    placeholder="First Name"
+                  />
+                  <input name="lastname" type="text" placeholder="Last Name" />
+                </div>
+                <div class="contacts-comments">
+                  <textarea
+                    name="comment"
+                    cols="30"
+                    rows="10"
+                    placeholder="Comment"
+                  ></textarea>
+                </div>
+                <button class="btn-form" type="submit">Send</button>
+              </form>
+            </div>
+            <div class="bg-relative">
+              <div class="bg-coordinates-maps">
+                <div class="coordinates-img">
+                  <img src="../img/coofee-maps.jpg" alt="coofee-maps" />
+                </div>
+                <div class="info-coordinates">
+                  <h5><span>Location</span></h5>
+                  <address>
+                    LITTLE LONSDALE ST, MELBOURNE VICTORIA 8011 AUSTRALIA
+                  </address>
+                  <h5><span>Hours</span></h5>
+                  <h6>THUE - THU</h6>
+                  <time datetime="2004-07-24T09:30">9:30AM</time>-<time
+                    datetime="2004-07-24T21:30"
+                    >21:30PM</time
+                  >
+                  <h6>FRI - SUN</h6>
+                  <time datetime="2004-07-24T10:30">10:30AM</time>-<time
+                    datetime="2004-07-24T23:30"
+                    >23:30PM</time
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="contacts-maps">
+        <h6 class="google-maps">Google Maps</h6>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3152.0919843199877!2d144.95955741531859!3d-37.81131437975281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642cab0b6f5e7%3A0xa738f6dd68b5a1e8!2zTGl0dGxlIExvbnNkYWxlIFN0LCBNZWxib3VybmUgVklDIDMwMDAsINCQ0LLRgdGC0YDQsNC70LjRjw!5e0!3m2!1sru!2sua!4v1610233275716!5m2!1sru!2sua"
+        ></iframe>
+      </section>
+      <!-- Contacts -->
+      <section class="footer__contacts">
+        <div class="wrap--container">
+          <div class="flx-contacts">
+            <div class="about__bon-appetit">
+              <h4><span>About Bon Appetit</span></h4>
+              <blockquote>
+                <p>
+                  Bon Apetit is an enchanting and easy-to-use parallax
+                  Restaurant WordPress theme that allows you to tell your story
+                  in a dynamic, narrative and enjoyable way, making it perfect
+                  for restaurants, bakeries, bars or coffee shops.
+                </p>
+              </blockquote>
+              <div class="be__social">
+                <address>
+                  <span class="social__title">Be Special</span>
+                  <ul>
+                    <li>
+                      <a href="#">
+                        <i class="fab fa-facebook-f"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <i class="fab fa-twitter"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <i class="fab fa-linkedin-in"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </address>
+              </div>
+            </div>
+            <div class="flx-column__form">
+              <div class="our-newsletter">
+                <h4><span>Our Newsletter</span></h4>
+                <p>
+                  To receive the latest news from us please subscribe to our
+                  newsletter.
+                </p>
+                <form class="our-newsletter__form" action="#">
+                  <input
+                    class="form__email"
+                    type="email"
+                    name="user_email"
+                    placeholder="enter your email here"
+                    required
+                  />
+                  <input
+                    class="form__button"
+                    type="submit"
+                    name="button"
+                    value="SEND"
+                  />
+                </form>
+              </div>
+              <div class="contact">
+                <h4><span>Contact</span></h4>
+                <address>
+                  <p>
+                    <i class="fa fa-phone"></i
+                    ><a class="contact__tel" href="tel:+31071312345"
+                      >+3(107)-1312-34-5</a
+                    >
+                  </p>
+                  <p>
+                    <i class="fas fa-envelope"></i
+                    ><a href="mailto:info@bonapetit.com">info@bonapetit.com</a>
+                  </p>
+                  <p>
+                    <i class="fas fa-map-marker-alt"></i
+                    ><a href="https://goo.gl/maps/MPsQ5A5tec7NMPJf8"
+                      >New York</a
+                    >
+                  </p>
+                </address>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="wrap--container">
+        <address>
+          <p>Copyright © 2020 Hennadiy Chikunov All Rights Reserved</p>
+        </address>
+        <!--Scroll To Top--><a
+          class="scrolltotop"
+          onclick="jQuery('html,body').animate({scrollTop:0}, 'slow');"
+        >
+          <span class="fa fa-chevron-up"></span></a
+        ><!--/Scroll To Top-->
+      </div>
+    </footer>
+    <!-- ПОДКЛЮЧИЛ JQUERY -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Скрипты на JQuery перенесены в отдельный файл -->
+    <script src="../js/scripts.js"></script>
+  </body>
 </html>

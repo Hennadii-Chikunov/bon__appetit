@@ -1,264 +1,383 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>News \ Blog</title>
-	<link href="../img/favicon.png" rel="icon" />
-	  <!-- ПОДКЛЮЧИЛ Сброс СТИЛЕЙ -->
-	  <link rel="stylesheet" href="../css/normalize.css" />
-	   <!-- ПОДКЛЮЧИЛ ШРИФТЫ, шрифтов 5 штук -->
-		<link
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News \ Blog</title>
+    <link href="../img/favicon.png" rel="icon" />
+    <!-- ПОДКЛЮЧИЛ Сброс СТИЛЕЙ -->
+    <link rel="stylesheet" href="../css/normalize.css" />
+    <!-- ПОДКЛЮЧИЛ ШРИФТЫ, шрифтов 5 штук -->
+    <link
       href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Dancing+Script:wght@400;700&family=Hanalei&family=Merienda:wght@400;700&family=Raleway:wght@400;600;700&display=swap"
       rel="stylesheet"
-	 />
-	  <!-- подключил БИБЛИОТЕКУ FONTAWESOME для иконок -->
-	  <link
-	  rel="stylesheet"
-	  href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
-	  integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
-	  crossorigin="anonymous"
-	/>
-	 <!-- ПОДКЛЮЧИЛ ГЛАВНЫЕ СТИЛИ , но что ВАЖНО !! РАБОТАЮ В SCSS - CSS ЭТО ДЛЯ БРАУЗЕРА -->
-	 <link rel="stylesheet" href="../css/main.css" />
-</head>
-<body>
-	<!-- START шапка САЙТА -->
-	<header class="header">
-		<div class="wrap--container">
-		<div class="header__body">
-		 <a class="header__logo" href="../index.html">
-			 <img src="../img/bon-appetit.png" alt="bon-appetit">
-		 </a>
-		 <div class="header__burger">
-			 <span></span>
-		 </div>
-		 <nav class="header__nav">
-			 <ul class="header__list">
-				 <li>
-					 <a class="header__link menu__item--active" href="../index.html">
-						 Home
-						 <svg version="1.1" x="0px" y="0px" viewBox="0 0 152.9 43.4" style="enable-background:new 0 0 152.9 43.4;" xml:space="preserve">
-							<path d="M151.9,13.6c0,0,3.3-9.5-85-8.3c-97,1.3-58.3,29-58.3,29s9.7,8.1,69.7,8.1c68.3,0,69.3-23.1,69.3-23.1 s1.7-10.5-14.7-18.4"/>
-						  </svg>
-					 </a>
-				 </li>
-				 <li>
-					 <a class="header__link" href="../pages/menu.html">
-						 Menu
-						 <svg version="1.1" x="0px" y="0px" viewBox="0 0 152.9 43.4" style="enable-background:new 0 0 152.9 43.4;" xml:space="preserve">
-							<path d="M151.9,13.6c0,0,3.3-9.5-85-8.3c-97,1.3-58.3,29-58.3,29s9.7,8.1,69.7,8.1c68.3,0,69.3-23.1,69.3-23.1 s1.7-10.5-14.7-18.4"/>
-						  </svg>
-					 </a>
-				 </li>
-				 <li>
-					 <a class="header__link" href="../pages/team.html">
-						 Our Team
-                   <svg version="1.1" x="0px" y="0px" viewBox="0 0 152.9 43.4" style="enable-background:new 0 0 152.9 43.4;" xml:space="preserve">
-							<path d="M151.9,13.6c0,0,3.3-9.5-85-8.3c-97,1.3-58.3,29-58.3,29s9.7,8.1,69.7,8.1c68.3,0,69.3-23.1,69.3-23.1 s1.7-10.5-14.7-18.4"/>
-						  </svg>
-					 </a>
-				 </li>
-				 <li>
-					 <a class="header__link" href="../pages/contacts.html">
-						 Contacts
-						 <svg version="1.1" x="0px" y="0px" viewBox="0 0 152.9 43.4" style="enable-background:new 0 0 152.9 43.4;" xml:space="preserve">
-							<path d="M151.9,13.6c0,0,3.3-9.5-85-8.3c-97,1.3-58.3,29-58.3,29s9.7,8.1,69.7,8.1c68.3,0,69.3-23.1,69.3-23.1 s1.7-10.5-14.7-18.4"/>
-						  </svg>
-					 </a>
-				 </li>
-			 </ul>
-		 </nav>
-		</div>
-		</div>
-	 </header>
-	 <!-- FINISH шапка САЙТА -->
-	 <main>
-		 <section class="news-blog">
-			 <div class="wrap--container flx-contr">
-              <div class="main-flx-wrap">
-                  <div class="main-flx-column">
-							<img src="../img/news-blog-food-one.jpg" alt="news-blog-food-one">
-							<div class="date-time-author">
-								<time class="time" datetime="2015-03-19">March 19.2015</time>
-								<span>By Admin</span>
-							</div>
-							 <h5 class="column-title">How to cook salmon deliciously and correctly</h5>
-							 <p class="column-quote">
-								Fusce et augue placerat, dictum velit sit amet, egestas urna. Cras aliquam pretium ornare. 
-								Aliquam vel finibus metus. Aenean venenatis sodales...
-							 </p>
-						</div>
-						<div class="main-flx-column">
-							<img src="../img/news-blog-food-two.jpg" alt="news-blog-food-one">
-							<div class="date-time-author">
-								<time class="time" datetime="2015-03-19">March 19.2015</time>
-								<span>By Admin</span>
-							</div>
-							 <h5 class="column-title">How to cook salmon deliciously and correctly</h5>
-							 <p class="column-quote">
-								Fusce et augue placerat, dictum velit sit amet, egestas urna. Cras aliquam pretium ornare. 
-								Aliquam vel finibus metus. Aenean venenatis sodales...
-							 </p>
-						</div>
-						<div class="main-flx-column">
-							<img src="../img/news-blog-food-three.jpg" alt="news-blog-food-one">
-							<div class="date-time-author">
-								<time class="time" datetime="2015-03-19">March 19.2015</time>
-								<span>By Admin</span>
-							</div>
-							 <h5 class="column-title">How to cook salmon deliciously and correctly</h5>
-							 <p class="column-quote">
-								Fusce et augue placerat, dictum velit sit amet, egestas urna. Cras aliquam pretium ornare. 
-								Aliquam vel finibus metus. Aenean venenatis sodales...
-							 </p>
-						</div>
-							<a class="btn-previous" href="../pages/news-blog-detail.html">
-								<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 129 129">
-									<g>
-									  <g>
-										 <path d="m64.5,122.6c32,0 58.1-26 58.1-58.1s-26-58-58.1-58-58,26-58,58 26,58.1 58,58.1zm0-108c27.5,5.32907e-15 49.9,22.4 49.9,49.9s-22.4,49.9-49.9,49.9-49.9-22.4-49.9-49.9 22.4-49.9 49.9-49.9z"/>
-										 <path d="m70,93.5c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2 1.6-1.6 1.6-4.2 0-5.8l-23.5-23.5 23.5-23.5c1.6-1.6 1.6-4.2 0-5.8s-4.2-1.6-5.8,0l-26.4,26.4c-0.8,0.8-1.2,1.8-1.2,2.9s0.4,2.1 1.2,2.9l26.4,26.4z"/>
-									  </g>
-									</g>
-								 </svg>
-							</a>
-							<a class="btn-next" href="../pages/news-blog-detail.html">
-								<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 129 129">
-									<g>
-									  <g>
-										 <path d="M64.5,122.6c32,0,58.1-26,58.1-58.1S96.5,6.4,64.5,6.4S6.4,32.5,6.4,64.5S32.5,122.6,64.5,122.6z M64.5,14.6    c27.5,0,49.9,22.4,49.9,49.9S92,114.4,64.5,114.4S14.6,92,14.6,64.5S37,14.6,64.5,14.6z"/>
-										 <path d="m51.1,93.5c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l26.4-26.4c0.8-0.8 1.2-1.8 1.2-2.9 0-1.1-0.4-2.1-1.2-2.9l-26.4-26.4c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l23.5,23.5-23.5,23.5c-1.6,1.6-1.6,4.2 0,5.8z"/>
-									  </g>
-									</g>
-								 </svg>
-						</a>	
-				  </div>
-				  <aside class="aside">  
-								<div class="recent-posts">
-									<h6><span>Recent Posts</span></h6>
-									<p class="aside__article">Global Temperature Records
-										Just Got Crushed Again</p>
-										<p class="aside__article">Global Temperature Records
-											Just Got Crushed Again</p>
-											<p class="aside__article">Global Temperature Records
-												Just Got Crushed Again</p>
-								</div>
-								<div class="our-newsletter">
-									<h6><span>Our newsletter</span></h6>
-									<p>To receive the latest news from us please
-										subscribe to our newsletter.</p>
-										<form action="#">
-											<input class="aside-email-form" type="email" placeholder="enter your email here">
-											<button class="aside-button" type="submit">SEND</button>
-										</form>
-								</div>
-								<div class="be-social">
-									<h6><span>Be Social</span></h6>
-									<p>To receive the latest news from us please
-										subscribe to our newsletter.</p>
-										<address>
-											<ul class="aside-icons">
-												<li>
-													<a href="#">
-														<i class="fab fa-facebook-f"></i>
-													</a>
-												</li>
-												<li>
-													<a href="#">
-														<i class="fab fa-twitter"></i>
-													</a>
-												</li>
-												<li>
-													<a href="#">
-														<i class="fab fa-linkedin-in"></i>	
-													</a>
-												</li>
-											</ul>
-										</address>
-								</div>
-						</aside>
-			   </div>
-		 </section>
-		  	<!-- Contacts -->
-		<section class="footer__contacts">
-			<div class="wrap--container">
-			<div class="flx-contacts">
-				  <div class="about__bon-appetit">
-					  <h4><span>About Bon Appetit</span></h4>
-					  <blockquote>
-						  <p>Bon Apetit is an enchanting and easy-to-use parallax Restaurant WordPress
-							  theme that allows you to tell your story in a dynamic, narrative and enjoyable
-							  way, making it perfect for restaurants, bakeries, bars or coffee shops.</p>
-					  </blockquote>
-					  <div class="be__social">
-						  <address>
-							  <span class="social__title">Be Special</span>
-							  <ul>
-								  <li>
-									  <a href="#">
-										  <i class="fab fa-facebook-f"></i>
-									  </a>
-								  </li>
-								  <li>
-									  <a href="#">
-										  <i class="fab fa-twitter"></i>
-									  </a>
-								  </li>
-								  <li>
-									  <a href="#">
-										  <i class="fab fa-linkedin-in"></i>	
-									  </a>
-								  </li>
-							  </ul>
-						  </address>
-					  </div>
-				  </div>
-			  <div class="flx-column__form">
-				  <div class="our-newsletter">
-					  <h4><span>Our Newsletter</span></h4>
-					  <p>To receive the latest news from us please
-						  subscribe to our newsletter.</p>
-							  <form class="our-newsletter__form" action="#">
-									  <input class="form__email" type="email" name="user_email" placeholder="enter your email here" required>
-									  <input class="form__button" type="submit" name="button" value="SEND">			
-							  </form>
-				  </div>
-				  <div class="contact">
-					  <h4><span>Contact</span></h4>
-					  <address>
-						  <p>
-							  <i class="fa fa-phone"></i><a class="contact__tel" href="tel:+31071312345">+3(107)-1312-34-5</a>
-						  </p>
-							<p>
-							  <i class="fas fa-envelope"></i><a href="mailto:info@bonapetit.com">info@bonapetit.com</a>
-							</p>
-							<p>
-							  <i class="fas fa-map-marker-alt"></i><a href="https://goo.gl/maps/MPsQ5A5tec7NMPJf8">New York</a>
-							</p>
-					  </address>
-				  </div>
-			  </div>
-			</div>
-			</div>
-		</section>
-	 </main>
-	 <footer class="footer">
-		<div class="wrap--container">
-		<address>
-			<p>Copyright © 2020 Hennadiy Chikunov All Rights Reserved</p>
-		</address>
-			<!--Scroll To Top--><a class="scrolltotop" onclick="jQuery('html,body').animate({scrollTop:0}, 'slow');">
-				<span class="fa fa-chevron-up"></span></a><!--/Scroll To Top-->
-		</div>
-	</footer>
-		<!-- ПОДКЛЮЧИЛ JQUERY -->
-		<script
-		src="https://code.jquery.com/jquery-3.5.1.js"
-		integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-		crossorigin="anonymous"
-	 ></script>
-	 <!-- Скрипты на JQuery перенесены в отдельный файл -->
-	 <script src="../js/scripts.js"></script>
-</body>
+    />
+    <!-- подключил БИБЛИОТЕКИ для иконок -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+      integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+      crossorigin="anonymous"
+    />
+	 <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- ПОДКЛЮЧИЛ ГЛАВНЫЕ СТИЛИ , но что ВАЖНО !! РАБОТАЮ В SCSS - CSS ЭТО ДЛЯ БРАУЗЕРА -->
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
+  <body>
+    <!-- START шапка САЙТА -->
+    <header class="header">
+      <div class="wrap--container">
+        <div class="header__body">
+          <a class="header__logo" href="../index.html">
+            <img src="../img/bon-appetit.png" alt="bon-appetit" />
+          </a>
+          <div class="header__burger">
+            <span></span>
+          </div>
+          <a href="#" class="themetoggle">
+            <span class="material-icons">wb_sunny</span></a
+          >
+          <nav class="header__nav">
+            <ul class="header__list">
+              <li>
+                <a class="header__link menu__item--active" href="../index.html">
+                  Home
+                  <svg
+                    version="1.1"
+                    x="0px"
+                    y="0px"
+                    viewBox="0 0 152.9 43.4"
+                    style="enable-background: new 0 0 152.9 43.4"
+                    xml:space="preserve"
+                  >
+                    <path
+                      d="M151.9,13.6c0,0,3.3-9.5-85-8.3c-97,1.3-58.3,29-58.3,29s9.7,8.1,69.7,8.1c68.3,0,69.3-23.1,69.3-23.1 s1.7-10.5-14.7-18.4"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a class="header__link" href="../pages/menu.html">
+                  Menu
+                  <svg
+                    version="1.1"
+                    x="0px"
+                    y="0px"
+                    viewBox="0 0 152.9 43.4"
+                    style="enable-background: new 0 0 152.9 43.4"
+                    xml:space="preserve"
+                  >
+                    <path
+                      d="M151.9,13.6c0,0,3.3-9.5-85-8.3c-97,1.3-58.3,29-58.3,29s9.7,8.1,69.7,8.1c68.3,0,69.3-23.1,69.3-23.1 s1.7-10.5-14.7-18.4"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a class="header__link" href="../pages/team.html">
+                  Our Team
+                  <svg
+                    version="1.1"
+                    x="0px"
+                    y="0px"
+                    viewBox="0 0 152.9 43.4"
+                    style="enable-background: new 0 0 152.9 43.4"
+                    xml:space="preserve"
+                  >
+                    <path
+                      d="M151.9,13.6c0,0,3.3-9.5-85-8.3c-97,1.3-58.3,29-58.3,29s9.7,8.1,69.7,8.1c68.3,0,69.3-23.1,69.3-23.1 s1.7-10.5-14.7-18.4"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a class="header__link" href="../pages/contacts.html">
+                  Contacts
+                  <svg
+                    version="1.1"
+                    x="0px"
+                    y="0px"
+                    viewBox="0 0 152.9 43.4"
+                    style="enable-background: new 0 0 152.9 43.4"
+                    xml:space="preserve"
+                  >
+                    <path
+                      d="M151.9,13.6c0,0,3.3-9.5-85-8.3c-97,1.3-58.3,29-58.3,29s9.7,8.1,69.7,8.1c68.3,0,69.3-23.1,69.3-23.1 s1.7-10.5-14.7-18.4"
+                    />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- FINISH шапка САЙТА -->
+    <main>
+      <section class="news-blog">
+        <div class="wrap--container flx-contr">
+          <div class="main-flx-wrap">
+            <div class="main-flx-column">
+              <img
+                src="../img/news-blog-food-one.jpg"
+                alt="news-blog-food-one"
+              />
+              <div class="date-time-author">
+                <time class="time" datetime="2015-03-19">March 19.2015</time>
+                <span>By Admin</span>
+              </div>
+              <h5 class="column-title">
+                How to cook salmon deliciously and correctly
+              </h5>
+              <p class="column-quote">
+                Fusce et augue placerat, dictum velit sit amet, egestas urna.
+                Cras aliquam pretium ornare. Aliquam vel finibus metus. Aenean
+                venenatis sodales...
+              </p>
+            </div>
+            <div class="main-flx-column">
+              <img
+                src="../img/news-blog-food-two.jpg"
+                alt="news-blog-food-one"
+              />
+              <div class="date-time-author">
+                <time class="time" datetime="2015-03-19">March 19.2015</time>
+                <span>By Admin</span>
+              </div>
+              <h5 class="column-title">
+                How to cook salmon deliciously and correctly
+              </h5>
+              <p class="column-quote">
+                Fusce et augue placerat, dictum velit sit amet, egestas urna.
+                Cras aliquam pretium ornare. Aliquam vel finibus metus. Aenean
+                venenatis sodales...
+              </p>
+            </div>
+            <div class="main-flx-column">
+              <img
+                src="../img/news-blog-food-three.jpg"
+                alt="news-blog-food-one"
+              />
+              <div class="date-time-author">
+                <time class="time" datetime="2015-03-19">March 19.2015</time>
+                <span>By Admin</span>
+              </div>
+              <h5 class="column-title">
+                How to cook salmon deliciously and correctly
+              </h5>
+              <p class="column-quote">
+                Fusce et augue placerat, dictum velit sit amet, egestas urna.
+                Cras aliquam pretium ornare. Aliquam vel finibus metus. Aenean
+                venenatis sodales...
+              </p>
+            </div>
+            <a class="btn-previous" href="../pages/news-blog-detail.html">
+              <svg
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 129 129"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                enable-background="new 0 0 129 129"
+              >
+                <g>
+                  <g>
+                    <path
+                      d="m64.5,122.6c32,0 58.1-26 58.1-58.1s-26-58-58.1-58-58,26-58,58 26,58.1 58,58.1zm0-108c27.5,5.32907e-15 49.9,22.4 49.9,49.9s-22.4,49.9-49.9,49.9-49.9-22.4-49.9-49.9 22.4-49.9 49.9-49.9z"
+                    />
+                    <path
+                      d="m70,93.5c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2 1.6-1.6 1.6-4.2 0-5.8l-23.5-23.5 23.5-23.5c1.6-1.6 1.6-4.2 0-5.8s-4.2-1.6-5.8,0l-26.4,26.4c-0.8,0.8-1.2,1.8-1.2,2.9s0.4,2.1 1.2,2.9l26.4,26.4z"
+                    />
+                  </g>
+                </g>
+              </svg>
+            </a>
+            <a class="btn-next" href="../pages/news-blog-detail.html">
+              <svg
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 129 129"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                enable-background="new 0 0 129 129"
+              >
+                <g>
+                  <g>
+                    <path
+                      d="M64.5,122.6c32,0,58.1-26,58.1-58.1S96.5,6.4,64.5,6.4S6.4,32.5,6.4,64.5S32.5,122.6,64.5,122.6z M64.5,14.6    c27.5,0,49.9,22.4,49.9,49.9S92,114.4,64.5,114.4S14.6,92,14.6,64.5S37,14.6,64.5,14.6z"
+                    />
+                    <path
+                      d="m51.1,93.5c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l26.4-26.4c0.8-0.8 1.2-1.8 1.2-2.9 0-1.1-0.4-2.1-1.2-2.9l-26.4-26.4c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l23.5,23.5-23.5,23.5c-1.6,1.6-1.6,4.2 0,5.8z"
+                    />
+                  </g>
+                </g>
+              </svg>
+            </a>
+          </div>
+          <aside class="aside">
+            <div class="recent-posts">
+              <h6><span>Recent Posts</span></h6>
+              <p class="aside__article">
+                Global Temperature Records Just Got Crushed Again
+              </p>
+              <p class="aside__article">
+                Global Temperature Records Just Got Crushed Again
+              </p>
+              <p class="aside__article">
+                Global Temperature Records Just Got Crushed Again
+              </p>
+            </div>
+            <div class="our-newsletter">
+              <h6><span>Our newsletter</span></h6>
+              <p>
+                To receive the latest news from us please subscribe to our
+                newsletter.
+              </p>
+              <form action="#">
+                <input
+                  class="aside-email-form"
+                  type="email"
+                  placeholder="enter your email here"
+                />
+                <button class="aside-button" type="submit">SEND</button>
+              </form>
+            </div>
+            <div class="be-social">
+              <h6><span>Be Social</span></h6>
+              <p>
+                To receive the latest news from us please subscribe to our
+                newsletter.
+              </p>
+              <address>
+                <ul class="aside-icons">
+                  <li>
+                    <a href="#">
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
+                  </li>
+                </ul>
+              </address>
+            </div>
+          </aside>
+        </div>
+      </section>
+      <!-- Contacts -->
+      <section class="footer__contacts">
+        <div class="wrap--container">
+          <div class="flx-contacts">
+            <div class="about__bon-appetit">
+              <h4><span>About Bon Appetit</span></h4>
+              <blockquote>
+                <p>
+                  Bon Apetit is an enchanting and easy-to-use parallax
+                  Restaurant WordPress theme that allows you to tell your story
+                  in a dynamic, narrative and enjoyable way, making it perfect
+                  for restaurants, bakeries, bars or coffee shops.
+                </p>
+              </blockquote>
+              <div class="be__social">
+                <address>
+                  <span class="social__title">Be Special</span>
+                  <ul>
+                    <li>
+                      <a href="#">
+                        <i class="fab fa-facebook-f"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <i class="fab fa-twitter"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <i class="fab fa-linkedin-in"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </address>
+              </div>
+            </div>
+            <div class="flx-column__form">
+              <div class="our-newsletter">
+                <h4><span>Our Newsletter</span></h4>
+                <p>
+                  To receive the latest news from us please subscribe to our
+                  newsletter.
+                </p>
+                <form class="our-newsletter__form" action="#">
+                  <input
+                    class="form__email"
+                    type="email"
+                    name="user_email"
+                    placeholder="enter your email here"
+                    required
+                  />
+                  <input
+                    class="form__button"
+                    type="submit"
+                    name="button"
+                    value="SEND"
+                  />
+                </form>
+              </div>
+              <div class="contact">
+                <h4><span>Contact</span></h4>
+                <address>
+                  <p>
+                    <i class="fa fa-phone"></i
+                    ><a class="contact__tel" href="tel:+31071312345"
+                      >+3(107)-1312-34-5</a
+                    >
+                  </p>
+                  <p>
+                    <i class="fas fa-envelope"></i
+                    ><a href="mailto:info@bonapetit.com">info@bonapetit.com</a>
+                  </p>
+                  <p>
+                    <i class="fas fa-map-marker-alt"></i
+                    ><a href="https://goo.gl/maps/MPsQ5A5tec7NMPJf8"
+                      >New York</a
+                    >
+                  </p>
+                </address>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="wrap--container">
+        <address>
+          <p>Copyright © 2020 Hennadiy Chikunov All Rights Reserved</p>
+        </address>
+        <!--Scroll To Top--><a
+          class="scrolltotop"
+          onclick="jQuery('html,body').animate({scrollTop:0}, 'slow');"
+        >
+          <span class="fa fa-chevron-up"></span></a
+        ><!--/Scroll To Top-->
+      </div>
+    </footer>
+    <!-- ПОДКЛЮЧИЛ JQUERY -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Скрипты на JQuery перенесены в отдельный файл -->
+    <script src="../js/scripts.js"></script>
+  </body>
 </html>

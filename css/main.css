@@ -8,6 +8,84 @@
   box-sizing: border-box;
 }
 
+html.dark,
+.dark body {
+  background: #000;
+}
+
+html.dark h1,
+html.dark h2,
+html.dark h3,
+html.dark h4,
+html.dark h5,
+html.dark a,
+html.dark p,
+html.dark .wrap-menu .menu--menu .menu--number,
+html.dark .tab1-text,
+html.dark .svg,
+.dark body h1,
+.dark body h2,
+.dark body h3,
+.dark body h4,
+.dark body h5,
+.dark body a,
+.dark body p,
+.dark body .wrap-menu .menu--menu .menu--number,
+.dark body .tab1-text,
+.dark body .svg {
+  color: #ffffff;
+  fill: #fff;
+}
+
+html.dark .team--title::before,
+html.dark .team--title::after,
+.dark body .team--title::before,
+.dark body .team--title::after {
+  border: solid 1px #fff;
+}
+
+html.dark .wrap-team .team-flx .team-column .team-icons li,
+.dark body .wrap-team .team-flx .team-column .team-icons li {
+  border: solid 2px #fff;
+}
+
+html.dark .wrap-team .team-flx .team-column .team-icons li i,
+.dark body .wrap-team .team-flx .team-column .team-icons li i {
+  color: #fff;
+}
+
+span.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 30px;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  color: #ffffff;
+  border: solid 2px #fff;
+  padding: 8px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 5;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  -webkit-font-feature-settings: "liga";
+          font-feature-settings: "liga";
+}
+
 a {
   text-decoration: none;
   font-style: normal;
@@ -61,6 +139,7 @@ button {
   -ms-flex-align: center;
   align-items: center;
   height: 80px;
+  position: relative;
 }
 
 .header .header__logo {
@@ -495,20 +574,20 @@ button {
   width: 6%;
   height: 100px;
   opacity: 0;
-  -webkit-animation-name: scroll,scroll-opacity;
-  animation-name: scroll,scroll-opacity;
-  -webkit-animation-duration: 1s,.5s;
-  animation-duration: 1s,.5s;
-  -webkit-animation-delay: 3s,2.5s;
-  animation-delay: 3s,2.5s;
-  -webkit-animation-iteration-count: infinite,1;
-  animation-iteration-count: infinite,1;
-  -webkit-animation-timing-function: linear,linear;
-  animation-timing-function: linear,linear;
-  -webkit-animation-direction: alternate,normal;
-  animation-direction: alternate,normal;
-  -webkit-animation-fill-mode: none,forwards;
-  animation-fill-mode: none,forwards;
+  -webkit-animation-name: scroll, scroll-opacity;
+  animation-name: scroll, scroll-opacity;
+  -webkit-animation-duration: 1s, 0.5s;
+  animation-duration: 1s, 0.5s;
+  -webkit-animation-delay: 3s, 2.5s;
+  animation-delay: 3s, 2.5s;
+  -webkit-animation-iteration-count: infinite, 1;
+  animation-iteration-count: infinite, 1;
+  -webkit-animation-timing-function: linear, linear;
+  animation-timing-function: linear, linear;
+  -webkit-animation-direction: alternate, normal;
+  animation-direction: alternate, normal;
+  -webkit-animation-fill-mode: none, forwards;
+  animation-fill-mode: none, forwards;
 }
 
 .header-restaurant .header__scroll-wrap p {
@@ -1574,15 +1653,20 @@ svg path {
   top: 70%;
   font-size: 0.9em;
   letter-spacing: 1px;
-  background: snow;
+  background: #000;
   -webkit-transform: translateY(-30%);
   transform: translateY(-30%);
+}
+
+.news .food-menu .food-menu__item:nth-child(3) .item__text h4,
+.news .food-menu .food-menu__item:nth-child(3) .item__text p {
+  color: #fff;
 }
 
 .news .food-menu .food-menu__item:nth-child(3) .item__text:after {
   content: "";
   position: absolute;
-  border: solid 1px #000;
+  border: solid 1px #fff;
   bottom: 75%;
   left: 1%;
   margin: 50px 0 0px 0;
